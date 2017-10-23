@@ -1,0 +1,378 @@
+/* #######################################################
+
+HOW TO CREATE AN INTERACTIVE GRAPH USING CSS3 & JQUERY [TUTORIAL]
+
+"How to create an Interactive Graph using CSS3 & jQuery [Tutorial]" was specially made for DesignModo by our friend Valeriu Timbuc.
+
+Links:
+http://vtimbuc.net
+http://designmodo.com
+http://vladimirkudinov.com
+
+######################################################## */
+
+/* Resets */
+.graph-container,
+.graph-container div,
+.graph-container a,
+.graph-container span {
+    margin: 0;
+    padding: 0;
+}
+
+/* Gradinet and Rounded Corners */
+.graph-container, #tooltip, .graph-info a {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f9f9f9));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f9f9f9 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#f9f9f9 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#f9f9f9 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#f9f9f9 100%);
+}
+
+/*  Graph Container */
+.graph-container {
+    position: relative;
+    width: 660px;
+    padding: 10px;
+    height: 104px;
+    -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,.1);
+    -moz-box-shadow: 0px 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0px 1px 2px rgba(0,0,0,.1);
+}
+
+    .graph-container > div {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+    }
+
+.graph-info {
+    width: 590px;
+    margin-bottom: 10px;
+}
+
+    /* Text Styles */
+    #tooltip, .graph-info a {
+        height: 20px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 20px;
+        color: #646464;
+    }
+
+.tickLabel {
+    font-weight: normal;
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+/* Tooltip */
+#tooltip {
+    position: absolute;
+    display: none;
+    padding: 5px 10px;
+    border: 1px solid #e1e1e1;
+}
+
+/* Links */
+.graph-info a {
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding: 7px 10px 5px 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: default;
+}
+
+    /* Color Circle for Links */
+    .graph-info a:before {
+        position: absolute;
+        display: block;
+        content: 'a';
+        width: 8px;
+        height: 8px;
+        top: 13px;
+        left: 13px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+/* Colors For each Link */
+.graph-info .visitors {
+    border-bottom: 2px solid #71c73e;
+}
+
+.graph-info .returning {
+    border-bottom: 2px solid #77b7c5;
+}
+
+.graph-info .visitors:before {
+    background: #71c73e;
+}
+
+.graph-info .returning:before {
+    background: #77b7c5;
+}
+
+/* Lines & Bars Buttons */
+#lines, #bars {
+    width: 34px;
+    height: 32px;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 10px;
+    border-bottom: 2px solid #71c73e;
+    float: right;
+    cursor: pointer;
+}
+
+    #lines.active, #bars.active {
+        background: #82d344;
+        background: -moz-linear-gradient(top, #82d344 0%, #71c73e 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#82d344), color-stop(100%,#71c73e));
+        background: -webkit-linear-gradient(top, #82d344 0%,#71c73e 100%);
+        background: -o-linear-gradient(top, #82d344 0%,#71c73e 100%);
+        background: -ms-linear-gradient(top, #82d344 0%,#71c73e 100%);
+        background: linear-gradient(to bottom, #82d344 0%,#71c73e 100%);
+    }
+
+    #lines span, #bars span {
+        display: block;
+        width: 34px;
+        height: 32px;
+        background: url('../img/lines.png') no-repeat 9px 12px;
+    }
+
+    #bars span {
+        background: url('../img/bars.png') no-repeat center 10px;
+    }
+
+    #lines.active span {
+        background-image: url('../img/lines_active.png');
+    }
+
+    #bars.active span {
+        background-image: url('../img/bars_active.png');
+    }
+
+/* Hide the First and Last Y Label */
+.yAxis .tickLabel:first-child,
+.yAxis .tickLabel:last-child {
+    display: none;
+}
+
+/* Clear Floats */
+.graph-info:before, .graph-info:after,
+.graph-container:before, .graph-container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.graph-x {
+     float: left;
+    -writing-mode: tb-rl;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    white-space: nowrap;
+    position: relative;
+    left: -9px;
+    top: 30px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.graph-y {
+    position: relative;
+top: 98px;
+text-align: center;
+font-size: 12px;
+font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ .total-gap-left-content {
+	width:170px;
+	float:left;
+	margin-right:10px;
+}
+.total-gap-left-content .block-gap {
+	height:134px;
+	border-radius:5px;
+	-webkit-box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.53);
+	-moz-box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.53);
+	box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.53);
+	margin:0 0 20px 0;
+	padding:5px;
+}
+.total-gap-left-content .block-gap .sb_head {
+	padding: 5px 5px 6px 5px;
+	border-radius:5px;
+	background: rgb(68,128,152); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(68,128,152,1) 0%, rgba(30,90,114,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(68,128,152,1)), color-stop(100%, rgba(30,90,114,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(68,128,152,1) 0%, rgba(30,90,114,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(68,128,152,1) 0%, rgba(30,90,114,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(68,128,152,1) 0%, rgba(30,90,114,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(68,128,152,1) 0%, rgba(30,90,114,1) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448098', endColorstr='#1e5a72', GradientType=0 ); /* IE6-9 */
+}
+.total-gap-left-content .block-gap .sb_head i {
+	padding-right:5px;
+	background: url(../Images/gap-anlysis.png) no-repeat;
+	height:18px;
+	width:18px;
+	float:left;
+}
+.ga {
+	background-position:-8px -14px!important;
+}
+.ttpo {
+	background-position:-33px -15px!important;
+}
+.ttpr {
+	background-position:-56px -13px!important;
+}
+.total-gap-left-content .block-gap .sb_head span {
+	font-size:12px;
+	font-family: "opensans_semibold";
+	color:#fff;
+	text-align: left;
+	display: block;
+	padding-left:25px;
+}
+ .total-gap-left-content .block-gap p {
+	font-size:30px;
+	color:#727272;
+	text-align: center;
+	padding: 45px 0;
+	font-family: "opensans_light";
+}
+.total-gap-right-content {
+	width:100%;
+	background:#fff;
+}
+
+
+
+
+
+/*
+////////////
+
+Aza Header
+
+/////
+
+*/
+
+.aza-header { width:960px;
+height: 100px;
+}
+
+.aza-header .aza-logo {
+background:url('../images/samp-logo.jpg') no-repeat;
+    border: none;
+    width:200px;
+	float:left;
+    height: 62px;
+    margin-right: 20px;
+	margin-top: 15px;
+}
+
+.aza-header .nav-menu { width:445px;
+float:left;
+margin-top: 14px;
+margin-left: 90px;
+}
+
+
+.nav-menu ul {
+	}
+
+.nav-menu ul li{ 
+	padding: 5px 10px;
+ border-radius:20px;
+ text-align:center;  border:1px solid #00a3e4;
+  float:left;margin: 0 5px 0 5px;}
+
+.nav-menu ul li a{
+	text-align:center; text-transform:uppercase; font-size:11px; color:#00a3e4; text-align:center; font-family: "opensans_semibold";
+	}
+
+.nav-menu ul li.active { background-color:#00a3e4; color:#fff;}
+
+
+
+.nav-menu ul li.active a { background-color:#00a3e4; color:#fff;}
+
+
+
+.log_in_bx {
+	width:192px;
+	height:45px;
+	float:right;
+	position: absolute;
+	right: 0;
+	top:62px;
+	}
+
+.log_in_bx p {display:inline-block; font-size:12px; color:#7f7f7f;}
+
+.log_in_bx a {
+height: 15px;
+padding: 3px 13px;
+background: #a0c539;
+border-radius: 20px;
+display: inline-block;
+font-family: "opensans_regular";
+font-size: 11px;
+color: #fff;
+}
+
+
+.closing_gap_list{ margin-left:35px;}
+.ptnt-heading {
+  background-color: #00a3e4;
+  margin: 0px 0 5px 0;
+  padding: 5px 0;
+  height: 30px;
+  border-radius: 3px;
+}
+.ptnt-heading h2 {
+	color:#ffffff;
+	line-height:30px;
+}
+
+
+.aza-header .back_btn {
+width: 28px;
+  height: 29px;
+  background: url(../Images/back.png) no-repeat;
+  position: absolute;
+  right: 154px;
+  top: 19px;
+}
+
+
+
+

@@ -1,0 +1,115 @@
+.radios-to-slider{
+	display:block;
+	position:relative;
+	margin-bottom:20px;
+	-webkit-box-sizing:content-box;
+	   -moz-box-sizing:content-box;
+	     -o-box-sizing:content-box;
+	        box-sizing:content-box;
+			
+			background: linear-gradient(to right, #47905b 0%, #48915c 17%, #479059 18%, #4e8e5c 20%, #538b5a 24%, #6d825b 33%, #777b5a 36%, #94705a 44%, #95715b 45%, #986d5a 45%, #9d6d59 47%, #a26a5b 48%, #ae645b 52%, #bf5e58 57%, #d15659 63%, #d55459 66%, #d85259 66%, #d65359 67%, #da5359 68%, #da5158 69%, #dd515a 70%, #dd515a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47905b', endColorstr='#dd515a', GradientType=1 );
+}
+
+
+.radios-to-slider.medium{
+	height:22px;
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+	-o-border-radius:25px;
+	border-radius:25px;
+	padding:0 0;
+}
+
+/* Levels */
+.radios-to-slider .slider-level{
+	background-color:#fff;
+	cursor:pointer;
+	position:absolute;
+	display:block;
+}
+
+.radios-to-slider .slider-level.slider-lower-level{
+	opacity:0.2;
+}
+
+.radios-to-slider.medium .slider-level{
+	width:22px;
+	height:22px;
+	-webkit-border-radius:22px;
+	-moz-border-radius:22px;
+	-o-border-radius:22px;
+	border-radius:22px;
+	z-index:2;
+}
+
+/* Labels */
+.slider-label{
+	position:absolute;
+	display:block;
+	cursor:pointer;
+	color:#5e5e5e;
+	text-align:center;
+}
+
+.slider-label-active
+{
+    font-weight: bold;
+}
+
+.radios-to-slider.medium .slider-label{
+	top:27px;
+	width:44px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+
+
+
+
+/* Slider bar */
+.radios-to-slider .slider-bar{
+	background-color:#47905b;
+	float:left;
+	height:100%;
+	width:0;
+	pointer-events:none;
+	display:none;
+	position:absolute;
+	left:0;
+	top:0;
+	
+
+}
+
+.slider-bar.transition-enabled{
+	-webkit-transition:.2s;
+	-moz-transition:.2s;
+	-o-transition:.2s;
+	transition:.2s;
+}
+
+.radios-to-slider.medium .slider-bar{
+	-webkit-border-radius:22px;
+	-moz-border-radius:22px;
+	-o-border-radius:22px;
+	border-radius:22px;
+	
+}
+
+/* Slider Knob */
+.slider-knob{
+	float:right;
+	background-color:#47905b;
+	border:2px solid #fff;
+}
+
+.radios-to-slider.medium .slider-knob{
+	width:20px;
+	height:20px;
+	-webkit-border-radius:22px;
+	-moz-border-radius:22px;
+	-o-border-radius:22px;
+	border-radius:22px;
+}

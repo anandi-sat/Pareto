@@ -1,0 +1,42 @@
+{
+  "name": "paretoapp",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server"
+  },
+  "dependencies": {
+    "@angular/common": "~2.3.0",
+    "@angular/compiler": "~2.3.0",
+    "@angular/core": "~2.3.0",
+    "@angular/forms": "~2.3.0",
+    "@angular/http": "~2.3.0",
+    "@angular/platform-browser": "~2.3.0",
+    "@angular/platform-browser-dynamic": "~2.3.0",
+    "@angular/router": "~3.3.0",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "ng2-bootstrap": "^1.2.5",
+    "ng2-pagination": "^2.0.1",
+    "ngx-bootstrap": "^1.9.3",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-rc.4",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.7.2",
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-usemin": "~2.0.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-rev": "~0.1.0",
+    "grunt-contrib-clean": "~0.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "typescript": "~2.0.10",
+    "lite-server": "^2.2.2"
+  }
+}

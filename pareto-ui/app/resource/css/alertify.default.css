@@ -1,0 +1,94 @@
+/**
+ * Default Look and Feel
+ */
+.alertify,
+.alertify-log {
+	font-family: sans-serif;
+}
+.alertify p{
+	margin: 16px 8px 14px 4px;
+	font-size: 14px;
+	line-height:18px;
+	text-align:left;
+	border-bottom:1px solid #ccc;
+	padding-bottom:28px;
+	padding-left:72px;
+	background: url(../Images/alert.png) no-repeat left top;
+	font-family: "opensans_light";
+	color:#000;
+	}
+.alertify {
+	/*background: -webkit-linear-gradient(#FFFFFF , #F5F5F5);
+	background: -o-linear-gradient(#FFFFFF , #F5F5F5);
+	background: -moz-linear-gradient(#FFFFFF , #F5F5F5);
+	background: linear-gradient(#FFFFFF , #F5F5F5);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFF', EndColorStr='#E5e5e5')";*/
+	background:#fff;
+	width:400px;
+	border: 1px solid #C2C2C2;
+	/* border-radius: 5px 5px 5px 5px; */
+	z-index: 99999;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin: -78px 0 0 -204px;
+	-webkit-box-shadow: 0px 0px 13px 2px rgba(199,199,199,0.47);
+	-moz-box-shadow: 0px 0px 13px 2px rgba(199,199,199,0.47);
+	box-shadow: 0px 0px 13px 2px rgba(199,199,199,0.47);
+}
+	.alertify-text {
+		border: 1px solid #CCC;
+		padding: 10px;
+		border-radius: 4px;
+	}
+	.alertify-button {
+		color: #70726f;
+		font-size:12px;
+	
+	}
+	.alertify-button:hover,
+	.alertify-button:focus {
+		color: #70726f;
+		font-size:12px;
+	}
+	.alertify-button:focus {
+		/*box-shadow: 0 0 15px #2B72D5;*/
+	}
+	.alertify-button:active {
+		position: relative;
+	}
+		.alertify-button-cancel,
+		.alertify-button-cancel:hover,
+		.alertify-button-cancel:focus {
+			background:url(../Images/sprite2.png) -522px -604px no-repeat;
+			width:137px;
+			height:41px;
+			line-height:19px;
+			
+	
+		}
+		.alertify-button-ok,
+		.alertify-button-ok:hover,
+		.alertify-button-ok:focus {
+			background:url(../Images/sprite2.png) -384px -605px no-repeat;
+			width:137px;
+			height:41px;
+			line-height:19px;
+		}
+
+.alertify-log {
+	background: #1F1F1F;
+	background: rgba(0,0,0,.9);
+	padding: 15px;
+	border-radius: 4px;
+	color: #FFF;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5);
+}
+	.alertify-log-error {
+		background: #FE1A00;
+		background: rgba(254,26,0,.9);
+	}
+	.alertify-log-success {
+		background: #5CB811;
+		background: rgba(92,184,17,.9);
+	}

@@ -1,0 +1,526 @@
+﻿	<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=940">
+    <meta name="MobileOptimized" content="940">
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+   <title>Pareto App®</title><link href="../../resource/css/all.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../resource/css/patient-manager.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--popup-->
+
+	 <script src="../../resource/js/jquery-1.10.2.min.js"></script>
+   
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#selectable tr').click(function(){
+			$(this).toggleClass('blue');
+		});
+		
+		$('li').click(function(){
+			$(this).toggleClass('actve');
+		});
+		
+		$('div').click(function(){
+			$(this).toggleClass('green');
+		});
+
+
+	});
+	
+	$(document).ready(function(){
+		$(".clear-btn").click(function(){
+			$("tr").removeClass("actve-blue");
+			$("tr").removeClass("blue");
+		
+	});
+	
+	$(document).ready(function(){
+		
+		$('.edit_btn').click(function(){
+			$("#addbox").slideDown("slow");
+		});
+		
+		$('#ok').click(function(){
+			$("#addbox").slideUp("slow");
+		});
+			
+	});
+});
+</script>
+
+
+</head>
+<body>
+<div class="wrapper-holder" >
+<!-- wrapper--> 
+<div id="wrapper">
+<!-- header -->
+<header class="aza-header">
+    <!-- header-frame -->
+   <div class="aza-logo"></div>
+
+   
+   <div class="nav-menu">
+   	<ul>
+    	<li  class="active"><a href="patient.html">Patient</a></li>
+        <li><a href="http://localhost:3000/app/component/campign/campign.html">Campaign</a></li>
+        <li><a href="report.html">Reports</a></li>
+         <li><a href="work-list.html">Work List</a></li>
+
+    </ul>
+    
+
+        </div>
+        
+            <div class="header-holder">
+            <ul class="inform">
+                <li><a href="#" style="cursor:pointer;" title="Home">item01</a></li>
+                <li class="style01"><a href="#" title="Information">item02</a></li>
+                <li class="print"><a href="configuration.html" >Print</a></li>
+                 <li><a class="back" href="#">Print</a></li>
+                
+            </ul>
+            
+           <div class="log_in_bx">
+               <a href="login.html">LOGOUT</a>
+           </div>
+   </div>
+    
+   
+
+
+</header>
+
+<div id="main" style="margin-top:-75px;">
+
+	<!--side menu-->
+	<aside class="side-menu">
+    
+    
+    	<!--side menu-->
+        	<div class="standard-selection-menu">
+        	   <div class="heading">Standard Selection</div>
+            	  <ul>
+            		<li><a href="chronic-conditions.html">Chronic Conditions</a></li>
+                    <div class="input-block">
+                           <label class="drop">
+             <select onchange="window.location.href=this.value">
+               <option value="cardiovascular.html">Cardiovascular Disease</option>
+             <option value="cancer.html">Cancer </option>
+             <option value="hypertension.html">Hypertension</option>
+            	<option value="rheumatoid-arthritis.html">Rheumatoid Arthritis</option>
+                <option value="diabetic.html">Diabetes</option>  
+            </select>
+
+        </label>
+        </div>
+            		<li><a href="female-population.html">Female Population</a></li>
+                    <li><a href="Gaps-report.html">Gaps report for:</a></li>
+                    
+                    <div class="input-block">
+                           <label class="drop" >
+              <select onchange="window.location.href=this.value">
+                    <option value="flushot.html">Flu shot</option>
+               <option value="colorectal-cancer.html">Colorectal Cancer Screening</option>
+             <option value="diabetic-retinal.html">Diabetic Retinal Exam </option>
+                              <option value="adult-BMI.html">Adult BMI Assessment</option>
+            	<option value="breast-cancer.html">Breast Cancer Screening</option>
+                <option value="ldl-screening.html">LDL Screening</option>
+                 <option value="rheumatoid.html"> Rheumatoid Arthritis Management</option>
+               
+
+            </select>
+
+        </label>
+        </div>
+                 </ul>
+       
+        </div>
+        <!--End side menu-->
+        
+        <div class="custom_heading">Custom Selection</div>
+        
+      <div class="column">
+            <label class="control-label">Filters</label>
+   <div class="edit_main">
+        	<a  class="edit_btn" href="#">Add</a>
+       	</div>
+
+        </div>
+        
+        <!--left-edit-block-->
+        <div class="left-edit-block">
+        	<h3>Gender<br> equals 'F'</h3>
+            <h3>AND Age <br>greater than '50'</h3>
+            <a href="#">Edit</a> <a href="#">Remove</a>
+            
+            
+            <div class="input-block" id="addbox" style="display:none;">
+                
+                                <label class="drop margin_btm">
+            <select>
+            		<option>AND</option>
+                	<option>OR</option>
+                 </select>
+
+        </label>
+        
+        
+           
+                                <label class="drop margin_btm">
+          <select>
+            		<option>Member Id</option>
+                	<option>Name</option>
+               		<option>Age</option>
+              	    <option>Sex</option>
+					<option>Open Gaps</option>
+					<option>Condition</option>
+                 </select>
+
+        </label>
+        
+                
+                           <label class="drop margin_btm">
+           <select>
+            	<option>Equals</option>
+                <option>Not-Equals</option>
+                <option>Greater than</option>
+                <option>Lesser than</option>
+                
+            </select>
+
+        </label>
+        
+         <label class="search-container">
+            <input id="activator" type="text" maxlength="120">
+
+        </label>
+        
+       <div class="edit_blk">
+        	<a   class="edit_btn" href="#">OK</a>
+       		<a id="ok" class="edit_btn" href="#">Cancel</a>
+       	</div>
+        </div>
+        </div>
+        <!--End left-edit-block-->
+        
+    </aside>
+    <!--//End side menu-->
+    
+    <!--patnt-content-->
+    <div id="patnt-content">
+    	<div class="conatiner"><div class="page-heading">
+            	    <h2>Patient Manager</h2>
+                <label></label>
+                <div class="search-patnt-blk"><span>Search Patients</span><input  type="text" maxlength="120"></div>
+            </div>
+            
+            <div class="view">
+            	<ul>
+                	<li class="green"><a href="#">View All</a></li>
+                    <li data-toggle="tooltip" data-placement="right" title="A"><a class="btn-default"  href="#">A</a></li>
+                     <li data-toggle="tooltip" data-placement="right" title="B"><a href="#">B</a></li>
+                      <li data-toggle="tooltip" data-placement="right" title="C"><a href="#">C</a></li>
+                       <li data-toggle="tooltip" data-placement="right" title="D"><a href="#">D</a></li>
+                        <li data-toggle="tooltip" data-placement="right" title="E"><a href="#">E</a></li>
+                         <li data-toggle="tooltip" data-placement="right" title="F"><a href="#">F</a></li>
+                          <li data-toggle="tooltip" data-placement="right" title="G"><a href="#">G</a></li>
+                           <li data-toggle="tooltip" data-placement="right" title="H"><a href="#">H</a></li>
+                            <li data-toggle="tooltip" data-placement="right" title="I"><a href="#">I</a></li>
+                             <li data-toggle="tooltip" data-placement="right" title="J"><a href="#">J</a></li>
+                              <li data-toggle="tooltip" data-placement="right" title="K"><a href="#">K</a></li>
+                               <li data-toggle="tooltip" data-placement="right" title="L"><a href="#">L</a></li>
+                                <li data-toggle="tooltip" data-placement="right" title="M"><a href="#">M</a></li>
+                                 <li data-toggle="tooltip" data-placement="right" title="N"><a href="#">N</a></li>
+                                  <li data-toggle="tooltip" data-placement="right" title="O"><a href="#">O</a></li>
+                                   <li data-toggle="tooltip" data-placement="right" title="P"><a href="#">P</a></li>
+                                    <li data-toggle="tooltip" data-placement="right" title="Q"><a href="#">Q</a></li>
+                                     <li data-toggle="tooltip" data-placement="right" title="R"><a href="#">R</a></li>
+                                      <li data-toggle="tooltip" data-placement="right" title="S"><a href="#">S</a></li>
+                                       <li data-toggle="tooltip" data-placement="right" title="T"><a href="#">T</a></li>
+                                        <li data-toggle="tooltip" data-placement="right" title="U"><a href="#">U</a></li>
+                                         <li data-toggle="tooltip" data-placement="right" title="V"><a href="#">V</a></li>
+                                          <li data-toggle="tooltip" data-placement="right" title="W"><a href="#">W</a></li>
+                                           <li data-toggle="tooltip" data-placement="right" title="X"><a href="#">X</a></li>
+                                            <li data-toggle="tooltip" data-placement="right" title="Y"><a href="#">Y</a></li>
+                                             <li data-toggle="tooltip" data-placement="right" title="Z"><a href="#">Z</a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="enroll-block">
+            	<a href="#" id="enroll" class="enroll-btn"><span></span>Enroll Selected</a>
+                
+                <div class="right-tools">
+                	<a class="clear-btn" href="#"><span></span>Clear All</a>
+                    <a class="add-btn" id="planname" href="#"><span></span>Add New</a>
+                     <a  onClick="$('#EnrollMembers').click()"  class="bulk-btn" href="#"><span></span>Bulk Upload</a>
+                 <input id="EnrollMembers" type="file" style="visibility:hidden"/>
+                </div>
+            </div>
+         
+            <div class="patnt-table-blk" style="height:413px;">
+            	<div class="table-responsive" >
+              <table id="selectable" class="table table-bordered text-center" >
+              <thead>
+                <tr>
+                  <th>Member ID</th>
+                  <th class="text-center">S.No</th>
+                  <th class="text-center">Name</th>
+                  <th class="text-center">Age</th>
+                  <th class="text-center">Gender</th>
+                  <th class="text-center">Open Gaps</th>
+                   <th class="text-center">Phone</th>
+                    <th class="text-center">E-mail</th>
+                    <th class="text-center">Address</th>
+                  </tr>
+              </thead>
+              <tbody ng-controller="PatientComponent">
+                		
+				<tr *ngFor="let patient of patientData">
+                  <td> {{patient.sno}}</td>
+                  <td class="text-left">{{patient.sno}}</td>
+                  <td><a href="interventions.html" class="reload_btn">{{patient.name}}</a></td>
+                  <td>{{patient.age}}</td>
+                  <td>{{patient.sex}}</td>
+                  <td style="text-align:center">{{patient.opengaps}}</td>
+                  <td>{{patient.phone}}</td>
+                  <td>{{patient.email}}</td>
+                  <td>{{patient.address}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+          </div>
+            <!--</div>-->
+  	    </div>	
+    </div>
+    <!--patnt-content-->
+
+</div>
+
+
+        
+      <!--popup-->
+     <div class="overlay" id="overlay" style="display:none;"></div>
+	
+       <div class="main_box" id="box" >
+            <a class="boxclose" id="boxclose"></a>
+            
+            <div class="box-main">    <div class="ptnt-heading">
+            	<h2>Patients Selected</h2>
+                <!--<label>14</label>-->
+            </div>
+            
+            
+            
+            
+    <div class="closing_gap_list">
+    <ul>
+		<li class="margin_rt"><span>Welcome Program</span></li>
+		<li><span>Flu Shot Campaign</span></li>
+		 <li class="margin_rt"><span>DRE Program</span></li>
+		<li><span>Obesity Program</span></li>
+       <li class="margin_rt"><span>Colorectal Cancer Screening Program</span></li>
+        <li ><span>Breast Cancer Screening Campaign</span></li>
+           <li class="margin_rt"><span>HbA1c Campaign</span></li>
+             <li><span>Survey Campaign</span></li>
+
+	</ul>
+   
+   </div>
+   
+   <div class="adhoc-blk">
+   	<div class="adhc-heading"><h2>Adhoc</h2></div>
+    <div class="adhc-btn"><a href="#" onclick='Show();'>Adhoc Writer</a></div>
+   <!--innser poup--> 
+     <div  class="overlay" id="overlay1" style="display:none;">
+	 
+	 <div class="inner-pop-box">
+
+     
+	<div class="mini-poup">
+    	<textarea></textarea>
+    </div>
+    	 <a href="#" class="confirm_btn1"  onClick="Hide();">OK</a>
+	 </div>
+	 
+	 </div>
+	  <!--//innser poup--> 
+	  
+    <div class="message">
+    	<h2>Message</h2>
+        	<ul>
+            	
+                
+               <li><a href="#"> Welcome </a></li>
+               <li><a href="#"> Flu Shot Reminder </a></li>
+               <li><a href="#"> Post Visit Feedback </a></li>
+               <li><a href="#"> Pregnancy Test </a></li>
+               <li><a href="#"> Prostate Cancer Information </a></li>
+               <li><a href="#">  HbA1c Reminder </a></li>
+               <li><a href="#">Retinal Eye Exam</a></li>
+			   <li><a href="#"> Lipid Profile Reminder</a></li>
+            </ul>
+    </div>
+    
+      <div class="channel">
+    	<h2>Channel</h2>
+        	<ul>
+            	
+                
+               <li><a href="#"> SMS </a></li>
+               <li><a href="#"> Email </a></li>
+               <li><a href="#"> Auto-Voice  </a></li>
+               <li><a href="#">  All </a></li>
+
+            </ul>
+           
+    </div>
+     <nav class="btn_bx">
+         <a href="images/iClin-Engager_Feedback_Ver1.01.pdf" target="_blank" class="overview_btn">Preview</a>
+         </nav>
+    
+   </div>
+         
+         
+         <nav class="btn_bx">
+         <a href="#" class="confirm_btn" >OK</a>
+         </nav>
+
+            </div>
+        </div>
+        <!--End Poup-->
+        
+  
+  
+  <!--poup -2-->
+  
+      <div class="overlay" id="overlay" style="display:none;"></div>
+
+ <div class="patnt-table-blk" id="box-a" style="position:fixed; width:650px; top:-900px;left:20%;  z-index:999;padding:15px; height:auto; background:#fff;">
+     
+   <div class="ptnt-heading"> 	<h2>Add New</h2>
+
+            </div>
+        
+          <a class="boxclose" id="boxclose-a"></a>
+            	<div style="background:#F0F0F0;padding: 25px;">
+                    
+            <table class="table-noborder" >
+       
+              <tbody>
+              <!--  <tr>
+                  <td colspan="3">
+                  <div class="input-group">
+                    <input style="width: 610px;" type="text" class="form-control">
+                                
+				</div>
+                    </td>
+                </tr>-->
+                
+                 <tr>
+                  <td> <div class="input-group"> <label>Name</label> <input style="width:160px"  type="text" class="form-control"></div></td>
+                  <td> <div class="input-group"> <label>Age</label> <input style="width:160px"  type="text" class="form-control"></div></td>
+                   <td> <div class="input-group"> <label>Sex</label> <input style="width:160px"  type="text" class="form-control"></div></td>
+                </tr>
+                
+                 <tr>
+                  <td> <div class="input-group"> <label>Phone</label> <input style="width:160px"  type="text" class="form-control"></div></td>
+                  <td> <div class="input-group"> <label>E-mail</label> <input style="width:160px"  type="text" class="form-control"></div></td>
+                   <td> <div class="input-group"> <label>Address</label> <input style="width:160px"  type="text" class="form-control"></div></td>
+                </tr>
+                
+              
+				
+              </tbody>
+            </table>
+          </div>
+          <nav class="btn_bx">
+         <a href="#" class="confirm_btn">Cancel</a>  
+         <a href="#" class="confirm_btn">Create</a>  
+         </nav>
+            </div>
+  <!--End popup-2-->
+   
+
+</div>
+
+<footer style="background:#fff; height:27px;" id="footerWrapper">
+    <div class="footer">
+        
+        <p><strong>Contact:&nbsp;</strong><a href="mailto:#">Pareto Healthcare</a></p>
+    </div>
+</footer>
+
+</div>
+
+
+
+<script src="../../resource/Scripts/app.js"></script>
+ <script type="text/javascript">
+ function Show()
+ {
+ document.getElementById("overlay1").style.display='block';
+ }
+ function Hide()
+ {
+ document.getElementById("overlay1").style.display='none';
+ }
+            $(function() {
+                $('#enroll').click(function(){
+				
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box').animate({'top':'75px'},500);
+                    });
+                });
+                $('#boxclose').click(function(){
+                    $('#box').animate({'top':'-750px'},500,function(){
+                        $('#overlay').fadeOut('fast');
+                    });
+                });
+				
+				
+				
+					
+				    $('#planname').click(function(){
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box-a').animate({'top':'75px'},500);
+                    });
+                });
+                $('#boxclose-a').click(function(){
+                    $('#box-a').animate({'top':'-750px'},500,function(){
+                        $('#overlay').fadeOut('fast');
+                    });
+                });
+				
+					$('.confirm_btn').click(function(){
+                    $('#box,#box-a').animate({'top':'-750px'},500,function(){
+                        $('#overlay').fadeOut('fast');
+                    });
+                $('td').removeClass('active');
+				});
+				
+					
+				$('.cancel_btn').click(function(){
+                    $('#box').animate({'top':'-750px'},500,function(){
+                        $('#overlay').fadeOut('fast');
+                    });
+                
+				});
+				
+		
+            });
+        </script>
+        
+        <script src="../../resource/js/tooltip.js"></script>
+<script>
+   $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+
+</body>
+
+</html>

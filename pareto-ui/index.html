@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pareto Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Load libraries (Note: IE required polyfills, in this exact order_ -->
+    <link rel="stylesheet" type="text/css" href="app/resource/libs/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="app/resource/libs/css/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="app/resource/libs/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="app/resource/libs/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="app/resource/libs/css/styles.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>-->
+
+    <!-- LIB SCRIPTS -->
+    <script type="text/javascript" src="app/resource/libs/js/jquery.min.js"></script>
+    <script type="text/javascript" src="app/resource/libs/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app/resource/libs/js/modernizr.js"></script>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('paretoapp').catch(function(err) {
+            console.error(err);
+        });
+
+    </script>
+
+</head>
+<body>
+<div class="container-fluid">
+  <patient>Loading...</patient>
+</div>
+</body>
+</html>

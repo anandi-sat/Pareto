@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=940">
+    <meta name="MobileOptimized" content="940">
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <title>Pareto Application®</title>  <link href="../../resource/css/all2.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../resource/css/campaign.css" type="text/css">
+    
+    <!--popup-->
+    <!--popup-->
+	 <script src="js/jquery-1.10.2.min.js"></script>
+     
+        <script>
+    function goBack()
+     {
+    window.history.back()
+     }
+</script>
+
+
+     <script type="text/javascript">
+	$(document).ready(function(){
+		$('tr').click(function(){
+			$(this).removeClass('actve').addClass('actve');
+		});
+	});
+</script>
+  
+ <style>
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.main_pop_box {
+	width:740px;
+	display:table;
+}
+.left_table_pop {
+	float:left;
+	width:325px;
+	height:390px;
+	overflow:scroll;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.center_table_pop {
+	float:left;
+	width:30px;
+	height:70px;
+	margin:40px 0;
+	padding-left:10px;
+}
+.right_table_pop {
+	float:left;
+	width:325px;
+	height:390px;
+	overflow:scroll;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.clear{
+	clear:both;
+}
+.main_pop_box th {
+	background-color:#666666;
+	text-align:left;
+	color:#FFF;
+}
+.main_pop_box th, td {
+	padding:5px;
+}
+.main_pop_box table, th, td {
+    border-collapse: collapse;
+	border:1px solid #ccc;
+}
+
+.text-center td, th{ border-left:none!important;border-right:none!important;}
+</style>   
+</head>
+<body>
+<div class="wrapper-holder">
+<!-- wrapper -->
+<div id="wrapper">
+<!-- header -->
+<header class="aza-header">
+
+    <!-- header-frame -->
+   <div class="aza-logo"></div>
+   
+   <div class="nav-menu">
+   	<ul>
+    	<li><a href="http://localhost:3000/">Patient</a></li>
+        <li class="active"><a href="campaign.html">Campaign</a></li>
+        <li><a href="report.html">Reports</a></li>
+         <li><a href="work-list.html">Work List</a></li>
+
+    </ul>
+    
+
+        </div>
+        
+            <div class="header-holder">
+            <ul class="inform">
+                <li><a href="#" style="cursor:pointer;" title="Home">item01</a></li>
+                <li class="style01"><a href="#" title="Information">item02</a></li>
+                <li class="print"><a href="#" title="print" >Config</a></li>
+                 <li><a class="back" href="http://localhost:3000/" >Go Back</a></li>
+                
+            </ul>
+            
+             <div class="log_in_bx">
+                            	
+                                <a href="login.html">LOGOUT</a>
+                            </div>
+   </div>
+    
+
+
+</header>
+
+<div id="main">
+	<div class="container">
+    
+    <div class="enroll-block">
+                
+                <div class="right-tools">
+ 
+                    <a class="add-btn" href="create-campaign.html"><span></span>Add New</a>
+
+                </div>
+            </div>
+		<div class="campaign_blok">
+        	<div class="table-responsive">
+                    
+            <table class="table text-center">
+              <thead>
+                <tr>
+                  <th width="350">Program</th>
+                  <th>Enrolled Patients</th>
+                  <th  width="90"></th>
+                  <th  width="50">Modify</th>
+                   <th  width="50">Enroll</th>
+                 </tr>
+              </thead>
+              <tbody>
+              
+                <tr>
+                  <td class="text-left"> <span class="stay"></span><a href="diabetes-program.html">Diabetes - Eye Check Up</a> </td>
+                  <td>14</td>
+                  <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                   <td><a href="#" id="enroll1"> <span class="enroll"></span></a></td>
+                </tr>
+                 
+                <tr>
+                  <td class="text-left"><span class="hlth"></span><a href="CRC-campaign.html" id="enroll2"> CRC Campaign</a> </td>
+                  <td>22</td>
+                  <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                   <td><a href="#" id="enroll3"> <span class="enroll"></span></a></td>
+                  </tr>
+                <tr> 
+
+                   <tr>
+                   <td class="text-left"><span class="nutri"></span><a href="annual-wellness.html"> Annual Wellness Visit Program</a> </td>
+                  <td>16</td>
+                 <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                    <td><a href="#" id="enroll5"> <span class="enroll"></span></a></td>
+       
+                </tr>
+                
+                 <tr>
+                <td class="text-left"><span class="mmbr"></span><a href="Colorectal-Cancer-campaign.html"> Survey Campaign  </a> </td>
+                  <td>19</td>
+                  <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                    <td><a href="#" id="enroll2"> <span class="enroll"></span></a></td>
+                </tr>
+				
+				<tr>
+                  <td class="text-left"><span class="flu"></span><a href="flu-campaign.html">Flu Shot Campaign</a>  </td>
+                  <td>20</td>
+                  <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                  <td><a href="#" id="enroll"> <span class="enroll"></span></a></td>
+                </tr>
+
+
+                    <td class="text-left"><span class="prgnnt"></span>Breast Cancer Screening Campaign  </td>
+                  <td>14</td>
+                  <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                    <td><a href="#" id="enroll4"> <span class="enroll"></span></a></td>
+                </tr>
+            
+                 <tr>
+                   <td class="text-left"><span class="nutri"></span><a href="annual-wellness.html"> Medication Adherence Program</a> </td>
+                  <td>11</td>
+                 <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                    <td><a href="#" id="enroll5"> <span class="enroll"></span></a></td>
+       
+                </tr>
+                
+                <tr>
+                 <td class="text-left"><span class="obsity"></span>Obesity Management Program  </td>
+                  <td>17</td>
+                  <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                    <td><a href="#" id="enroll6"> <span class="enroll"></span></a></td>
+                </tr>
+                
+                
+                 <tr>
+                  <td class="text-left"><span class="hlth"></span>Diabetes Management Campaign(A1c & LDL Control) </td>
+                  <td>22</td>
+                  <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                   <td><a href="#" id="enroll3"> <span class="enroll"></span></a></td>
+                  </tr>
+                <tr>
+                
+                 <tr>
+                   <td class="text-left"><span class="nutri"></span><a href="annual-wellness.html"> LDL Screening Program</a> </td>
+                  <td>11</td>
+                 <td><span class="active">Activate</span>  </td>
+                  <td><span class="modfy"></span></td>
+                    <td><a href="#" id="enroll5"> <span class="enroll"></span></a></td>
+       
+                </tr>
+               
+               
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+	</div>
+
+</div>
+
+ <!--popup-->
+     <div class="overlay" id="overlay" style="display:none;"></div>
+       <div class="main_box" id="box" >
+            <a class="boxclose" id="boxclose"></a>
+            
+            <div class="box-main">
+            
+            <div class="ptnt-heading">
+            	<h2>Add Patients</h2>
+                <label></label>
+            </div> 
+            
+            
+            
+            
+    <div class="closing_gap_list" style="width:740px;">
+
+<div class="main_pop_box">
+<!-- left box start -->
+   <div class="left_table_pop table table-bordered" id="left_Box">
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
+ <thead>
+  <tr>
+    <th width="100">Member ID</th>
+    <th width="230">Name</th>
+  </tr>
+  </thead>
+  
+  <tr>
+    <td>20000330358</td>
+    <td>Robin Baize</td>
+  </tr>
+  
+  <tr>
+    <td>87500187701</td>
+    <td>Richard Rodriguez</td>
+  </tr>
+  
+  <tr>
+    <td>90000038968</td>
+    <td>Quentin Miles</td>
+  </tr>
+
+  <tr>
+    <td>18956542311</td>
+    <td>Iyengar Srinivas</td>
+  </tr>
+  
+  <tr>
+    <td>30000070783</td>
+    <td>Mike Smith</td>
+  </tr>
+  
+  <tr>
+    <td>46250020556</td>
+    <td>Matthew Maury</td>
+  </tr>
+  
+    <tr>
+    <td>30000086316</td>
+    <td>Linga Swany</td>
+  </tr>
+  
+  <tr>
+    <td>87500121115</td>
+    <td>Justin Miller</td>
+  </tr>
+  <tr>
+    <td>85000083259</td>
+    <td>Joseph Reed</td>
+  </tr>
+  
+   <tr>
+    <td>3750203004</td>
+    <td>Jonathan Blevins</td>
+  </tr>
+  
+     <tr>
+    <td>56250102399</td>
+    <td>John Treadwell</td>
+  </tr>
+  
+     <tr>
+    <td>2500073571</td>
+    <td>Jack Avery</td>
+  </tr>
+  
+     <tr>
+    <td>18956542312</td>
+    <td>Matt Tapia</td>
+  </tr>
+  
+     <tr>
+    <td>92500236560</td>
+    <td>Alex Fields</td>
+  </tr>
+  
+     <tr>
+    <td>46250012502</td>
+    <td>Robbie Reynolds</td>
+  </tr>
+</table>
+ 
+   </div>
+<!-- left box ends -->
+
+<!-- center box start -->   
+   <div class="center_table_pop">
+      <a href="#"><img src="images/left.png" width="20" height="24" style="margin-bottom:20px;" id="left_button" /></a>
+      <a href="#"><img src="images/right.png" width="20" height="24" id="right_button"/></a>
+   </div>
+<!-- center box ends -->     
+
+<!-- right box start -->      
+   <div class="right_table_pop table table-bordered" id="right_Box">
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
+ <thead>
+  <tr>
+    <th width="100">Member ID</th>
+    <th width="230">Name</th>
+  </tr>
+  </thead>
+  
+  <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+ <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+
+ <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+   <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+ <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+   <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+   <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+   <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+    <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+  
+     <tr>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+</table>
+   </div>
+<!-- right box ends --> 
+</div>
+
+    
+   </div>
+ <div style="clear:both;"></div>        
+         
+         <nav class="btn_bx">
+         <a href="#" class="confirm_btn" >Save</a>
+         </nav>
+
+            </div>
+        </div>
+        <!--End Poup-->
+   
+      
+   
+
+</div>
+
+<footer style="background:#fff; height:27px;" id="footerWrapper">
+    <div class="footer">
+        
+        <p><strong>Contact:&nbsp;</strong><a href="mailto:#">Pareto Healthcare</a></p>
+    </div>
+</footer>
+
+</div>
+</div>
+
+<!--   <script>
+
+   function goBack(){alert(1);
+        window.history.back();
+    }
+
+</script>-->
+
+ <script type="text/javascript">
+
+            //$(function() {
+                $('#enroll').click(function(){
+				
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box').animate({'top':'75px'},500);
+                    });
+                });
+                $('#boxclose').click(function(){
+                    $('#box').animate({'top':'-750px'},500,function(){
+                        $('#overlay').fadeOut('fast');
+                    });
+                });
+				
+				
+				
+					
+				    $('#planname').click(function(){
+                    $('#save-overlay').fadeIn('fast',function(){
+                        $('#box-a').animate({'top':'200px'},500);
+                    });
+                });
+                $('#boxclose-a').click(function(){
+                    $('#box-a').animate({'top':'-750px'},500,function(){
+                        $('#save-overlay').fadeOut('fast');
+                    });
+                });
+				
+					$('.confirm_btn').click(function(){
+                    $('#box').animate({'top':'-750px'},500,function(){
+                        $('#overlay').fadeOut('fast');
+                    });
+                $('td').removeClass('active');
+				});
+				
+					
+				$('.cancel_btn').click(function(){
+                    $('#box').animate({'top':'-750px'},500,function(){
+                        $('#overlay').fadeOut('fast');
+                    });
+                
+				});
+				
+				
+			//$(function() {
+                $('#enroll1').click(function(){
+				
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box').animate({'top':'75px'},500);
+                    });
+                });
+
+							//$(function() {
+                $('#enroll2').click(function(){
+				
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box').animate({'top':'75px'},500);
+                    });
+                });
+				//$(function() {
+				 $('#enroll3').click(function(){
+				
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box').animate({'top':'75px'},500);
+                    });
+                });
+
+				//$(function() {
+                $('#enroll4').click(function(){
+				
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box').animate({'top':'75px'},500);
+                    });
+                });
+				                $('#enroll5').click(function(){
+				
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box').animate({'top':'75px'},500);
+                    });
+                });
+				                $('#enroll6').click(function(){
+				
+                    $('#overlay').fadeIn('fast',function(){
+                        $('#box').animate({'top':'75px'},500);
+                    });
+                });
+
+				
+		
+            //});
+			
+			$('#right_button').on('click',function(){
+			$('#right_Box table>tbody').prepend($('#left_Box tr.actve').removeClass('actve'));
+			});
+			
+			$('#left_button').on('click',function(){
+			$('#left_Box table>tbody').prepend($('#right_Box tr.actve').removeClass('actve'));
+			});
+        </script>
+        
+     
+
+
+</body>
+
+</html>
