@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=940">
     <meta name="MobileOptimized" content="940">
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-    <title>Pareto Application®</title>  <link href="../../resource/css/all2.css" rel="stylesheet"/>
+    <title>Pareto Application®</title>  
+    <link href="../../resource/css/all2.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../resource/css/campaign.css" type="text/css">
     
     <!--popup-->
     <!--popup-->
-	 <script src="js/jquery-1.10.2.min.js"></script>
+	 <script src="../../resource/js/jquery-1.10.2.min.js"></script>
      
         <script>
     function goBack()
@@ -144,93 +145,17 @@ body {
                    <th  width="50">Enroll</th>
                  </tr>
               </thead>
-              <tbody>
+              <tbody ng-controller="CampaignComponent">
               
-                <tr>
-                  <td class="text-left"> <span class="stay"></span><a href="diabetes-program.html">Diabetes - Eye Check Up</a> </td>
-                  <td>14</td>
-                  <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                   <td><a href="#" id="enroll1"> <span class="enroll"></span></a></td>
+                <tr *ngFor="let campaign of campaignData">
+                  <td class="text-left"> <span class="stay"></span><a href="diabetes-program.html">{{campaign.Program}}</a> </td>
+                  <td>{{campaign.EnrolledPatients}}</td>
+                  <td>{{campaign.Status}}  </td>
+                  <td>{{campaign.Modify}}</td>
+                   <td><a href="#">{{campaign.Enroll}}</a></td>
                 </tr>
                  
-                <tr>
-                  <td class="text-left"><span class="hlth"></span><a href="CRC-campaign.html" id="enroll2"> CRC Campaign</a> </td>
-                  <td>22</td>
-                  <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                   <td><a href="#" id="enroll3"> <span class="enroll"></span></a></td>
-                  </tr>
-                <tr> 
 
-                   <tr>
-                   <td class="text-left"><span class="nutri"></span><a href="annual-wellness.html"> Annual Wellness Visit Program</a> </td>
-                  <td>16</td>
-                 <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                    <td><a href="#" id="enroll5"> <span class="enroll"></span></a></td>
-       
-                </tr>
-                
-                 <tr>
-                <td class="text-left"><span class="mmbr"></span><a href="Colorectal-Cancer-campaign.html"> Survey Campaign  </a> </td>
-                  <td>19</td>
-                  <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                    <td><a href="#" id="enroll2"> <span class="enroll"></span></a></td>
-                </tr>
-				
-				<tr>
-                  <td class="text-left"><span class="flu"></span><a href="flu-campaign.html">Flu Shot Campaign</a>  </td>
-                  <td>20</td>
-                  <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                  <td><a href="#" id="enroll"> <span class="enroll"></span></a></td>
-                </tr>
-
-
-                    <td class="text-left"><span class="prgnnt"></span>Breast Cancer Screening Campaign  </td>
-                  <td>14</td>
-                  <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                    <td><a href="#" id="enroll4"> <span class="enroll"></span></a></td>
-                </tr>
-            
-                 <tr>
-                   <td class="text-left"><span class="nutri"></span><a href="annual-wellness.html"> Medication Adherence Program</a> </td>
-                  <td>11</td>
-                 <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                    <td><a href="#" id="enroll5"> <span class="enroll"></span></a></td>
-       
-                </tr>
-                
-                <tr>
-                 <td class="text-left"><span class="obsity"></span>Obesity Management Program  </td>
-                  <td>17</td>
-                  <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                    <td><a href="#" id="enroll6"> <span class="enroll"></span></a></td>
-                </tr>
-                
-                
-                 <tr>
-                  <td class="text-left"><span class="hlth"></span>Diabetes Management Campaign(A1c & LDL Control) </td>
-                  <td>22</td>
-                  <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                   <td><a href="#" id="enroll3"> <span class="enroll"></span></a></td>
-                  </tr>
-                <tr>
-                
-                 <tr>
-                   <td class="text-left"><span class="nutri"></span><a href="annual-wellness.html"> LDL Screening Program</a> </td>
-                  <td>11</td>
-                 <td><span class="active">Activate</span>  </td>
-                  <td><span class="modfy"></span></td>
-                    <td><a href="#" id="enroll5"> <span class="enroll"></span></a></td>
-       
-                </tr>
                
                
                
