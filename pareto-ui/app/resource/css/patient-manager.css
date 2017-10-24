@@ -58,7 +58,7 @@
 	border-style: solid;
 	border-width:3px 0 3px 3px;
 	content: "";
-	left: 2%;
+	left: 3%;
 	position: absolute;
 	width: 0;
 	margin: 5px 0 0 0;
@@ -241,7 +241,7 @@
 }
 
 .search-patnt-blk{ 
-	float:right;
+	float:left;
 	display:inline-block;
 	margin-top: 3px;
 	padding-right:10px;
@@ -252,15 +252,16 @@
 .search-patnt-blk span { 
 	color:#fefefe;
 	font-size:12px;
-	padding-right: 10px;
+	padding-right: 15px;
 }
 
 .search-patnt-blk input[type=text]{
-	height:16px!important;
+	height:18px!important;
+	
 }
 
 .search-container input[type=text], .search-patnt-blk input[type=text] {
-	width:120px;
+	width:110px;
 	height: 18px;
 	margin-bottom: 0;
 	font-size: 12px;
@@ -268,12 +269,12 @@
 	color: #888;
 	border: 1px solid #e1e1e1;
 	padding: 3px 10px 2px 8px;
-	background-image: url('app/resource/images/search.jpg'), none;
+	background-image: url('../images/search.jpg'), none;
 	background-position: right;
 	background-repeat: no-repeat;
 	background-color: #fff;
 	/* background-position: -269px -92px !important; */
-	padding-right: 22px !important;
+	padding-right: 25px !important;
 	cursor: pointer;
 }
 
@@ -331,8 +332,9 @@
 .page-heading {
 	background-color:#040404;
 	margin: 0px 0 5px;
-	padding: 5px 0;
+	padding: 6px 0;
 	height:40px;
+	width:790;
 }	
 	
 	
@@ -360,18 +362,20 @@
 .view {
 	border:1px solid #d0d0d0;
 	height:32px;
+	width: 783px;
 }	
 /*.view ul li.actve { background:none;}*/
 	
 .view ul {
 	margin:0;
 	padding:0;
+	width: 785px;
 }	
 
 .view ul li {
 	border-right:1px solid #d0d0d0;
 	float:left;
-	padding:8px 10px 7px 9px;
+	padding:8px 9px 7px 9px;
 }	
 .view ul li.green{  background-color:#a0c539;}
 .view ul li.green a {color:#fff;}
@@ -418,14 +422,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25b0e9', end
 	height:20px;
 	float:left;
 	margin-right: 3px;
-	background:url('app/resource/images/gap-anlysis.png') -200px -51px;
+	background:url('../images/gap-anlysis.png') -200px -51px;
 }
 
 
 .enroll-block .right-tools {
 	float:right;
 	  height: 29px;
-	  width:295px;
+	 
 }
 
 .enroll-block .right-tools .clear-btn{
@@ -459,7 +463,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	height:20px;
 	float:left;
 	margin-right: 3px;
-	background:url('app/resource/Images/gap-anlysis.png') -79px -110px;
+	background:url('../images/gap-anlysis.png') -79px -110px;
 }
 
 
@@ -492,7 +496,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	height:30px;
 	float:left;
 	margin-right: 3px;
-	background:url(app/resource/Images/gap-anlysis.png) -100px -109px;
+	background:url(../images/gap-anlysis.png) -100px -109px;
 }
 
 
@@ -526,7 +530,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	height:20px;
 	float:left;
 	margin-right: 3px;
-	background:url(app/resource/Images/gap-anlysis.png) -119px -110px;
+	background:url(../images/gap-anlysis.png) -119px -110px;
 }
 
 
@@ -686,7 +690,7 @@ th {
 
 
  .overlay {
-	background:transparent url(app/resource/images/overlay.png) repeat top left;
+	background:transparent url(../images/overlay.png) repeat top left;
 	background: rgba(0,0,0,0.5);
  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000, endColorstr=#7F000000);
 	position:fixed;
@@ -732,7 +736,7 @@ a.boxclose {
 	float:right;
 	width:26px;
 	height:26px;
-	background:transparent url(app/resource/images/close-icon.png) no-repeat;
+	background:transparent url(../images/close-icon.png) no-repeat;
 	margin-top:0px;
 	margin-right:-4px;
 	cursor:pointer;
@@ -1003,7 +1007,7 @@ height:78px;
 }
 
 .aza-header .aza-logo {
-background:url('app/resource/images/samp-logo.png') no-repeat;
+background:url('../images/samp-logo.png') no-repeat;
     border: none;
     width:200px;
 	float:left;
@@ -1045,21 +1049,22 @@ margin-left: 90px;
 	height:45px;
 	float:right;
 	position: absolute;
-	    right: -110px;
+	    right: -95px;
 	top:62px;
 	}
 
 .log_in_bx p {display:inline-block; font-size:12px; color:#7f7f7f;}
 
 .log_in_bx a {
-height: 20px;
-padding: 3px 13px;
+height: 22px;
+padding: 4px 13px;
 background: #a0c539;
 border-radius: 20px;
 display: inline-block;
 font-family: "opensans_regular";
 font-size: 11px;
 color: #fff;
+padding-right: 10px;
 }
 
 

@@ -1,125 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=940">
-    <meta name="MobileOptimized" content="940">
-    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-    <title>Pareto Application®</title>  
-    <link href="../../resource/css/all2.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../resource/css/campaign.css" type="text/css">
-    
-    <!--popup-->
-    <!--popup-->
-	 <script src="../../resource/js/jquery-1.10.2.min.js"></script>
-     
-        <script>
-    function goBack()
-     {
-    window.history.back()
-     }
-</script>
 
+        <script src="app/resource/js/campaignpopup.js"></script>
 
-     <script type="text/javascript">
-	$(document).ready(function(){
-		$('tr').click(function(){
-			$(this).removeClass('actve').addClass('actve');
-		});
-	});
-</script>
-  
- <style>
-body {
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
-}
-.main_pop_box {
-	width:740px;
-	display:table;
-}
-.left_table_pop {
-	float:left;
-	width:325px;
-	height:390px;
-	overflow:scroll;
-    overflow-x:hidden;
-    overflow-y:scroll;
-}
-.center_table_pop {
-	float:left;
-	width:30px;
-	height:70px;
-	margin:40px 0;
-	padding-left:10px;
-}
-.right_table_pop {
-	float:left;
-	width:325px;
-	height:390px;
-	overflow:scroll;
-    overflow-x:hidden;
-    overflow-y:scroll;
-}
-.clear{
-	clear:both;
-}
-.main_pop_box th {
-	background-color:#666666;
-	text-align:left;
-	color:#FFF;
-}
-.main_pop_box th, td {
-	padding:5px;
-}
-.main_pop_box table, th, td {
-    border-collapse: collapse;
-	border:1px solid #ccc;
-}
-
-.text-center td, th{ border-left:none!important;border-right:none!important;}
-</style>   
-</head>
-<body>
-<div class="wrapper-holder">
-<!-- wrapper -->
-<div id="wrapper">
 <!-- header -->
-<header class="aza-header">
-
-    <!-- header-frame -->
-   <div class="aza-logo"></div>
-   
-   <div class="nav-menu">
-   	<ul>
-    	<li><a href="/patient">Patient</a></li>
-        <li class="active"><a href="/campaign">Campaign</a></li>
-        <li><a href="report.html">Reports</a></li>
-         <li><a href="work-list.html">Work List</a></li>
-
-    </ul>
-    
-
-        </div>
-        
-            <div class="header-holder">
-            <ul class="inform">
-                <li><a href="#" style="cursor:pointer;" title="Home">item01</a></li>
-                <li class="style01"><a href="#" title="Information">item02</a></li>
-                <li class="print"><a href="#" title="print" >Config</a></li>
-                 <li><a class="back" href="/patient" >Go Back</a></li>
-                
-            </ul>
-            
-             <div class="log_in_bx">
-                            	
-                                <a href="login.html">LOGOUT</a>
-                            </div>
-   </div>
-    
-
-
-</header>
+              
 
 <div id="main">
 	<div class="container">
@@ -183,9 +66,9 @@ body {
             
             
     <div class="closing_gap_list" style="width:740px;">
-
+<!--
 <div class="main_pop_box">
-<!-- left box start -->
+<!-- left box start 
    <div class="left_table_pop table table-bordered" id="left_Box">
 <table width="100%" border="1" cellspacing="0" cellpadding="0">
  <thead>
@@ -273,14 +156,14 @@ body {
    </div>
 <!-- left box ends -->
 
-<!-- center box start -->   
+<!-- center box start   
    <div class="center_table_pop">
       <a href="#"><img src="app/resource/images/left.png" width="20" height="24" style="margin-bottom:20px;" id="left_button" /></a>
       <a href="#"><img src="app/resource/images/right.png" width="20" height="24" id="right_button"/></a>
    </div>
 <!-- center box ends -->     
 
-<!-- right box start -->      
+<!-- right box start      
    <div class="right_table_pop table table-bordered" id="right_Box">
 <table width="100%" border="1" cellspacing="0" cellpadding="0">
  <thead>
@@ -366,8 +249,8 @@ body {
   </tr>
 </table>
    </div>
-<!-- right box ends --> 
-</div>
+<!-- right box ends  
+</div>-->
 
     
    </div>
@@ -384,7 +267,7 @@ body {
       
    
 
-</div>
+
 
 <footer style="background:#fff; height:27px;" id="footerWrapper">
     <div class="footer">
@@ -393,7 +276,8 @@ body {
     </div>
 </footer>
 
-</div>
+
+
 
 <!--   <script>
 
@@ -507,6 +391,4 @@ body {
      
 
 
-</body>
 
-</html>

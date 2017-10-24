@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <base href="/">
-    <title>Pareto Application</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=940">
+    <meta name="MobileOptimized" content="940">
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <title>Pareto Application®</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Load libraries (Note: IE required polyfills, in this exact order_ -->
     <link rel="stylesheet" type="text/css" href="app/resource/libs/css/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="app/resource/libs/css/jquery.mCustomScrollbar.min.css" />
@@ -13,6 +18,10 @@
     <link rel="stylesheet" type="text/css" href="app/resource/libs/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="app/resource/libs/css/main.css" />
     <link rel="stylesheet" type="text/css" href="app/resource/libs/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="app/resource/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="app/resource/css/campaign.css" />    
+    <link rel="stylesheet" type="text/css" href="app/resource/css/patient-manager.css" />   
+    <link rel="stylesheet" type="text/css" href="app/resource/css/campaignpopup.css" />
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     
     <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>-->
@@ -26,7 +35,7 @@
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    
+    <script src="app/resource/js/jquery-1.10.2.min.js"></script>
     <!-- Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
@@ -36,10 +45,50 @@
 
     </script>
 
+
 </head>
 <body>
 <div class="container-fluid">
+        <div class="wrapper-holder" >
+                <!-- wrapper--> 
+                <div id="wrapper">
+                <!-- header -->
+                <header class="aza-header">
+                    <!-- header-frame -->
+                   <div class="aza-logo"></div>
+                
+                   
+                   <div class="nav-menu">
+                       <ul>
+                        <li  class="active"><a href="/patient">Patient</a></li>
+                        <li><a href="/campaign">Campaign</a></li>
+                        <li><a href="report.html">Reports</a></li>
+                         <li><a href="work-list.html">Work List</a></li>
+                
+                    </ul>
+                    
+                
+                        </div>
+                        
+                            <div class="header-holder">
+                            <ul class="inform">
+                                <li><a href="#" style="cursor:pointer;" title="Home">item01</a></li>
+                                <li class="style01"><a href="#" title="Information">item02</a></li>
+                                <li class="print"><a href="configuration.html" >Print</a></li>
+                                 <li><a class="back" href="#">Print</a></li>
+                                
+                            </ul>
+                            
+                           <div class="log_in_bx">
+                               <a href="login.html">LOGOUT</a>
+                           </div>
+                   </div>
+                    
+                   
+                
+                
+                </header>
   <patient>Loading...</patient>
-</div>
+</div></div>
 </body>
 </html>

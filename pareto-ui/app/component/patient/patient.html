@@ -1,98 +1,11 @@
-﻿	<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=940">
-    <meta name="MobileOptimized" content="940">
-    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-   <title>Pareto App®</title><link href="../../resource/css/all.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../resource/css/patient-manager.css" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--popup-->
-
-	 <script src="../../resource/js/jquery-1.10.2.min.js"></script>
-   
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#selectable tr').click(function(){
-			$(this).toggleClass('blue');
-		});
-		
-		$('li').click(function(){
-			$(this).toggleClass('actve');
-		});
-		
-		$('div').click(function(){
-			$(this).toggleClass('green');
-		});
+﻿
+<script src="app/resource/js/patientpopup.js"></script>
 
 
-	});
-	
-	$(document).ready(function(){
-		$(".clear-btn").click(function(){
-			$("tr").removeClass("actve-blue");
-			$("tr").removeClass("blue");
-		
-	});
-	
-	$(document).ready(function(){
-		
-		$('.edit_btn').click(function(){
-			$("#addbox").slideDown("slow");
-		});
-		
-		$('#ok').click(function(){
-			$("#addbox").slideUp("slow");
-		});
-			
-	});
-});
-</script>
-
-
-</head>
-<body>
-<div class="wrapper-holder" >
 <!-- wrapper--> 
 <div id="wrapper">
 <!-- header -->
-<header class="aza-header">
-    <!-- header-frame -->
-   <div class="aza-logo"></div>
 
-   
-   <div class="nav-menu">
-   	<ul>
-    	<li  class="active"><a href="/patient">Patient</a></li>
-        <li><a href="/campaign">Campaign</a></li>
-        <li><a href="report.html">Reports</a></li>
-         <li><a href="work-list.html">Work List</a></li>
-
-    </ul>
-    
-
-        </div>
-        
-            <div class="header-holder">
-            <ul class="inform">
-                <li><a href="#" style="cursor:pointer;" title="Home">item01</a></li>
-                <li class="style01"><a href="#" title="Information">item02</a></li>
-                <li class="print"><a href="configuration.html" >Print</a></li>
-                 <li><a class="back" href="#">Print</a></li>
-                
-            </ul>
-            
-           <div class="log_in_bx">
-               <a href="login.html">LOGOUT</a>
-           </div>
-   </div>
-    
-   
-
-
-</header>
 
 <div id="main" style="margin-top:-75px;">
 
@@ -447,7 +360,7 @@
   <!--End popup-2-->
    
 
-</div>
+
 
 <footer style="background:#fff; height:27px;" id="footerWrapper">
     <div class="footer">
@@ -456,7 +369,7 @@
     </div>
 </footer>
 
-</div>
+
 
 
 
@@ -521,6 +434,3 @@
    $(function () { $("[data-toggle='tooltip']").tooltip(); });
 </script>
 
-</body>
-
-</html>

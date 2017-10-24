@@ -8,6 +8,8 @@ CORS(app)
 
 from Patients import patientData
 
+from campaigns import campaignData
+
 #import the method defined 'patientData' in Patients.py
 
 @app.route('/PatientData', methods=['GET'])
@@ -19,6 +21,16 @@ def retrievePatientDetails():
     response=json.dumps(patients)
     return response
 
+#import the method defined 'campignData' in campigns.py
+
+@app.route('/campaignData', methods=['GET'])
+def retrievecampaignDetails():
+    campaigns = campaignData()
+# call the method and set a new series variable 'campignsData' here
+
+#To set the response as JSON, use the below code
+    response=json.dumps(campaigns)
+    return response
 
 def read_properties_file(file_path):
     with open(file_path) as f:

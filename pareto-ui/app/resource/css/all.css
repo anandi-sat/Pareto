@@ -266,7 +266,7 @@ section.intervention {
 }
 /* wrapper-holder */
 .wrapper-holder {
-    width: 980px;
+    width: 1000px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -299,7 +299,7 @@ section.intervention {
     float: left;
     text-indent: -9999px;
     overflow: hidden;
-    background: url('app/resource/images/samp-logo.png') no-repeat;
+    background: url('../images/samp-logo.png') no-repeat;
     width: 200px;
     height: 45px;
     margin: 6px 58px 0px 8px;
@@ -391,7 +391,7 @@ section.intervention {
         }
 
     .part-block .active a {
-        background: url(app/resource/images/sprite.png) no-repeat 0 -431px;
+        background: url(../images/sprite.png) no-repeat 0 -431px;
         color: #fff;
         text-shadow: none;
     }
@@ -437,7 +437,7 @@ section.intervention {
     }
 
         .add-nav a:after {
-            background: url(app/resource/images/sprite.png) no-repeat -362px 0;
+            background: url(../images/sprite.png) no-repeat -362px 0;
             width: 29px;
             height: 52px;
             content: '';
@@ -547,7 +547,7 @@ section.intervention {
     /* category */
     #content .category {
         float: left;
-        background:#000 url(app/resource/images/bg-section01.png) no-repeat;
+        background:#000 url(../images/bg-section01.png) no-repeat;
         background-size: 100% 100%;
         background-color: #494949;
         border-top: 1px solid #7d7d7d;
@@ -595,7 +595,7 @@ section.intervention {
         #content .popup-active .category:after {
             border-color: transparent #ebebec;
             border: none !important;
-            background: url(app/resource/images/arrow.png) no-repeat 1px 0;
+            background: url(../images/arrow.png) no-repeat 1px 0;
             width: 15px;
             height: 22px;
         }
@@ -624,7 +624,7 @@ section.intervention {
     #content .category .title:after {
         content: '';
         position: absolute;
-        background: url(app/resource/images/sprite.png) no-repeat -155px -185px;
+        background: url(../images/sprite.png) no-repeat -155px -185px;
         width: 48px;
         height: 39px;
         top: 0;
@@ -702,7 +702,7 @@ section.intervention {
         z-index: 10;
         top: 1px;
         left: 1px;
-        background: url(app/resource/images/bg-section02.png) no-repeat;
+        background: url(../images/bg-section02.png) no-repeat;
         width: 28px;
         height: 19px;
         font: 11px/19px 'opensans_semibold', Arial, Helvetica, sans-serif;
@@ -729,7 +729,7 @@ section.intervention {
         text-align: center;
         -webkit-box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.35);
         box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.35);
-        background: #000000 url(app/resource/images/bg-section03.png) no-repeat;
+        background: #000000 url(../images/bg-section03.png) no-repeat;
     }
 
     #content .category a {
@@ -899,7 +899,7 @@ section.intervention {
     }
 
     #content .category .info01.error a {
-        background: url(app/resource/images/sprite.png) no-repeat -155px -320px;
+        background: url(../images/sprite.png) no-repeat -155px -320px;
         width: 20px;
         height: 20px;
         display: block;
@@ -927,7 +927,7 @@ section.intervention {
     #content .category.measure-active:after {
         /*border-color:transparent #ebebec;*/
         border: none !important;
-        background: url(app/resource/images/arrow.png) no-repeat 1px 0;
+        background: url(../images/arrow.png) no-repeat 1px 0;
         width: 15px;
         height: 22px;
     }
@@ -948,7 +948,7 @@ section.intervention {
             display: block;
             border-color: transparent #ebebec;
             border: none !important;
-            background: url(app/resource/images/arrow.png) no-repeat 1px 0;
+            background: url(../images/arrow.png) no-repeat 1px 0;
             width: 15px;
             height: 22px;
         }
@@ -1381,7 +1381,7 @@ section.intervention {
     .subcategory li .info.error a {
         text-indent: -9999px;
         overflow: hidden;
-        background: url(app/resource/images/sprite.png) no-repeat -235px -320px;
+        background: url(../images/sprite.png) no-repeat -235px -320px;
         width: 18px;
         height: 18px;
         margin-right: 2px;
@@ -1443,7 +1443,7 @@ section.intervention {
             height: 24px;
             top: 4px;
             left: 8px;
-            background: url(app/resource/images/sprite.png) no-repeat 0 -146px;
+            background: url(../images/sprite.png) no-repeat 0 -146px;
         }
 
         #sidebar .block-info .title {
@@ -1474,7 +1474,7 @@ section.intervention {
 
     .block-rating .info {
         float: left;
-        background: url(app/resource/images/sprite.png) no-repeat 0 -303px;
+        background: url(../images/sprite.png) no-repeat 0 -303px;
         text-align: center;
         width: 50px;
         height: 46px;
@@ -1483,33 +1483,33 @@ section.intervention {
         font: 15px/39px 'opensans_extrabold', Arial, Helvetica, sans-serif;
     }
         /*.block-rating .info.col-Green{
-	background:url(app/resource/images/sprite.png) no-repeat 0 -303px;
+	background:url(../images/sprite.png) no-repeat 0 -303px;
 }
 
 .block-rating .info.col-Blue{
-	background:url(app/resource/images/sprite.png) no-repeat 0 -303px;
+	background:url(../images/sprite.png) no-repeat 0 -303px;
 }
 
 .block-rating .info.col-Red{
-	background:url(app/resource/images/sprite.png) no-repeat 0 -303px;
+	background:url(../images/sprite.png) no-repeat 0 -303px;
 }
 */
         .block-rating .info.col-Green {
-            background: url(app/resource/images/sprite.png) no-repeat -12px -315px;
+            background: url(../images/sprite.png) no-repeat -12px -315px;
         }
 
         .block-rating .info.col-Blue {
-            background: url(app/resource/images/sprite.png) no-repeat -101px -580px;
+            background: url(../images/sprite.png) no-repeat -101px -580px;
         }
 
         /*.block-rating .info.col-Green {
-  background: url(app/resource/images/sprite.png) no-repeat 0 -303px;
+  background: url(../images/sprite.png) no-repeat 0 -303px;
 }
 .block-rating .info.col-Blue {
-  background: url(app/resource/images/sprite.png) no-repeat -90px -570px;
+  background: url(../images/sprite.png) no-repeat -90px -570px;
 }*/
         .block-rating .info.col-Red {
-            background: url(app/resource/images/sprite.png) no-repeat -131px -844px; /*-178px -570px;*/
+            background: url(../images/sprite.png) no-repeat -131px -844px; /*-178px -570px;*/
         }
     /* stars */
     .block-rating .stars {
@@ -1529,7 +1529,7 @@ section.intervention {
             float: left;
             width: 29px;
             height: 30px;
-            background: url(app/resource/images/sprite.png) no-repeat 0 -215px;
+            background: url(../images/sprite.png) no-repeat 0 -215px;
         }
 
         .block-rating .stars .style01 a {
@@ -1797,7 +1797,7 @@ section.intervention {
         }
 
             .block-inform .info a:after {
-                background: url(app/resource/images/sprite.png) no-repeat -289px 0;
+                background: url(../images/sprite.png) no-repeat -289px 0;
                 width: 38px;
                 height: 27px;
                 content: '';
@@ -1870,7 +1870,7 @@ section.intervention {
             height: 24px;
             top: 0;
             left: 0;
-            background: url(app/resource/images/sprite.png) no-repeat -236px 0;
+            background: url(../images/sprite.png) no-repeat -236px 0;
         }
 
         .block-inform .row .col:first-child:after {
@@ -1937,7 +1937,7 @@ section.intervention {
         overflow: hidden;
         height: 42px;
         padding: 16px 23px 10px 15px;
-        background: url(app/resource/images/sprite.png) no-repeat 0 -565px;
+        background: url(../images/sprite.png) no-repeat 0 -565px;
         z-index: 10;
     }
 
@@ -2388,8 +2388,8 @@ section.intervention {
     .measure-view-content .block-info:after {
         content: '';
         position: absolute;
-        background: url(app/resource/images/sprite1.png) no-repeat -274px -290px;
-        /*background: url(app/resource/images/sprite1.png) no-repeat -124px -210px;*/
+        background: url(../images/sprite1.png) no-repeat -274px -290px;
+        /*background: url(../images/sprite1.png) no-repeat -124px -210px;*/
         width: 54px;
         height: 54px;
         top: 7px;
@@ -2699,7 +2699,7 @@ section.intervention {
         /*height:474px;*/
         margin: 0 0 0 2px;
         padding: 17px 24px 12px 44px;
-        background: url(app/resource/images/line01.png) repeat-y 329px 0;
+        background: url(../images/line01.png) repeat-y 329px 0;
         -webkit-box-shadow: inset -5px -25px 15px rgba(195, 195, 195, 0.15), 0 2px 3px rgba(195, 195, 195, 0.25);
         box-shadow: inset -5px -25px 15px rgba(195, 195, 195, 0.15), 0 2px 3px rgba(195, 195, 195, 0.25);
     }
@@ -2735,7 +2735,7 @@ section.intervention {
         width: 40px;
         padding: 16px 14px 15px 15px;
         height: 40px;
-        background: url(app/resource/images/sprite.png) no-repeat -21px -659px;
+        background: url(../images/sprite.png) no-repeat -21px -659px;
     }
 
     .cycle-gallery.style01 .prev,
@@ -2911,7 +2911,7 @@ section.intervention {
     margin: 0 auto;
     height: 150px;
     position: relative;
-    background: url(app/resource/images/bg-section05.png) no-repeat;
+    background: url(../images/bg-section05.png) no-repeat;
 }
 
     .block-graph .columns {
@@ -2949,7 +2949,7 @@ section.intervention {
 .block-graph .column:after{
             content:'';
             position:absolute;
-            background:url(app/resource/images/sprite.png) no-repeat -306px -853px;
+            background:url(../images/sprite.png) no-repeat -306px -853px;
             width:55px;
             height:13px;
             right:-47px;
@@ -3010,7 +3010,7 @@ section.intervention {
     }
 
     .block-graph .column .info {
-        background: url(app/resource/images/sprite.png) no-repeat -22px -897px;
+        background: url(../images/sprite.png) no-repeat -22px -897px;
         width: 48px;
         height: 53PX;
         text-align: center;
@@ -3052,7 +3052,7 @@ section.intervention {
         height: 32px;
         padding: 5px 0px 0px 5px;
         /*color:#579d37;*/
-        background: url(app/resource/images/sprite.png) no-repeat -265px -891px;
+        background: url(../images/sprite.png) no-repeat -265px -891px;
         font: 11px/38px 'opensans_semibold', Arial, Helvetica, sans-serif;
         top: -66px;
     }
@@ -3154,7 +3154,7 @@ section.intervention {
     overflow: hidden;
     width: 11px;
     height: 9px;
-    background: url(app/resource/images/sprite.png) no-repeat -481px 0;
+    background: url(../images/sprite.png) no-repeat -481px 0;
 }
 
 .inner .stars li {
@@ -3214,7 +3214,7 @@ section.intervention {
     position: absolute;
     top: 8px;
     left: 43px;
-    background: url(app/resource/images/sprite.png) no-repeat -284px -675px;
+    background: url(../images/sprite.png) no-repeat -284px -675px;
     width: 46px;
     height: 51px;
 }
@@ -3237,7 +3237,7 @@ section.intervention {
     top: 70px;
     left: -56px;
     padding: 50px 0px 0px 56px;
-    background: url(app/resource/images/stagnant_ascending.png) no-repeat;
+    background: url(../images/stagnant_ascending.png) no-repeat;
     width: 46px;
     height: 51px;
 }
@@ -3292,13 +3292,13 @@ section.intervention {
 .popup .info-area.style01:before {
     width: 57px;
     height: 64px;
-    background: url(app/resource/images/sprite.png) no-repeat -281px -747px;
+    background: url(../images/sprite.png) no-repeat -281px -747px;
 }
 
 .popup .info-area.nothing:before {
     width: 57px;
     height: 64px;
-    /*background:url(app/resource/images/sprite.png) no-repeat -281px -747px;*/
+    /*background:url(../images/sprite.png) no-repeat -281px -747px;*/
 }
 
 .popup .btn,
@@ -3354,7 +3354,7 @@ section.intervention {
     .popup .btn:after {
         content: '';
         position: absolute;
-        background: url(app/resource/images/sprite.png) no-repeat -417px -696px;
+        background: url(../images/sprite.png) no-repeat -417px -696px;
         width: 21px;
         height: 21px;
         top: 5px;
@@ -3530,7 +3530,7 @@ section.intervention {
     vertical-align: middle;
     display: inline-block;
     white-space: normal;
-    /*background:url(app/resource/images/sprite.png) no-repeat -423px -559px;*/
+    /*background:url(../images/sprite.png) no-repeat -423px -559px;*/
     width: 26px;
     height: 25px;
     text-align: center;
@@ -3539,34 +3539,34 @@ section.intervention {
 }
 
 .table-frame .column .info-star5 {
-    background: url(app/resource/images/sprite_stars.png) no-repeat 0px 1px;
+    background: url(../images/sprite_stars.png) no-repeat 0px 1px;
     color: #000;
 }
 
 .table-frame .column .info-star4 {
-    background: url(app/resource/images/sprite_stars.png) no-repeat 0px -24px;
+    background: url(../images/sprite_stars.png) no-repeat 0px -24px;
     color: #000;
 }
 
 .table-frame .column .info-star3 {
-    background: url(app/resource/images/sprite_stars.png) no-repeat 0px -54px;
+    background: url(../images/sprite_stars.png) no-repeat 0px -54px;
     color: #fff;
 }
 
 .table-frame .column .info-star2 {
-    background: url(app/resource/images/sprite_stars.png) no-repeat 0px -81px;
+    background: url(../images/sprite_stars.png) no-repeat 0px -81px;
     color: #fff;
 }
 
 .table-frame .column .info-star1 {
-    background: url(app/resource/images/sprite_stars.png) no-repeat 0px -108px;
+    background: url(../images/sprite_stars.png) no-repeat 0px -108px;
     color: #fff;
 }
 
 .table-frame .column .info.error {
     text-indent: -9999px;
     overflow: hidden;
-    background: url(app/resource/images/sprite.png) no-repeat -467px -558px;
+    background: url(../images/sprite.png) no-repeat -467px -558px;
     width: 28px;
     height: 28px;
     margin: -4px 0 -5px;
@@ -3677,7 +3677,7 @@ section.intervention {
 
 .table-frame .columns .info {
     display: block;
-    background: url(app/resource/images/round_BG.png) no-repeat;
+    background: url(../images/round_BG.png) no-repeat;
     background-size: 24px auto;
     width: 24px;
     height: 24px;
@@ -3760,7 +3760,7 @@ a.col-Blue {
 }
 
     #meter .Blue {
-        background: url(app/resource/images/img-blue.png) no-repeat 0 0;
+        background: url(../images/img-blue.png) no-repeat 0 0;
         width: 50%;
         height: 25px;
         position: absolute;
@@ -3768,7 +3768,7 @@ a.col-Blue {
     }
 
 #meter-b .green {
-    background: url('app/resource/images/meter-b-green.png') no-repeat 0 -1px;
+    background: url('../images/meter-b-green.png') no-repeat 0 -1px;
     width: 50%;
     height: 75px;
     position: absolute;
@@ -3821,7 +3821,7 @@ a.col-Blue {
     }
 
 #meter .Green {
-    background: url(app/resource/images/img-green.png) no-repeat 0 -1px;
+    background: url(../images/img-green.png) no-repeat 0 -1px;
     width: 50%;
     height: 25px;
     position: absolute;
@@ -3829,7 +3829,7 @@ a.col-Blue {
 }
 
 #meter .Red {
-    background: url(app/resource/images/img-red.png) no-repeat 0 -1px;
+    background: url(../images/img-red.png) no-repeat 0 -1px;
     width: 50%;
     height: 25px;
     position: absolute;
@@ -3837,7 +3837,7 @@ a.col-Blue {
 }
 
 #meter .middle {
-    background: url(app/resource/images/img-middle.png) no-repeat 0 -1px;
+    background: url(../images/img-middle.png) no-repeat 0 -1px;
     width: 80%;
     height: 25px;
     position: absolute;
@@ -3845,7 +3845,7 @@ a.col-Blue {
 }
 
     #meter .middle .value {
-        background: url(app/resource/images/value.png) no-repeat 0 0;
+        background: url(../images/value.png) no-repeat 0 0;
         width: 27px;
         height: 22px;
         position: absolute;
@@ -3863,7 +3863,7 @@ a.col-Blue {
         }
 
 #meter .bottom {
-    background: url(app/resource/Images/Img-bottom.png) no-repeat 0 -1px;
+    background: url(../images/Img-bottom.png) no-repeat 0 -1px;
     width: 100%;
     height: 25px;
     position: absolute;
@@ -3931,7 +3931,7 @@ a.col-Blue {
     }
 
 #wrapper-login {
-    background: url(app/resource/images/bg.png) no-repeat 0 0;
+    background: url(../images/bg.png) no-repeat 0 0;
     width: 940px;
     margin: 0 auto;
     padding: 0 0 50px;
@@ -3997,7 +3997,7 @@ a.col-Blue {
     }
 
         #icons .inform a:after {
-            background: url("app/resource/images/sprite2.png") no-repeat scroll -51px -606px transparent;
+            background: url("../images/sprite2.png") no-repeat scroll -51px -606px transparent;
             content: "";
             height: 58px;
             left: 50%;
@@ -4012,7 +4012,7 @@ a.col-Blue {
     }
 
 #logo-pane #logo a {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -64px -46px transparent;
+    background: url("../images/sprite2.png") no-repeat scroll -64px -46px transparent;
     display: block;
     height: 72px;
     overflow: hidden;
@@ -4043,7 +4043,7 @@ a.col-Blue {
     }
 
 .input {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -52px -156px transparent;
+    background: url("../images/sprite2.png") no-repeat scroll -52px -156px transparent;
     display: block;
     height: 39px;
     width: 181px;
@@ -4117,7 +4117,7 @@ input {
 }
 
     input.submitBtn {
-        background: url("app/resource/images/sprite2.png") no-repeat scroll -52px -475px transparent;
+        background: url("../images/sprite2.png") no-repeat scroll -52px -475px transparent;
         border: 0 none;
         width: 144px;
         height: 46px;
@@ -4145,14 +4145,14 @@ section#ad {
 }
 
 .ad1 {
-    background: url("app/resource/images/ad1.png") no-repeat 0 0;
+    background: url("../images/ad1.png") no-repeat 0 0;
     width: 294px;
     height: 178px;
     float: left;
 }
 
 .ad2 {
-    background: url("app/resource/images/ad2.png") no-repeat 0 0;
+    background: url("../images/ad2.png") no-repeat 0 0;
     width: 294px;
     height: 178px;
     float: right;
@@ -4182,7 +4182,7 @@ footer {
     }
 /*login contract/plan*/
 #wrapper-login2 {
-    /*background:url(app/resource/images/bg-popup.jpg) no-repeat 0 0;*/
+    /*background:url(../images/bg-popup.jpg) no-repeat 0 0;*/
     width: 940px;
     margin: 0px auto;
     padding: 0px 0px 0px;
@@ -4209,14 +4209,14 @@ footer {
     }
 
         #header-login2 .next-btn a {
-            background: url("app/resource/images/sprite2.png") no-repeat scroll -67px -663px transparent;
+            background: url("../images/sprite2.png") no-repeat scroll -67px -663px transparent;
             height: 46px;
             width: 58px;
             display: block;
         }
 
 #wrapper-login2 #icons .inform {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -408px -404px transparent;
+    background: url("../images/sprite2.png") no-repeat scroll -408px -404px transparent;
     width: 167px;
     height: 54px;
     float: left;
@@ -4258,7 +4258,7 @@ footer {
 }
 
     #wrapper-login2 #icons .inform a:after {
-        /*background:url("app/resource/images/sprite2.png") no-repeat scroll -371px -404px transparent;*/
+        /*background:url("../images/sprite2.png") no-repeat scroll -371px -404px transparent;*/
         background: none;
         content: "";
         height: 58px;
@@ -4290,7 +4290,7 @@ footer {
 }
 
 #wrapper-login2 #logo-pane #logo a {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -64px -46px transparent;
+    background: url("../images/sprite2.png") no-repeat scroll -64px -46px transparent;
     display: block;
     height: 72px;
     overflow: hidden;
@@ -4307,7 +4307,7 @@ footer {
 }
 
     #forms-contract .or {
-        background: url("app/resource/images/sprite2.png") no-repeat scroll -55px -389px transparent;
+        background: url("../images/sprite2.png") no-repeat scroll -55px -389px transparent;
         width: 72px;
         height: 72px;
         display: block;
@@ -4357,7 +4357,7 @@ footer {
 }
 
 .contract-id ul li.style01 {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -52px -227px transparent;
+    background: url("../images/sprite2.png") no-repeat scroll -52px -227px transparent;
     width: 99px;
     height: 40px;
     float: left;
@@ -4386,7 +4386,7 @@ footer {
 
 .contract-id input.go-btn,
 .organization input.go-btn {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -59px -332px transparent;
+    background: url("../images/sprite2.png") no-repeat scroll -59px -332px transparent;
     border: 0 none;
     width: 67px;
     height: 45px;
@@ -4404,7 +4404,7 @@ footer {
 
 .organization ul li.style01,
 .organization ul li.style02 {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -50px -282px transparent;
+    background: url("../images/sprite2.png") no-repeat scroll -50px -282px transparent;
     width: 249px;
     height: 40px;
     float: left;
@@ -4440,7 +4440,7 @@ footer#login-contract {
 }
 /*login 08*/
 #wrapper-brochure {
-    /*background: url(app/resource/images/bg-brochure.png) no-repeat 0 0;*/
+    /*background: url(../images/bg-brochure.png) no-repeat 0 0;*/
     width: 940px;
     margin: 0 auto;
     padding: 0 0 50px;
@@ -4494,7 +4494,7 @@ footer#login-contract {
     }
 
 .login2 input.submitBtn {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -52px -538px transparent !important;
+    background: url("../images/sprite2.png") no-repeat scroll -52px -538px transparent !important;
     border: none;
     text-decoration: none;
     outline: none;
@@ -4521,7 +4521,7 @@ footer#login-contract {
 }
 
     .login2-container .ipad {
-        background: url("app/resource/images/ipad.png") no-repeat 0 0;
+        background: url("../images/ipad.png") no-repeat 0 0;
         width: 321px;
         height: 242px;
         float: left;
@@ -4553,7 +4553,7 @@ footer#login-contract {
             }
 
 .product-brochure {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -59px -734px transparent !important;
+    background: url("../images/sprite2.png") no-repeat scroll -59px -734px transparent !important;
     height: 50px;
     left: 38px;
     position: relative;
@@ -4583,12 +4583,12 @@ footer#login-contract {
 }
 
 .login2 .submit9 input.submitBtn {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -52px -793px transparent !important;
+    background: url("../images/sprite2.png") no-repeat scroll -52px -793px transparent !important;
     top: 46px !important;
 }
 
 .login2 .submit9_new input.submitBtn {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -52px -793px transparent !important;
+    background: url("../images/sprite2.png") no-repeat scroll -52px -793px transparent !important;
     top: 39px !important;
     left: 0px !important;
 }
@@ -4617,7 +4617,7 @@ footer#login-contract {
 }
 
     .arrows a.arrow-left {
-        background: url('app/resource/images/sprite2.png') no-repeat scroll -398px -334px transparent !important;
+        background: url('../images/sprite2.png') no-repeat scroll -398px -334px transparent !important;
         position: absolute;
         width: 47px;
         height: 47px;
@@ -4625,7 +4625,7 @@ footer#login-contract {
     }
 
     .arrows a.arrow-right {
-        background: url('app/resource/images/sprite2.png') no-repeat scroll -459px -334px transparent !important;
+        background: url('../images/sprite2.png') no-repeat scroll -459px -334px transparent !important;
         position: absolute;
         width: 47px;
         height: 47px;
@@ -4633,7 +4633,7 @@ footer#login-contract {
     }
 
 .shadow {
-    background: url('app/resource/images/shadow.png') no-repeat 0 0;
+    background: url('../images/shadow.png') no-repeat 0 0;
     width: 940px;
     height: 34px;
 }
@@ -4647,7 +4647,7 @@ footer#login-contract {
 }
 
 .product-brochure9 {
-    background: url('app/resource/images/sprite2.png') no-repeat scroll -59px -734px transparent !important;
+    background: url('../images/sprite2.png') no-repeat scroll -59px -734px transparent !important;
     width: 222px;
     height: 50px;
     margin: 0 auto;
@@ -4733,7 +4733,7 @@ select {
 }
 
     #meter-b .measurements_01 {
-        background: url('app/resource/images/measurements_01.png') no-repeat;
+        background: url('../images/measurements_01.png') no-repeat;
         width: 11px;
         height: 48px;
         position: absolute;
@@ -4744,7 +4744,7 @@ select {
     }
 
     #meter-b .measurements_02 {
-        background: url('app/resource/images/measurements_02.png') no-repeat;
+        background: url('../images/measurements_02.png') no-repeat;
         width: 11px;
         height: 48px;
         position: absolute;
@@ -4755,7 +4755,7 @@ select {
     }
 
     #meter-b .measurements_03 {
-        background: url('app/resource/images/measurements_03.png') no-repeat;
+        background: url('../images/measurements_03.png') no-repeat;
         width: 11px;
         height: 48px;
         position: absolute;
@@ -4766,7 +4766,7 @@ select {
     }
 
     #meter-b .measurements_04 {
-        background: url('app/resource/images/measurements_04.png') no-repeat;
+        background: url('../images/measurements_04.png') no-repeat;
         width: 11px;
         height: 48px;
         position: absolute;
@@ -4777,7 +4777,7 @@ select {
     }
 
     #meter-b .measurements_05 {
-        background: url('app/resource/images/measurements_05.png') no-repeat;
+        background: url('../images/measurements_05.png') no-repeat;
         width: 11px;
         height: 48px;
         position: absolute;
@@ -4788,7 +4788,7 @@ select {
     }
 
     #meter-b .blue {
-        background: url('app/resource/images/meter-b-blue.png') no-repeat 0 0;
+        background: url('../images/meter-b-blue.png') no-repeat 0 0;
         width: 50%;
         height: 75px;
         position: absolute;
@@ -4796,7 +4796,7 @@ select {
     }
 
         #meter-b .blue .value1 {
-            background: url('app/resource/images/value1.png') no-repeat scroll 0 0 transparent;
+            background: url('../images/value1.png') no-repeat scroll 0 0 transparent;
             height: 51px;
             position: absolute;
             right: 0;
@@ -4816,7 +4816,7 @@ select {
 
 
     #meter-b .green .value1 {
-        background: url('app/resource/images/value1.png') no-repeat scroll 0 0 transparent;
+        background: url('../images/value1.png') no-repeat scroll 0 0 transparent;
         height: 51px;
         position: absolute;
         right: 0;
@@ -4835,7 +4835,7 @@ select {
         }
 
     #meter-b .middle {
-        background: url('app/resource/images/meter-b-middle.png') no-repeat 0 0;
+        background: url('../images/meter-b-middle.png') no-repeat 0 0;
         width: 50%;
         height: 75px;
         position: absolute;
@@ -4843,7 +4843,7 @@ select {
     }
 
         #meter-b .middle .value3 {
-            background: url('app/resource/images/value3.png') no-repeat 0 0;
+            background: url('../images/value3.png') no-repeat 0 0;
             width: 47px;
             height: 50px;
             position: absolute;
@@ -4861,7 +4861,7 @@ select {
             }
 
     #meter-b .bottom {
-        background: url('app/resource/images/meter-b-bottom.png') no-repeat 0 0;
+        background: url('../images/meter-b-bottom.png') no-repeat 0 0;
         width: 100%;
         height: 75px;
         position: absolute;
@@ -4902,7 +4902,7 @@ h1 {
 
 .logout {
     float: right;
-    background: url('app/resource/images/sprite.png') no-repeat -128px -77px;
+    background: url('../images/sprite.png') no-repeat -128px -77px;
     width: 54px;
     height: 51px;
     margin-left: 1px;
@@ -4924,7 +4924,7 @@ h1 {
 }
 
 .input-login2 {
-    background: url("app/resource/images/sprite2.png") no-repeat scroll -378px -478px transparent !important;
+    background: url("../images/sprite2.png") no-repeat scroll -378px -478px transparent !important;
     width: 244px !important;
     /*left:-66px !important;*/
 }
@@ -5080,7 +5080,7 @@ h1 {
     #sidebar .inform .info.error a {
         text-indent: -9999px;
         overflow: hidden;
-        background: url('app/resource/images/sprite.png') no-repeat -225px -318px;
+        background: url('../images/sprite.png') no-repeat -225px -318px;
         width: 35px;
         height: 20px;
         display: block;
@@ -5146,7 +5146,7 @@ section#popup03-Btn {
 }
 
 #popupBg {
-    background: url('app/resource/images/popup-bg.png') repeat 0 0;
+    background: url('../images/popup-bg.png') repeat 0 0;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -5156,7 +5156,7 @@ section#popup03-Btn {
 }
 
 .popup03 {
-    background: url('app/resource/images/popup.png') no-repeat 0 0;
+    background: url('../images/popup.png') no-repeat 0 0;
     height: 188px;
     width: 504px;
     z-index: 99999;
@@ -5205,7 +5205,7 @@ p {
 }
 
 input.okButton {
-    background: url('app/resource/images/okButton.png') no-repeat 0 0;
+    background: url('../images/okButton.png') no-repeat 0 0;
     width: 68px;
     height: 46px;
     border: 0;
@@ -5284,7 +5284,7 @@ section.subscribe {
     }
 
     .form-subscribe input.submit {
-        background: url('app/resource/Images/submit.png') no-repeat 0 0;
+        background: url('../images/submit.png') no-repeat 0 0;
         width: 114px;
         height: 30px;
         border: none;
@@ -5304,7 +5304,7 @@ section.improve-footer p {
 }
 
 .rate-zero {
-    background: url('app/resource/images/sprite_white.png') no-repeat -155px -369px;
+    background: url('../images/sprite_white.png') no-repeat -155px -369px;
     width: 42px;
     height: 42px;
     display: block;
@@ -5314,7 +5314,7 @@ section.improve-footer p {
 }
 
 .rate-zeroblack {
-    background: url('app/resource/images/sprite1.png') no-repeat -155px -369px;
+    background: url('../images/sprite1.png') no-repeat -155px -369px;
     width: 42px;
     height: 42px;
     display: block;
@@ -5331,19 +5331,19 @@ section.improve-footer p {
 }
 
 .block-inform .info .style05 a:after {
-    background: url('app/resource/images/sprite.png') no-repeat -209px -47px;
+    background: url('../images/sprite.png') no-repeat -209px -47px;
 }
 
 .block-inform .info .style06 a:after {
-    background: url('app/resource/images/sprite.png') no-repeat -209px -82px;
+    background: url('../images/sprite.png') no-repeat -209px -82px;
 }
 
 .block-inform .info .style07 a:after {
-    background: url('app/resource/images/sprite.png') no-repeat -207px -116px;
+    background: url('../images/sprite.png') no-repeat -207px -116px;
 }
 
 .block-inform .info .style08 a:after {
-    background: url('app/resource/images/sprite.png') no-repeat -209px -155px;
+    background: url('../images/sprite.png') no-repeat -209px -155px;
 }
 
 #forms {
@@ -5502,7 +5502,7 @@ section.improve-footer p {
 
 .block-graph .column1 .info,
 .block-graph .column1 .info1 {
-    background: url(app/resource/images/sprite.png) no-repeat -21px -894px;
+    background: url(../images/sprite.png) no-repeat -21px -894px;
     width: 48px;
     height: 53px;
     text-align: center;
@@ -5535,7 +5535,7 @@ section.improve-footer p {
     height: 32px;
     padding: 6px;
     color: #579d37;
-    background: url(app/resource/images/sprite.png) no-repeat -268px -890px;
+    background: url(../images/sprite.png) no-repeat -268px -890px;
     font: 11px/38px 'opensans_semibold', Arial, Helvetica, sans-serif;
     top: -36px;
     text-align: center;
@@ -5629,7 +5629,7 @@ section.improve-footer p {
 
 .col-Gray {
     float: left;
-    background: url('app/resource/images/sprite.png') no-repeat -74px -303px;
+    background: url('../images/sprite.png') no-repeat -74px -303px;
     text-align: center;
     width: 74px;
     height: 70px;
@@ -5676,7 +5676,7 @@ section.improve-footer p {
 }
 
 .header-holder .inform a {
-    background: transparent url('app/resource/images/sprite_sitemenu_icons.png') -10px -11px;
+    background: transparent url('../images/sprite_sitemenu_icons.png') -10px -11px;
     border: none;
     width: 40px;
     height: 40px;
@@ -5690,7 +5690,7 @@ section.improve-footer p {
     }
 	
 .header-holder .inform .back{
-    background: transparent url('app/resource/images/sprite_sitemenu_icons.png') -11px -105px;
+    background: transparent url('../images/sprite_sitemenu_icons.png') -11px -105px;
     border: none;
     width: 40px;
     height: 40px;
@@ -5698,7 +5698,7 @@ section.improve-footer p {
 }
 
 .header-holder .inform .back a{
-    background: transparent url('app/resource/images/sprite_sitemenu_icons.png') -11px -105px;
+    background: transparent url('../images/sprite_sitemenu_icons.png') -11px -105px;
     border: none;
     width: 40px;
     height: 40px;
@@ -5948,6 +5948,8 @@ section.improve-footer p {
     table-layout: fixed;
     width: 100%;
     border: 0;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
     .container > section.block {
@@ -6050,7 +6052,7 @@ section.improve-footer p {
             display: block;
             width: 9px;
             height: 16px;
-            background: url('app/resource/images/arrow_dark.png') no-repeat 0 0;
+            background: url('../images/arrow_dark.png') no-repeat 0 0;
             position: absolute;
             top: 50%;
             right: -9px;
@@ -6339,7 +6341,7 @@ section.improve-footer p {
 
     .trend-analysis .graph,
     .comparative-analysis .graph {
-        background: #ffffff url("app/resource/images/bg-section05.png") no-repeat center center;
+        background: #ffffff url("../images/bg-section05.png") no-repeat center center;
         width: 220px;
         height: 150px;
         margin: 0 auto;
@@ -6930,7 +6932,7 @@ section.improve-footer p {
     }
 
     .monthly-analysis nav .btn {
-        background: url('app/resource/images/sprite_sitemenu_icons.png') no-repeat -10px -210px;
+        background: url('../images/sprite_sitemenu_icons.png') no-repeat -10px -210px;
         height: 30px;
         display: inline-block;
         width: 45px;
@@ -7154,7 +7156,7 @@ section.improve-footer p {
         .wrapper-holder.login .text-block .launch,
         .wrapper-holder.login .text-block .download,
         .wrapper-holder.login .footer .updates {
-            background: url('app/resource/images/sprite_login.jpg') no-repeat 0 0;
+            background: url('../images/sprite_login.jpg') no-repeat 0 0;
         }
 
         .wrapper-holder.login .bookmark {
@@ -7236,7 +7238,7 @@ section.improve-footer p {
             .wrapper-holder.login .news-block ul {
                 font-family: opensans_regular;
                 font-size: 12px;
-                list-style: disc outside url('app/resource/images/list-style-image.jpg');
+                list-style: disc outside url('../images/list-style-image.jpg');
                 line-height: 20px;
             }
 
@@ -7977,7 +7979,7 @@ Block-Rating--12-19-014
 
     .container-marquee li {
         /*float: left;*/
-        background-image: url('app/resource/images/list-style-image.jpg');
+        background-image: url('../images/list-style-image.jpg');
         background-repeat: no-repeat;
         background-position: 4px 6px;
         padding-left: 20px;
@@ -8101,7 +8103,7 @@ span.paginatecircle { /* CSS for paginate circle spans. Required */
 }
 
 .box .label {
-    background: url(app/resource/Images/calendar.png) no-repeat left;
+    background: url(../images/calendar.png) no-repeat left;
     font-size: 12px;
     text-indent: 25px;
 }
@@ -8216,7 +8218,7 @@ span.paginatecircle { /* CSS for paginate circle spans. Required */
 .box .timer-lg {
     width: 112px;
     height: 46px;
-    background: url(app/resource/Images/timer-lg.png) no-repeat;
+    background: url(../images/timer-lg.png) no-repeat;
     margin: 0 auto;
 }
 
@@ -8240,7 +8242,7 @@ span.paginatecircle { /* CSS for paginate circle spans. Required */
 
 .box .paln-button .info {
     float: right;
-    background: url(app/resource/images/sprite.png) no-repeat -30px -434px;
+    background: url(../images/sprite.png) no-repeat -30px -434px;
     text-align: center;
     text-indent: 2px;
     width: 24px;
@@ -8639,7 +8641,7 @@ Ccontentpanel
         width: 76px;
         height: 25px;
         display: inline-block;
-        background: url(app/resource/Images/count.png) no-repeat;
+        background: url(../images/count.png) no-repeat;
         position: relative;
         top: 8px;
     }
@@ -8648,7 +8650,7 @@ Ccontentpanel
         width: 147px;
         height: 25px;
         display: inline-block;
-        background: url(app/resource/Images/count-a.png) no-repeat;
+        background: url(../images/count-a.png) no-repeat;
         position: relative;
         top: 8px;
     }
@@ -9181,7 +9183,7 @@ Plan Rating Predictor
 */
 
 .content-panel-two .down-arrow {
-    background: url(app/resource/Images/down-arrow.png) no-repeat;
+    background: url(../images/down-arrow.png) no-repeat;
     width: 85px;
     height: 24px;
     position: relative;
@@ -9236,7 +9238,7 @@ ul.task-list, ul.targt-list {
             height: 17px;
             background: #ccc;
             display: inline-block;
-            background: url(app/resource/Images/close-blue.png) no-repeat;
+            background: url(../images/close-blue.png) no-repeat;
             position: relative;
             top: 3px;
             cursor: pointer;
@@ -9376,7 +9378,7 @@ ul.targt-list a{ font-size:11px;}
         }
 
 .planrating-block .cr_btn {
-    background: url(app/resource/Images/sprite2.png) no-repeat -530px -288px;
+    background: url(../images/sprite2.png) no-repeat -530px -288px;
     width: 15px;
     height: 15px;
     float: left;
@@ -9384,7 +9386,7 @@ ul.targt-list a{ font-size:11px;}
 }
 
 .planrating-block .trgt_btn {
-    background: url(app/resource/Images/sprite2.png) no-repeat -551px -288px;
+    background: url(../images/sprite2.png) no-repeat -551px -288px;
     width: 15px;
     height: 15px;
     float: left;
@@ -9677,7 +9679,7 @@ Bsic Simulator
         width: 16px;
         height: 24px;
         position: absolute;
-        background: url(app/resource/Images/sprite2.png) no-repeat -520px -347px;
+        background: url(../images/sprite2.png) no-repeat -520px -347px;
         left: 455px;
         right: 0;
         top: 327px;
@@ -9842,7 +9844,7 @@ Bsic Simulator
 
 .crrnt-rating .info {
     float: left;
-    background: url(app/resource/images/sprite.png) no-repeat -30px -434px;
+    background: url(../images/sprite.png) no-repeat -30px -434px;
     text-align: center;
     width: 26px;
     height: 22px;
@@ -9865,7 +9867,7 @@ Bsic Simulator
 
 .trgt-rating .info {
     float: left;
-    background: url(app/resource/images/sprite.png) no-repeat -30px -434px;
+    background: url(../images/sprite.png) no-repeat -30px -434px;
     text-align: center;
     width: 26px;
     height: 22px;
@@ -9875,7 +9877,7 @@ Bsic Simulator
 }
 
 .measure-content .info {
-    background: url(app/resource/images/sprite.png) no-repeat 31px -315px;
+    background: url(../images/sprite.png) no-repeat 31px -315px;
     text-align: center;
     text-indent: 48px;
     width: 85px;
@@ -9937,14 +9939,14 @@ Bsic Simulator
 	width:23px;
 	height:23px;
 	float:left;
-	background:url(app/resource/Images/sprite2.png) no-repeat -573px -284px;
+	background:url(../images/sprite2.png) no-repeat -573px -284px;
 }
 
 .impact-block-inner .per {
 	width:14px;
 	height:32px;
 	float:left;
-	background:url(app/resource/Images/sprite2.png) no-repeat -601px -274px;
+	background:url(../images/sprite2.png) no-repeat -601px -274px;
 }
 
 
@@ -9952,7 +9954,7 @@ Bsic Simulator
 	width:23px;
 	height:23px;
 	float:left;
-	background:url(app/resource/Images/sprite2.png) no-repeat -615px -284px;
+	background:url(../images/sprite2.png) no-repeat -615px -284px;
 }
 
 
@@ -9960,7 +9962,7 @@ Bsic Simulator
         width: 18px;
         height: 23px;
         float: left;
-        background: url(app/resource/Images/sprite2.png) no-repeat -639px -268px;
+        background: url(../images/sprite2.png) no-repeat -639px -268px;
         margin-left: 10px;
     }
 
@@ -10026,7 +10028,7 @@ Bsic Simulator
 
     .paln-button .info {
         float: right;
-        background: url(app/resource/images/sprite.png) no-repeat -30px -434px;
+        background: url(../images/sprite.png) no-repeat -30px -434px;
         text-align: center;
         text-indent: 2px;
         width: 24px;
@@ -10082,7 +10084,7 @@ Path Of ResistANCE
         }
 
         .path-of-least table th .icon {
-            background: url(app/resource/Images/conf-icon.png) no-repeat right;
+            background: url(../images/conf-icon.png) no-repeat right;
             padding-left: 17px;
         }
 
@@ -10151,7 +10153,7 @@ Path Of ResistANCE
     }
 
 .timer {
-    background: url(app/resource/Images/timer.png) no-repeat;
+    background: url(../images/timer.png) no-repeat;
     width: 78px;
     height: 24px;
     float: left;
@@ -10322,7 +10324,7 @@ PLAN -RATING _Gadgets
     float: left;
     background: #f0eeee;
     border-radius: 10px;
-    background: url(app/resource/Images/calculator_bg.png) no-repeat;
+    background: url(../images/calculator_bg.png) no-repeat;
     margin-left: 30px;
 }
 
@@ -10339,7 +10341,7 @@ PLAN -RATING _Gadgets
         width: 80px;
         height: 44px;
         position: relative;
-        background: url(app/resource/Images/sprite2.png) no-repeat -548px -402px;
+        background: url(../images/sprite2.png) no-repeat -548px -402px;
         float: left;
         z-index: 99999;
         top: 0;
@@ -10509,7 +10511,7 @@ PLAN -RATING _Gadgets
 }
 
     .clct-button .btn {
-        background-image: url(app/resource/Images/sprite2.png);
+        background-image: url(../images/sprite2.png);
         background-repeat: no-repeat;
         background-position: -549px -402px;
         position: relative;
@@ -10536,7 +10538,7 @@ PLAN -RATING _Gadgets
     }
 
         .clct-button .btn span {
-            background-image: url(app/resource/Images/sprite2.png);
+            background-image: url(../images/sprite2.png);
             background-repeat: no-repeat;
             background-position: -514px -288px;
             float: right;
@@ -10550,7 +10552,7 @@ PLAN -RATING _Gadgets
     width: 80px;
     height: 44px;
     position: relative;
-    background: url(app/resource/Images/sprite2.png) no-repeat;
+    background: url(../images/sprite2.png) no-repeat;
     z-index: 99999;
     float: left;
     top: 0;
@@ -10617,7 +10619,7 @@ calcltr-2
     float: left;
     background: #f0eeee;
     border-radius: 10px;
-    background: url(app/resource/Images/calculator_bg.png) no-repeat;
+    background: url(../images/calculator_bg.png) no-repeat;
     margin-left: 30px;
 }
 
@@ -10640,7 +10642,7 @@ calcltr-2
     width: 80px;
     height: 44px;
     position: relative;
-    background: url(app/resource/Images/sprite2.png) no-repeat;
+    background: url(../images/sprite2.png) no-repeat;
     /* float: left; */
     z-index: 99999;
     float: left;
@@ -10655,7 +10657,7 @@ calcltr-2
     width: 80px;
     height: 44px;
     position: relative;
-    background: url(app/resource/Images/sprite2.png) no-repeat -644px -402px;
+    background: url(../images/sprite2.png) no-repeat -644px -402px;
     /* float: left; */
     z-index: 99999;
     float: left;
@@ -10671,7 +10673,7 @@ calcltr-2
     width: 80px;
     height: 44px;
     position: relative;
-    background: url(app/resource/Images/sprite2.png) no-repeat -864px -402px;
+    background: url(../images/sprite2.png) no-repeat -864px -402px;
     /* float: left; */
     z-index: 99999;
     float: left;
@@ -10832,7 +10834,7 @@ Table
             }
 
             .simulator-bottom-block table th .icon {
-                background: url(app/resource/Images/conf-icon.png) no-repeat right;
+                background: url(../images/conf-icon.png) no-repeat right;
                 padding-left: 17px;
             }
 
@@ -10875,7 +10877,7 @@ Table
             height: 17px;
             background: #ccc;
             display: inline-block;
-            background: url(app/resource/Images/close-blue.png) no-repeat;
+            background: url(../images/close-blue.png) no-repeat;
             position: relative;
             top: 3px;
             cursor: pointer;
@@ -10996,17 +10998,17 @@ Table
             width: 126px;
             height: 36px;
             text-indent: 33px;
-            background: url(app/resource/Images/sprite2.png) -376px -671px no-repeat;
+            background: url(../images/sprite2.png) -376px -671px no-repeat;
         }
 
 
         .measure_button .left-column .save-as-btn {
-            background: url(app/resource/Images/sprite2.png) -511px -671px no-repeat;
+            background: url(../images/sprite2.png) -511px -671px no-repeat;
             margin-left: 0 !important;
         }
 
         .measure_button .left-column .exp-ppt-btn {
-            background: url(app/resource/Images/sprite2.png) -644px -671px no-repeat;
+            background: url(../images/sprite2.png) -644px -671px no-repeat;
             margin-left: 0 !important;
         }
 
@@ -11113,7 +11115,7 @@ Table
 }
 
 .box .label {
-    background: url(app/resource/Images/calendar.png) no-repeat left;
+    background: url(../images/calendar.png) no-repeat left;
     font-size: 12px;
     text-indent: 25px;
 }
@@ -11164,7 +11166,7 @@ a.boxclose {
 	float:right;
 	width:63px;
 	height:29px;
-	background:transparent url(app/resource/images/popup-close.jpg) no-repeat;
+	background:transparent url(../images/popup-close.jpg) no-repeat;
 	margin-top:-14px;
 	margin-right:-15px;
 	cursor:pointer;
@@ -11260,7 +11262,7 @@ a.boxclose {
 .box .timer-lg {
     width: 112px;
     height: 46px;
-    background: url(app/resource/Images/timer-lg.png) no-repeat;
+    background: url(../images/timer-lg.png) no-repeat;
     margin: 0 auto;
 }
 
@@ -11284,7 +11286,7 @@ a.boxclose {
 
 .box .paln-button .info {
     float: right;
-    background: url(app/resource/images/sprite.png) no-repeat -30px -434px;
+    background: url(../images/sprite.png) no-repeat -30px -434px;
     text-align: center;
     text-indent: 2px;
     width: 24px;
@@ -11818,7 +11820,7 @@ Improvment Mesures
         width: 34px;
         height: 30px;
         float: left;
-        background: url(app/resource/Images/sprite2.png) no-repeat -666px -258px;
+        background: url(../images/sprite2.png) no-repeat -666px -258px;
         position: absolute;
         left: 914px;
         right: 0;
@@ -11955,7 +11957,7 @@ Improvment Mesures
 
 
     .imp-measures .right_box table .close_btn {
-        background: url(app/resource/Images/close-blue.png) no-repeat;
+        background: url(../images/close-blue.png) no-repeat;
         width: 17px;
         height: 17px;
         float: left;
@@ -11993,7 +11995,7 @@ Improvment Mesures
             width: 40px;
             height: 44px;
             float: left;
-            background: url(app/resource/Images/sprite2.png) no-repeat -382px -722px;
+            background: url(../images/sprite2.png) no-repeat -382px -722px;
         }
 
         .imp-measures .left_blok .improve_btn .proce {
@@ -12078,7 +12080,7 @@ Improvment Mesures
         width: 126px;
         height: 36px;
         text-indent: 33px;
-        background: url(app/resource/Images/sprite2.png) -376px -671px no-repeat;
+        background: url(../images/sprite2.png) -376px -671px no-repeat;
         cursor: pointer;
     }
 
@@ -12236,7 +12238,7 @@ ICE SCORE CARD
     }
 
         .incentive-overview .inner .sub .left_btn span {
-            background: url(app/resource/Images/dollar.png) no-repeat 6px 0;
+            background: url(../images/dollar.png) no-repeat 6px 0;
             width: 21px;
             height: 17px;
             position: relative;
@@ -12365,7 +12367,7 @@ ICE SCORE CARD
     .care_gap .message {
         width: 42px;
         height: 37px;
-        background: url(app/resource/Images/message.jpg) no-repeat;
+        background: url(../images/message.jpg) no-repeat;
         position: absolute;
         float: left;
         left: 182px;
@@ -12377,7 +12379,7 @@ ICE SCORE CARD
     .care_gap .message1 {
         width: 42px;
         height: 37px;
-        background: url(app/resource/Images/message.jpg) no-repeat;
+        background: url(../images/message.jpg) no-repeat;
         position: absolute;
         float: left;
         left: 422px;
@@ -12388,7 +12390,7 @@ ICE SCORE CARD
     .care_gap .message2 {
         width: 42px;
         height: 37px;
-        background: url(app/resource/Images/message.jpg) no-repeat;
+        background: url(../images/message.jpg) no-repeat;
         position: absolute;
         float: left;
         left: 189px;
@@ -12517,7 +12519,7 @@ ICE SCORE CARD
         }
 
         .measure-table table thead .sorting_asc {
-            background: url('app/resource/images/sort_asc.png') no-repeat center right;
+            background: url('../images/sort_asc.png') no-repeat center right;
             background-color: #dde6ef;
             cursor: pointer;
         }
@@ -12536,14 +12538,14 @@ ICE SCORE CARD
         }
 
             .measure-table table td span {
-                background: url(app/resource/Images/star.png) no-repeat;
+                background: url(../images/star.png) no-repeat;
                 width: 16px;
                 height: 16px;
                 float: left;
             }
 
             .measure-table table td span {
-                background: url(app/resource/Images/star.png) no-repeat;
+                background: url(../images/star.png) no-repeat;
                 width: 16px;
                 height: 16px;
                 float: left;
@@ -12686,7 +12688,7 @@ a.boxclose-one {
     float: right;
     width: 26px;
     height: 26px;
-    background: transparent url(app/resource/images/close-icon.png) no-repeat;
+    background: transparent url(../images/close-icon.png) no-repeat;
     margin-top: -14px;
     margin-right: -15px;
     cursor: pointer;
@@ -12722,7 +12724,7 @@ a.boxclose-one {
 .box-button-ok:hover {
     /*background-color: #5CB811;
     border: 1px solid #3B7808;*/
-    background: url(app/resource/images/okButton.png) no-repeat 0 0;
+    background: url(../images/okButton.png) no-repeat 0 0;
     width: 68px;
     height: 46px;
     border: 0;
@@ -12737,7 +12739,7 @@ a.boxclose-one {
 .box-button-ok-one:hover {
     /*background-color: #5CB811;
     border: 1px solid #3B7808;*/
-    background: url(app/resource/images/okButton.png) no-repeat 0 0;
+    background: url(../images/okButton.png) no-repeat 0 0;
     width: 68px;
     height: 46px;
     border: 0;

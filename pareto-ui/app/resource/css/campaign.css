@@ -177,7 +177,7 @@ th {
 .enroll{
 	width: 18px;
 	height: 18px;
-	background: url(../Images/gap-anlysis.png) -168px -134px;
+	background: url(../images/gap-anlysis.png) -168px -134px;
 	margin-right: 5px;
 	text-align: center;
 	display: inline-block;
@@ -203,7 +203,7 @@ float:right;
 }
 
 .enroll-block .right-tools .add-btn{
-	height:20px;
+	height:25px;
 	padding:3px 8px;
 	min-width:75px;
 	line-height:21px;
@@ -230,7 +230,7 @@ float:right;
 	height:20px;
 	float:left;
 	margin-right: 3px;
-	background:url('../Images/gap-anlysis.png') -100px -109px;
+	background:url('../images/gap-anlysis.png') -100px -109px;
 }
 
 
@@ -383,7 +383,7 @@ float:right;
 .session_bar .title .flushot { 
 	width: 28px;
 	height: 25px;
-	background: url(app/resource/Images/gap-anlysis.png) -226px -54px;
+	background: url(../images/gap-anlysis.png) -226px -54px;
 	float: left;
 }
 
@@ -425,7 +425,7 @@ float:right;
 .touchpoint-main .blue-blok .tch-icon{
 	width: 25px;
 	height: 25px;
-	background: url(app/resource/Images/gap-anlysis.png) -10px -143px;
+	background: url(../images/gap-anlysis.png) -10px -143px;
 	vertical-align: middle;
 	margin: 0 auto;;
 }
@@ -466,10 +466,10 @@ float:right;
 
 
 
-.touchpoint-main .tools .lttr-icn.mail {background: url(app/resource/Images/gap-anlysis.png) -60px -143px;}
-.touchpoint-main .tools .lttr-icn.sms {background: url(app/resource/Images/gap-anlysis.png) -41px -166px;}
-.touchpoint-main .tools .lttr-icn.phone {background: url(app/resource/Images/gap-anlysis.png) -83px -145px;}
-.touchpoint-main .tools .lttr-icn.book {background: url(app/resource/Images/gap-anlysis.png) -35px -144px;}
+.touchpoint-main .tools .lttr-icn.mail {background: url(../images/gap-anlysis.png) -60px -143px;}
+.touchpoint-main .tools .lttr-icn.sms {background: url(../images/gap-anlysis.png) -41px -166px;}
+.touchpoint-main .tools .lttr-icn.phone {background: url(../images/gap-anlysis.png) -83px -145px;}
+.touchpoint-main .tools .lttr-icn.book {background: url(../images/gap-anlysis.png) -35px -144px;}
 
 .days {
 	color: #a0c539;
@@ -674,7 +674,7 @@ margin-left: 90px;
 
 .log_in_bx {
 	width:192px;
-	height:45px;
+	height:60px;
 	float:right;
 	position: absolute;
 	    right: -110px;
@@ -684,7 +684,7 @@ margin-left: 90px;
 .log_in_bx p {display:inline-block; font-size:12px; color:#7f7f7f;}
 
 .log_in_bx a {
-height: 15px;
+height: 20px;
 padding: 3px 13px;
 background: #a0c539;
 border-radius: 20px;
@@ -756,7 +756,7 @@ a.boxclose {
 	float:right;
 	width:26px;
 	height:26px;
-	background:transparent url(app/resource/images/close-icon.png) no-repeat;
+	background:transparent url(../images/close-icon.png) no-repeat;
   margin-top: 8px;
   margin-right: 7px;
 	cursor:pointer;

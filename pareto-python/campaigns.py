@@ -4,7 +4,7 @@ import MySQLdb
 
 #Write the below statements into a method "campignData"
 
-def campignData():
+def campaignData():
     db = MySQLdb.connect(host="localhost",      # your host, usually localhost
                      user="root",           # your username
                      passwd="",             # your password
