@@ -16,18 +16,28 @@ export class PatientComponent{
     
    //simple call init function on controller
    
+    i = 0;
     
+    patientdata = '';
+    patientData: any;
     
-    i=65;
-	step = 0;
-	
-    patientData : any;
-    alphabets: any = [];
-    
+    alphabets : any = [];
     public ngOnInit(): any
     {
         this.getPatientData();
+        // this.getIndex();      
+        
     }
+
+    getIndex(){
+        console.log("reached here");
+        while( this.i <=26) {    
+            var j = this.i + 65;         
+            this.alphabets[this.i] =String.fromCharCode(j);      
+        }
+        console.log(this.alphabets);
+    }
+
     
     getPatientData(){
         
@@ -47,30 +57,6 @@ export class PatientComponent{
 
     }
 
-    listIndex(){
-        
-        console.log('ReachedHere');
-        let alphabets = [];
-        for (let i = 65; i <= 90;i++) {
-            alphabets.push(String.fromCharCode(i));
-        }
-        console.log(alphabets);
-    
-    }
-
-    getCurrentStep() {
-        return this.step;
-    }
-
-    goback(){
-        this.step = this.step - 1;    }
-
-    toReport(){
-        this.step = this.step + 1;    }
-
-        
+   
+   
 }
-
-
-
-

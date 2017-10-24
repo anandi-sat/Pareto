@@ -13,16 +13,30 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var ng2_bootstrap_1 = require('ng2-bootstrap');
+var router_1 = require('@angular/router');
+var ng2_pagination_1 = require('ng2-pagination');
 var app_component_1 = require('./app.component');
 var patient_1 = require('./component/patient/patient');
-var ng2_pagination_1 = require('ng2-pagination');
+var campaign_1 = require('./component/campaign/campaign');
+var appRoutes = [
+    { path: 'patient', component: patient_1.PatientComponent },
+    { path: 'campaign', component: campaign_1.CampaignComponent },
+    {
+        path: '',
+        redirectTo: '/patient',
+        pathMatch: 'full'
+    },
+];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, ng2_pagination_1.Ng2PaginationModule, http_1.HttpModule, ng2_bootstrap_1.AlertModule.forRoot(), ng2_bootstrap_1.TooltipModule.forRoot(), ng2_bootstrap_1.ModalModule.forRoot()],
-            declarations: [app_component_1.AppComponent, patient_1.PatientComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, ng2_pagination_1.Ng2PaginationModule, http_1.HttpModule, ng2_bootstrap_1.AlertModule.forRoot(), ng2_bootstrap_1.TooltipModule.forRoot(), ng2_bootstrap_1.ModalModule.forRoot(), router_1.RouterModule.forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
+                )], exports: [
+                router_1.RouterModule
+            ],
+            declarations: [app_component_1.AppComponent, patient_1.PatientComponent, campaign_1.CampaignComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -10,47 +10,47 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_service_1 = require('../../service/http.service');
-var PatientComponent = (function () {
-    function PatientComponent(httpService) {
+var CampaignComponent = (function () {
+    function CampaignComponent(httpService) {
         this.httpService = httpService;
         //simple call init function on controller
-        this.i = 0;
-        this.patientdata = '';
-        this.alphabets = [];
+        this.i = 65;
+        this.step = 0;
     }
-    PatientComponent.prototype.ngOnInit = function () {
-        this.getPatientData();
-        // this.getIndex();      
-    };
-    PatientComponent.prototype.getIndex = function () {
+    CampaignComponent.prototype.ngOnInit = function () {
         console.log("reached here");
-        while (this.i <= 26) {
-            var j = this.i + 65;
-            this.alphabets[this.i] = String.fromCharCode(j);
-        }
-        console.log(this.alphabets);
+        this.getcampaignData();
     };
-    PatientComponent.prototype.getPatientData = function () {
+    CampaignComponent.prototype.getcampaignData = function () {
         var _this = this;
-        this.httpService.getPatients("PatientData").subscribe(function (resp) {
+        this.httpService.getcampaigns("campaignData").subscribe(function (resp) {
             if (resp != null) {
-                _this.patientData = resp.response;
+                _this.campaignData = resp.response;
             }
-            console.log(typeof _this.patientData);
-            console.log(_this.patientData);
+            console.log(typeof _this.campaignData);
+            console.log(_this.campaignData);
         }, function (error) {
             console.log(error);
         });
     };
-    PatientComponent = __decorate([
+    CampaignComponent.prototype.getCurrentStep = function () {
+        return this.step;
+    };
+    CampaignComponent.prototype.goback = function () {
+        this.step = this.step - 1;
+    };
+    CampaignComponent.prototype.toReport = function () {
+        this.step = this.step + 1;
+    };
+    CampaignComponent = __decorate([
         core_1.Component({
-            selector: 'patienthtml',
-            templateUrl: 'app/component/patient/patient.html',
+            selector: 'campaignhtml',
+            templateUrl: 'app/component/campaign/campaign.html',
             providers: [http_service_1.HttpService]
         }), 
         __metadata('design:paramtypes', [http_service_1.HttpService])
-    ], PatientComponent);
-    return PatientComponent;
+    ], CampaignComponent);
+    return CampaignComponent;
 }());
-exports.PatientComponent = PatientComponent;
-//# sourceMappingURL=patient.js.map
+exports.CampaignComponent = CampaignComponent;
+//# sourceMappingURL=campaign.js.map

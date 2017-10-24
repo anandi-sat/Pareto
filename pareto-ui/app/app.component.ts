@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'patient',
-  template: '<patienthtml></patienthtml>'
+  template: `
+  <router-outlet></router-outlet>`
 })
 export class AppComponent { }

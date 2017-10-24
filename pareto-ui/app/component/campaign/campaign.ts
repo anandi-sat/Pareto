@@ -4,7 +4,7 @@ import {HttpService} from '../../service/http.service';
 
 @Component({
     selector: 'campaignhtml',
-    templateUrl: 'app/component/campign/campaign.html',
+    templateUrl: 'app/component/campaign/campaign.html',
     providers: [HttpService]
 })
 
