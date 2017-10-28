@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
 import {HttpService} from '../../service/http.service';
-
+import {PatientService} from '../../service/patientdetails/patient.service';
 
 @Component({
     selector: 'patienthtml',
     templateUrl: 'app/component/patient/patient.html',
-    providers: [HttpService]
+    providers: [HttpService ]
 })
 
 export class PatientComponent{
@@ -20,7 +20,7 @@ export class PatientComponent{
     
     patientdata = '';
     patientData: any;
-    
+    noofpatient: number = 0;
     alphabets : any = [];
     public ngOnInit(): any
     {
@@ -46,6 +46,8 @@ export class PatientComponent{
             if(resp!=null){
                 
                 this.patientData= resp.response;
+                this.noofpatient = resp.response.length;
+                console.log(this.noofpatient);
             }
             console.log(typeof this.patientData);
             console.log(this.patientData);

@@ -8,11 +8,13 @@ import {Ng2PaginationModule} from 'ng2-pagination'
 import { AppComponent } from './app.component';
 import { PatientComponent } from './component/patient/patient';
 import { CampaignComponent } from './component/campaign/campaign';
+import { DeliveryComponent } from './component/delivery/deliveryplanner';
 
 
 const appRoutes: Routes = [
   { path: 'patient', component: PatientComponent },
   { path: 'campaign', component: CampaignComponent },
+  { path: 'delivery', component: DeliveryComponent },
   {
     path: '',
     redirectTo: '/patient',
@@ -21,13 +23,13 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, Ng2PaginationModule, HttpModule, AlertModule.forRoot(), TooltipModule.forRoot(), ModalModule.forRoot()RouterModule.forRoot(
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, Ng2PaginationModule, HttpModule, AlertModule.forRoot(), TooltipModule.forRoot(), ModalModule.forRoot(),RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )],exports: [
     RouterModule
   ],
-  declarations: [AppComponent, PatientComponent, CampaignComponent],
+  declarations: [AppComponent, PatientComponent, CampaignComponent, DeliveryComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

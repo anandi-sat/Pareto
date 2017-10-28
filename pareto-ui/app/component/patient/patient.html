@@ -127,7 +127,7 @@
     <div id="patnt-content">
     	<div class="conatiner"><div class="page-heading">
             	    <h2>Patient Manager</h2>
-                <label></label>
+                <label>{{noofpatient}}</label>
                 <div class="search-patnt-blk"><span>Search Patients</span><input  type="text" maxlength="120"></div>
             </div>
             
@@ -196,7 +196,7 @@
 				<tr *ngFor="let patient of patientData">
                   <td> {{patient.sno}}</td>
                   <td class="text-left">{{patient.sno}}</td>
-                  <td><a href="interventions.html" class="reload_btn">{{patient.name}}</a></td>
+                  <td><a href="/delivery" class="reload_btn">{{patient.name}}</a></td>
                   <td>{{patient.age}}</td>
                   <td>{{patient.sex}}</td>
                   <td style="text-align:center">{{patient.opengaps}}</td>

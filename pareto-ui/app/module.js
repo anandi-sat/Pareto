@@ -18,9 +18,11 @@ var ng2_pagination_1 = require('ng2-pagination');
 var app_component_1 = require('./app.component');
 var patient_1 = require('./component/patient/patient');
 var campaign_1 = require('./component/campaign/campaign');
+var deliveryplanner_1 = require('./component/delivery/deliveryplanner');
 var appRoutes = [
     { path: 'patient', component: patient_1.PatientComponent },
     { path: 'campaign', component: campaign_1.CampaignComponent },
+    { path: 'delivery', component: deliveryplanner_1.DeliveryComponent },
     {
         path: '',
         redirectTo: '/patient',
@@ -36,7 +38,7 @@ var AppModule = (function () {
                 )], exports: [
                 router_1.RouterModule
             ],
-            declarations: [app_component_1.AppComponent, patient_1.PatientComponent, campaign_1.CampaignComponent],
+            declarations: [app_component_1.AppComponent, patient_1.PatientComponent, campaign_1.CampaignComponent, deliveryplanner_1.DeliveryComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

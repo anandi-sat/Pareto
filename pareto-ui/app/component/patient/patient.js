@@ -16,6 +16,7 @@ var PatientComponent = (function () {
         //simple call init function on controller
         this.i = 0;
         this.patientdata = '';
+        this.noofpatient = 0;
         this.alphabets = [];
     }
     PatientComponent.prototype.ngOnInit = function () {
@@ -35,6 +36,8 @@ var PatientComponent = (function () {
         this.httpService.getPatients("PatientData").subscribe(function (resp) {
             if (resp != null) {
                 _this.patientData = resp.response;
+                _this.noofpatient = resp.response.length;
+                console.log(_this.noofpatient);
             }
             console.log(typeof _this.patientData);
             console.log(_this.patientData);

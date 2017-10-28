@@ -6,13 +6,13 @@ Table
 
 .table-responsive {
 	min-height:.01%;
-	overflow-x:auto
+	overflow-x:scroll;
 }
 .table-responsive {
 	width:100%;
-	height:200px;
-	margin-bottom:15px;
-	overflow-y:scroll;
+	height:auto;
+		margin-bottom:15px;
+	overflow-y:hidden;
 	overflow-x:hidden;
 }
 .table-responsive>.table {
@@ -23,6 +23,7 @@ Table
 }
 table {
 	background-color:transparent
+	
 }
 caption {
 	padding-top:8px;
@@ -37,12 +38,14 @@ th {
 	width:100%;
 	max-width:100%;
 	margin-bottom:20px
+
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
 	padding:8px;
 	line-height:1.42857143;
 	vertical-align:top;
 	border-bottom:5px solid #fff
+	
 }
 .table>thead>tr>th {
 	vertical-align:bottom;
@@ -133,28 +136,28 @@ th {
 .mmbr, .flu, .stay, .prgnnt, .nutri, .obsity, .hlth {
 	width:18px;
 	height:18px;
-	background:url(../Images/gap-anlysis.png) -145px -114px;
+	background:url(app/resource/Images/gap-anlysis.png) -145px -114px;
 	float:left;
 	margin-right:5px;
 }
 .flu {
-	background:url(../Images/gap-anlysis.png) -168px -114px!important;
+	background:url(app/resource/Images/gap-anlysis.png) -168px -114px!important;
 }
 .stay {
-	background:url(../Images/gap-anlysis.png) -184px -114px!important;
+	background:url(app/resource/Images/gap-anlysis.png) -184px -114px!important;
 }
 .prgnnt {
-	background:url(../Images/gap-anlysis.png) -228px -114px!important;
+	background:url(app/resource/Images/gap-anlysis.png) -228px -114px!important;
 	width:11px!important;
 }
 .nutri {
-	background:url(../Images/gap-anlysis.png) -241px -114px!important;
+	background:url(app/resource/Images/gap-anlysis.png) -241px -114px!important;
 }
 .obsity {
-	background:url(../Images/gap-anlysis.png) -258px -116px!important;
+	background:url(app/resource/Images/gap-anlysis.png) -258px -116px!important;
 }
 .hlth {
-	background:url(../Images/gap-anlysis.png) -145px -114px!important;
+	background:url(app/resource/Images/gap-anlysis.png) -145px -114px!important;
 }
 .modfy {
 	width: 14px;
@@ -172,7 +175,7 @@ th {
 	text-align: center;
 	display: inline-block;
 	margin: 0 auto;
-	background: url(../Images/gap-anlysis.png) -117px -210px;
+	background: url(app/resource/Images/gap-anlysis.png) -117px -210px;
 }
 .tb_sms {
 	width: 14px;
@@ -182,7 +185,7 @@ th {
 	text-align: center;
 	display: inline-block;
 	margin: 0 auto;
-	background: url(../Images/gap-anlysis.png) -117px -210px;
+	background: url(app/resource/Images/gap-anlysis.png) -117px -210px;
 }
 .tb_mail {
 	width: 14px;
@@ -192,7 +195,7 @@ th {
 	text-align: center;
 	display: inline-block;
 	margin: 0 auto;
-	background: url(../Images/gap-anlysis.png) -117px -210px;
+	background: url(app/resource/Images/gap-anlysis.png) -117px -210px;
 }
 .faild {
 	width: 14px;
@@ -202,7 +205,7 @@ th {
 	text-align: center;
 	display: inline-block;
 	margin: 0 auto;
-	background: url(../Images/gap-anlysis.png) -130px -210px;
+	background: url(app/resource/Images/gap-anlysis.png) -130px -210px;
 }
 .reschdl {
 	width: 14px;
@@ -212,7 +215,7 @@ th {
 	text-align: center;
 	display: inline-block;
 	margin: 0 auto;
-	background: url(../Images/gap-anlysis.png) -143px -210px;
+	background: url(app/resource/Images/gap-anlysis.png) -143px -210px;
 }
 .pt_close {
 	width: 14px;
@@ -221,12 +224,12 @@ th {
 	text-align: center;
 	cursor:pointer;
 	display: inline-block;
-	background: url(../Images/gap-anlysis.png) -153px -207px;
+	background: url(app/resource/Images/gap-anlysis.png) -153px -207px;
 }
 .enroll {
 	width: 18px;
 	height: 18px;
-	background: url(../Images/gap-anlysis.png) -168px -134px;
+	background: url(app/resource/Images/gap-anlysis.png) -168px -134px;
 	margin-right: 5px;
 	text-align: center;
 	display: inline-block;
@@ -235,6 +238,7 @@ th {
 	margin-top:5px;
 	margin-bottom:5px;
 	height: 35px;
+	width: 959px;
 }
 .enroll-block .right-tools {
 	float:right;
@@ -271,7 +275,7 @@ th {
 	text-align: left;
 }
 .enroll-block .right-tools .add-btn {
-	height:20px;
+	height:25px;
 	padding:3px 8px;
 	min-width:75px;
 	line-height:21px;
@@ -293,13 +297,14 @@ th {
 }
 .enroll-block .right-tools .add-btn span {
 	width:16px;
-	height:20px;
+	height:25px;
 	float:left;
 	margin-right: 3px;
-	background:url(../Images/gap-anlysis.png) -100px -109px;
+	background:url(app/resource/Images/gap-anlysis.png) -100px -109px;
 }
 .top_block {
 	height:60px;
+	width:959px;
 	padding: 0 2px;
 	margin-top: 5px;
 	border: 1px solid #bfbfbf;
@@ -358,8 +363,8 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 	-moz-border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
-	height:36px;
-	margin: 3px 1px 3px 1px;
+	height:52px;
+	margin: 3px 1px -3px 1px;
 	padding:8px;
 	background: rgb(37,176,233); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(37,176,233,1) 0%, rgba(34,175,229,1) 4%, rgba(35,174,231,1) 7%, rgba(31,170,225,1) 17%, rgba(27,166,223,1) 31%, rgba(20,159,214,1) 46%, rgba(10,149,206,1) 72%, rgba(7,146,201,1) 78%, rgba(1,140,195,1) 96%, rgba(0,141,197,1) 100%); /* FF3.6+ */
@@ -416,24 +421,25 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 .session_bar .title .flushot {
 	width: 28px;
 	height: 25px;
-	background: url(../Images/gap-anlysis.png) -226px -53px;
+	background: url(app/resource/Images/gap-anlysis.png) -226px -53px;
 	float: left;
 }
 .session_bar .title .dre {
 	width: 28px;
 	height: 25px;
-	background: url(../Images/gap-anlysis.png) -250px -56px;
+	background: url(app/resource/Images/gap-anlysis.png) -250px -56px;
 	float: left;
 }
 .prgm-ovrviw {
 	background:#f6f6f6;
 	border:1px solid #e2e2e2;
 	border-radius:4px;
-	height:120px;
+	height:123px;
+	width: 959px;
 	padding: 10px;
 }
 .prgm-ovrviw .round_btn {
-	background:url(../Images/round_btn.png) no-repeat;
+	background:url(app/resource/Images/round_btn.png) no-repeat;
 	height:63px;
 	width:63px;
 	position:absolute;
@@ -457,8 +463,8 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 	margin-right:0;
 }
 .touchpoint-main .blue-blok {
-	height:47px;
-	padding:8px;
+	height:54px;
+	padding:7px;
 	-moz-border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -504,16 +510,16 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 	margin: 0 auto;
 }
 .touchpoint-main .blue-blok .tch-icon.awarenss {
-	background: url(../Images/gap-anlysis.png) -9px -143px;
+	background: url(app/resource/Images/gap-anlysis.png) -9px -143px;
 }
 .touchpoint-main .blue-blok .tch-icon.cmptr {
-	background: url(../Images/gap-anlysis.png) -116px -168px;
+	background: url(app/resource/Images/gap-anlysis.png) -116px -168px;
 }
 .touchpoint-main .blue-blok .tch-icon.reminder {
-	background: url(../Images/gap-anlysis.png) -150px -168px;
+	background: url(app/resource/Images/gap-anlysis.png) -150px -168px;
 }
 .touchpoint-main .blue-blok .tch-icon.family {
-	background: url(../Images/gap-anlysis.png) -176px -168px;
+	background: url(app/resource/Images/gap-anlysis.png) -176px -168px;
 }
 .touchpoint-main .blue-blok h3 {
 	text-align:center;
@@ -556,16 +562,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .touchpoint-main .tools .lttr-icn.blank {
 }
 .touchpoint-main .tools .lttr-icn.mail {
-	background: url(../Images/gap-anlysis.png) -60px -143px;
+	background: url(app/resource/Images/gap-anlysis.png) -60px -143px;
 }
 .touchpoint-main .tools .lttr-icn.sms {
-	background: url(../Images/gap-anlysis.png) -41px -166px;
+	background: url(app/resource/Images/gap-anlysis.png) -41px -166px;
 }
 .touchpoint-main .tools .lttr-icn.phone {
-	background: url(../Images/gap-anlysis.png) -83px -145px;
+	background: url(app/resource/Images/gap-anlysis.png) -83px -145px;
 }
 .touchpoint-main .tools .lttr-icn.book {
-	background: url(../Images/gap-anlysis.png) -35px -144px;
+	background: url(app/resource/Images/gap-anlysis.png) -35px -144px;
 }
 .days {
 	color: #a0c539;
@@ -647,7 +653,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .day-blk h4 {
 	font-size:15px;
 	position:relative;
-	bottom: -70px;
+	bottom: -68px;
 	padding-left: 5px;
 }
 .day-blk h4 p {
@@ -659,12 +665,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	float:left;
 	margin-top: 10px;
 	width:350px;
-	margin-right:25px;
+
 	height:238px;
 	border-bottom:1px solid #d9d9d9;
 }
 .patients-box .hdng {
-	height:35px;
+	height:40px;
 }
 .patients-box .hdng h4 {
 	color: #00a3e4;
@@ -677,12 +683,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .patients-box .btn {
 	background:#bcbcbc;
 	color:#000;
-	padding:3px 5px;
+	padding:3px 3px;
 	float:right;
 	position: relative;
 	top: 8px;
 	right: 3px;
-	border-radius:4px;
+	border-radius:5px;
 	border:1px solid #9fa19b;
 }
 .tchpoint-box .hdng h4 {
@@ -691,25 +697,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	font-size: 14px;
 	float: left;
 	display: block;
+	height:20px;
 	margin: 16px 0px 3px 0;
 }
 .tchpoint-box .btn {
 	background:#bcbcbc;
 	color:#000;
-	padding:3px 5px;
+	padding:3px 3px;
 	float:right;
 	position: relative;
 	top: 8px;
-	right: 5px;
-	border-radius:4px;
+	right: 1px;
+	border-radius:5px;
 	border:1px solid #9fa19b;
 }
 .tchpoint-box {
-	float:left;
+	float:center;
 	margin-top: 10px;
-	width:585px;
+	width:605px;
 	height:238px;
-	border-bottom:1px solid #d9d9d9;
+	padding-left: 30px;
+
 }
 .channl-avlble {
 	border-top: 1px solid #dddddd;
@@ -752,13 +760,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .channl-avlble .tools .lttr-icn.blank {
 }
 .channl-avlble .tools .lttr-icn .mail {
-	background: url(../Images/gap-anlysis.png) -58px -144px;
+	background: url(app/resource/Images/gap-anlysis.png) -58px -144px;
 	width: 27px;
 	height: 24px;
 	float: left;
 }
 .channl-avlble .tools .lttr-icn .sms {
-	background: url(../Images/gap-anlysis.png) -39px -166px;
+	background: url(app/resource/Images/gap-anlysis.png) -39px -166px;
 	width: 27px;
 	height: 24px;
 	float: left;
@@ -767,13 +775,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	width: 27px;
 	height: 24px;
 	float: left;
-	background: url(../Images/gap-anlysis.png) -85px -145px;
+	background: url(app/resource/Images/gap-anlysis.png) -85px -145px;
 }
 .channl-avlble .tools .lttr-icn .book {
 	width: 24px;
 	height: 24px;
 	float: left;
-	background: url(../Images/gap-anlysis.png) -37px -144px;
+	background: url(app/resource/Images/gap-anlysis.png) -37px -144px;
 }
 .day-blk-one {
 	width:130px;
@@ -894,7 +902,7 @@ Aza Header
 	height: 100px;
 }
 .aza-header .aza-logo {
-	background: url('../images/samp-logo.jpg') no-repeat;
+	background: url('app/resource/Images/samp-logo.jpg') no-repeat;
 	border: none;
 	width: 200px;
 	float: left;
@@ -1016,7 +1024,7 @@ a.boxclose {
 	float: right;
 	width: 26px;
 	height: 26px;
-	background: transparent url(../images/close-icon.png) no-repeat;
+	background: transparent url(app/resource/Images/close-icon.png) no-repeat;
 	margin-top: 6px;
 	margin-right: 3px;
 	cursor: pointer;
@@ -1284,7 +1292,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adafae', end
 	float:left;
 }
 .tools-bitton-box .patnt-btn {
-	height: 20px;
+	height: 25px;
 	padding: 3px 8px;
 	margin-right:5px;
 	text-align:center;
@@ -1321,7 +1329,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adafae', end
 .aza-header .back_btn {
 	width: 28px;
 	height: 29px;
-	background: url(../Images/back.png) no-repeat;
+	background: url(app/resource/Images/back.png) no-repeat;
 	position: absolute;
 	right: 154px;
 	top: 19px;

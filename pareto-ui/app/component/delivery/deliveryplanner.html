@@ -1,0 +1,500 @@
+<link rel="stylesheet" type="text/css" href="../../resource/css/flu-campaign.css" />
+
+<div id="main">
+	<div class="container">
+    
+    
+    <div class="top_block">
+            	  
+                <div class="catgry-block ">
+                    <a href="#"><h2>14</h2><span class="title" >Patients Enrolled</span></a>	
+                </div>
+                
+               
+                
+              
+                
+                
+                <div class="session_bar">
+                <div class="title"><span class="glyphicon glyphicon-globe"></span><h2 style="width:270px;">Program</h2></div>
+             
+                </div>
+                
+                
+				 <div class="catgry-block" style="float:right; position:absolute; right:0;">
+                    <a href="#"><h2>4</h2><span class="title">Touchpoints</span></a>	
+                </div>
+                
+            </div>
+            
+            
+            
+            
+            
+    <div class="enroll-block">
+       <div class="left-tools">
+                	<button  type="button" class="btn-default" data-toggle="tooltip" data-placement="right" title="DRE Program aims at making patients aware of high risks associated with Diabetic Retinopathy, points them to relevant resources/center for Eye Exam and sends regular reminders. Activate this campaign for the chronic diabetic patients. 
+">Description</button>
+             </div>
+                
+                <div class="right-tools">
+<div class="tools-bitton-box">
+                	<a href="new-diabetes.html" class="patnt-btn ">Edit</a>
+                
+               </div>
+					<a class="add-btn" id="form" href="#"><span></span>Configure</a>
+                    <a id="bulk"  class="add-btn" href="#"><span></span>Enroll Members</a>
+
+                </div>
+                
+               
+            </div>
+             <div class="prgrm-title">Program Overview</div>
+				<div class="campaign_blok">
+				<div class="prgm-ovrviw">
+            
+            	<div class="day-blk"><h4>Channel <p>(Channel sequence)</p></h4></div>
+                <div class="days">0 Day Lapsed</div>
+            	<div class="touchpoint-main">
+                	<div class=" blue-blok">
+                      <div class="line"></div>
+                    	<div class="tch-icon awarenss"></div>
+                        <h3><p>Awareness Message</p></h3>
+                    </div>
+                    
+                    <div class="tools">
+                   <!--  <a href="#" target="_blank"> <span class="lttr-icn book" title="Print"></span></a>
+                         <a href="#" >  <span class="lttr-icn phone" title="IVRS"></span></a>-->
+                    	<a href="images/Email_Diabetic Retinal Eye Exam.pdf" target="_blank" ><span class="lttr-icn mail" title="E-mail"></span></a>
+                          <a href="images/SMS_Diabetic Retinal Eye Exam.pdf" target="_blank">   <span  title="SMS"class="lttr-icn sms"></span> </a>
+						  <a target="_blank"><span  title="SMS"class="lttr-icn sms"></span> </a>
+                    </div>
+                </div><!--end-->
+                <div class="days">2 Days Lapsed</div>
+                
+                <div class="touchpoint-main">
+                	<div class=" blue-blok">
+                      <div class="line"></div>
+                    	<div class="tch-icon cmptr"></div>
+                        <h3><p>Delayed Screening</p></h3>
+                    </div>
+                    
+                    <div class="tools">
+                    	
+
+                    	<a href="images/Delayed Screening.pdf"><span class="lttr-icn mail"></span></a> 
+                        <a href="images/dre_TP2_Sms.pdf"> <span class="lttr-icn sms"></span></a>
+                        <a href="images/Print_Eye Exam Center Info.pdf" target="_blank"> <span class="lttr-icn mail"></span></a>
+                    </div>
+                </div><!--end-->
+                <div class="days">3 Days Lapsed</div>
+                
+                
+                <div class="touchpoint-main">
+                	<div class=" blue-blok">
+                      <div class="line"></div>
+                    	<div class="tch-icon reminder"></div>
+                        <h3><p>Breaking the Myth</p></h3>
+                    </div>
+                    
+                    <div class="tools">
+                      <a href="images/dre_TP3_Email.pdf"><span class="lttr-icn mail"></span></a>
+                    	<a href="images/dre_TP3_Sms.pdf"><span class="lttr-icn sms"></span></a>
+						<a href="images/dre_TP3_Ivr.pdf"><span class="lttr-icn phone"></span></a>
+                    </div>
+                </div><!--end-->
+                <div class="days">2 Days Lapsed</div>
+                
+                
+                <div class="touchpoint-main">
+                	<div class=" blue-blok">
+                    	<div class="tch-icon family"></div>
+                        <h3><p>Barrier Identification</p></h3>
+                    </div>
+                    
+                    <div class="tools">
+                        <a href="images/dre_TP4_Email.pdf"><span class="lttr-icn mail"></span></a>
+                    	<a href="images/dre_TP4_Sms.pdf"><span class="lttr-icn sms"></span></a>
+						<span class="lttr-icn sms"></span>
+                    </div>
+                </div><!--end-->
+            </div>
+      <div class="col-sm-12" style="width: 106%;"><div class="col-sm-3" style="padding-left: 1px;">       
+            <div class="patients-box">
+            	<div class="hdng">
+                <h4>Patients</h4>
+                <a href="#" class="btn">View All</a>
+                </div>
+            
+                <div class="table-responsive">         
+            <table class="table table-bordered text-center">
+              <thead>
+                <tr>
+                 
+                  <th class="text-center">Patient ID</th>
+                  <th class="text-center">Name </th>
+                  <th class="text-center">Age</th>
+                   <th>Sex</th>
+                 </tr>
+              </thead>
+              <tbody ng-controller="PatientComponent">
+              
+              
+              	<tr *ngFor="let patient of patientData">
+                  <td><span class="pt_close"></span>{{patient.sno}}</td>
+                  <td>{{patient.name}}</td>
+                  <td>{{patient.age}}</td>
+                  <td>{{patient.sex}}</td>
+                </tr>
+         
+         </tbody>
+            </table>
+          </div> </div></div>
+          <div class="col-sm-1">&nbsp;&nbsp;&nbsp;</div>
+          <div class="col-sm-8">
+          <div class="table-responsive"> 
+          <div class="tchpoint-box">
+          	<div class="hdng">
+                <h4>Touchpoints</h4>
+                <a href="#" class="btn">View All</a>
+                </div>
+          
+          
+                    
+            <table class="table table-bordered text-center" align="right">
+              <thead>
+                <tr>
+                 
+                  <th class="text-center" width="20%">Name</th>
+                  <th class="text-center">Touchpoint </th>
+                  <th class="text-center" width="20%">Channel</th>
+                  <th class="text-center">Time Stamp</th>
+                  <th class="text-center">Status</th>
+                
+                 </tr>
+              </thead>
+              <tbody ng-controller="DeliveryComponent">
+              
+                
+                 <tr *ngFor="let delivery of deliveryData">
+                  <td>{{delivery.Name}}</td>
+                  <td>{{delivery.Touchpoint}}</td>
+                  <td>{{delivery.Channel}}</td>
+                  <td>{{delivery.TimeStamp}}</td>
+                  <td>{{delivery.Status}}</td>
+                </tr>
+                
+
+              </tbody>
+            </table>
+          </div></div></div>
+        </div> 
+        
+        </div>
+        
+	</div>
+	
+	  <!--popup-->
+    <div class="overlay" id="overlay" style="display:none;" ></div>
+      <div class="main_box green" id="box" >
+          
+            
+            <div class="box-main">
+            <div class="ptnt-heading">
+            	<h2>Configure</h2>
+            </div>
+            
+    <div class="closing_gap_list">
+	
+    <div class="input-col">
+   		 <div class="colmn-1"><label>Physicians Name</label> </div>
+        <div class="colmn-2">
+         <select type="text">
+                      <option>Dr. Srujan Krishna</option>
+         	<option>Dr. Jagadesh Kumar</option>
+            <option>Dr. Sudheer Gowd</option>
+              <option>Dr. Siddhi Ramayya</option>
+               <option>Dr. Ravindar Singh</option>
+         </select>
+         </div>
+    </div>
+    
+    <div class="input-col">
+      <div class="colmn-1"> <label>Clinic Name</label> </div>
+      <div class="colmn-2"><input type="text" placeholder="Pareto  Health Clinic"></div>
+    </div>
+    
+     <div class="input-col">
+      <div class="colmn-1"> <label>Address</label> </div>
+    <div class="colmn-2">  <textarea id="name_2" rows="3" cols="27" title="" placeholder="Pareto  Health Clinic, #12, 10th cross,Mahalakshminagar,Near JAYANAGAR,Bangalore,KARNATAKA" ></textarea></div>
+    </div>
+    
+         <div class="input-col">
+      <div class="colmn-1"> <label>Contact Details</label> </div>
+     <div class="colmn-2"><input type="text" placeholder="+91-912-324-1245"></div>
+    </div>
+    
+       <div class="input-col">
+      <div class="colmn-1"> <label>Logo</label> </div>
+    <div class="colmn-2"> <input class="upld-file" type="file"><div style="  position: relative;  top: -38px;  left: 83px;"><img src="Images/samp-logo.png"></div></div>
+    </div>
+    
+  <!--  <div class="logo-box"><img src="images/samp-logo.png" sa></div>-->
+   
+   </div>
+   
+   
+         
+         
+         <nav class="btn_bx">
+         <a href="#" class="confirm_btn" >Confirm</a>  <a href="#" class="cancl_btn" >Cancel</a>
+         </nav>
+
+            </div>
+        </div>
+        <!--End Poup-->
+        
+        
+        
+                
+
+ <!--popup-->
+     <div class="overlay" id="save-overlay" style="display:none;"></div>
+       <div class="main_box-1" id="box-a" >
+            <a class="boxclose" id="boxclose-a"></a>
+            
+            <div class="box-main">
+            
+            <div class="ptnt-heading">
+            	<h2>Add Patients</h2>
+                <label></label>
+            </div> 
+            
+            
+            
+            
+    <div  style="width:740px; margin-top:20px; margin-left:25px;">
+
+<div class="main_pop_box">
+<!-- left box start -->
+   <div class="left_table_pop table table-bordered" id="left_Box">
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
+ <thead>
+  <tr>
+    <th width="100">Member ID</th>
+    <th width="230">Name</th>
+  </tr>
+  </thead>
+  
+  <tr>
+    <td>20000330358</td>
+    <td>Robin Baize</td>
+  </tr>
+  
+  <tr>
+    <td>87500187701</td>
+    <td>Richard Rodriguez</td>
+  </tr>
+  
+  <tr>
+    <td>90000038968</td>
+    <td>Quentin Miles</td>
+  </tr>
+
+  <tr>
+    <td>18956542311</td>
+    <td>Iyengar Srinivas</td>
+  </tr>
+  
+  <tr>
+    <td>30000070783</td>
+    <td>Mike Smith</td>
+  </tr>
+  
+  <tr>
+    <td>46250020556</td>
+    <td>Matthew Maury</td>
+  </tr>
+  
+    <tr>
+    <td>30000086316</td>
+    <td>Linga Swany</td>
+  </tr>
+  
+  <tr>
+    <td>87500121115</td>
+    <td>Justin Miller</td>
+  </tr>
+  <tr>
+    <td>85000083259</td>
+    <td>Joseph Reed</td>
+  </tr>
+  
+   <tr>
+    <td>3750203004</td>
+    <td>Jonathan Blevins</td>
+  </tr>
+  
+     <tr>
+    <td>56250102399</td>
+    <td>John Treadwell</td>
+  </tr>
+  
+     <tr>
+    <td>2500073571</td>
+    <td>Jack Avery</td>
+  </tr>
+  
+     <tr>
+    <td>18956542312</td>
+    <td>Matt Tapia</td>
+  </tr>
+  
+     <tr>
+    <td>92500236560</td>
+    <td>Alex Fields</td>
+  </tr>
+  
+     <tr>
+    <td>46250012502</td>
+    <td>Robbie Reynolds</td>
+  </tr>
+</table>
+ 
+   </div>
+<!-- left box ends -->
+
+<!-- center box start -->   
+   <div class="center_table_pop">
+      <a href="#"><img src="images/left.png" width="20" height="24" style="margin-bottom:20px;" id="left_button" /></a>
+      <a href="#"><img src="images/right.png" width="20" height="24" id="right_button"/></a>
+   </div>
+<!-- center box ends -->     
+
+<!-- right box start -->      
+   <div class="right_table_pop table table-bordered" id="right_Box">
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
+ <thead>
+  <tr>
+    <th width="100">Member ID</th>
+    <th width="230">Name</th>
+  </tr>
+  </thead>
+  
+  <tr>
+    <td>10000198703</td>
+    <td>Srinivas Wardan</td>
+  </tr>
+  
+  <tr>
+    <td>10000198702</td>
+    <td>Rekha Kumari</td>
+  </tr>
+  
+  <tr>
+    <td>11250364402</td>
+    <td>Janardhan Kumar</td>
+  </tr>
+
+  <tr>
+    <td>18956542311</td>
+    <td>Iyengar Srinivas</td>
+  </tr>
+  
+  <tr>
+    <td>18956542312</td>
+    <td>Yesaswini Iyyengar</td>
+  </tr>
+  
+  <tr>
+    <td>18956542310</td>
+    <td>Mohan Sharma</td>
+  </tr>
+  
+    <tr>
+    <td>12452265321</td>
+    <td>Tahir Aslam</td>
+  </tr>
+  
+  <tr>
+    <td>10000198703</td>
+    <td>Jaspreet Singh</td>
+  </tr>
+  <tr>
+    <td>10000198702</td>
+    <td>Ankit Upadhyay</td>
+  </tr>
+  
+   <tr>
+    <td>11250364402</td>
+    <td>Harish Kumar</td>
+  </tr>
+  
+     <tr>
+    <td>18956542311</td>
+    <td>Lakshmi Rajesh</td>
+  </tr>
+  
+     <tr>
+    <td>18956542310</td>
+    <td>Mounika Goud</td>
+  </tr>
+  
+     <tr>
+    <td>18956542312</td>
+    <td>Mahesh Kumar</td>
+  </tr>
+  
+     <tr>
+    <td>18956542310</td>
+    <td>Ashish Chanchalani</td>
+  </tr>
+  
+     <tr>
+    <td>18956542312</td>
+    <td>Andrew  Brock</td>
+  </tr>
+</table>
+   </div>
+<!-- right box ends --> 
+</div>
+
+    
+   </div>
+ <div style="clear:both;"></div>        
+         
+         <nav class="btn_bx">
+         <a href="#" class="confirm_btn" >Save</a>
+         </nav>
+
+            </div>
+        </div>
+        <!--End Poup-->
+   
+      
+
+</div>
+
+
+      
+   
+
+
+
+<footer style="background:#fff; height:27px;" id="footerWrapper">
+    <div class="footer">
+        
+        <p><strong>Contact:&nbsp;</strong><a href="mailto:#">Pareto Healthcare</a></p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+ 
+ 
+
+
