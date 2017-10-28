@@ -9,19 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_service_1 = require('../../service/http.service');
+var patient_service_1 = require('../../service/patientdetails/patient.service');
 var PatientComponent = (function () {
-    function PatientComponent(httpService) {
-        this.httpService = httpService;
+    function PatientComponent(patientService) {
+        this.patientService = patientService;
         //simple call init function on controller
         this.i = 0;
-        this.patientdata = '';
         this.noofpatient = 0;
         this.alphabets = [];
     }
     PatientComponent.prototype.ngOnInit = function () {
-        this.getPatientData();
+        this.patientService.getPatientData();
+        this.patientData = this.patientService.patientData;
+        this.noofpatient = this.patientService.noofpatient;
         // this.getIndex();      
+        console.log(this.patientData);
     };
     PatientComponent.prototype.getIndex = function () {
         console.log("reached here");
@@ -31,27 +33,13 @@ var PatientComponent = (function () {
         }
         console.log(this.alphabets);
     };
-    PatientComponent.prototype.getPatientData = function () {
-        var _this = this;
-        this.httpService.getPatients("PatientData").subscribe(function (resp) {
-            if (resp != null) {
-                _this.patientData = resp.response;
-                _this.noofpatient = resp.response.length;
-                console.log(_this.noofpatient);
-            }
-            console.log(typeof _this.patientData);
-            console.log(_this.patientData);
-        }, function (error) {
-            console.log(error);
-        });
-    };
     PatientComponent = __decorate([
         core_1.Component({
             selector: 'patienthtml',
             templateUrl: 'app/component/patient/patient.html',
-            providers: [http_service_1.HttpService]
+            providers: [patient_service_1.PatientService]
         }), 
-        __metadata('design:paramtypes', [http_service_1.HttpService])
+        __metadata('design:paramtypes', [patient_service_1.PatientService])
     ], PatientComponent);
     return PatientComponent;
 }());

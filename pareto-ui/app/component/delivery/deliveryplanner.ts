@@ -1,37 +1,35 @@
 import {Component} from '@angular/core';
 import {HttpService} from '../../service/http.service';
-import {PatientComponent} from '../patient/patient';
 import {PatientService} from '../../service/patientdetails/patient.service';
 
 
 @Component({
     selector: 'deliveryhtml',
     templateUrl: 'app/component/delivery/deliveryplanner.html',
-    providers: [HttpService, PatientComponent]
+    providers: [HttpService, PatientService]
 })
 
 export class DeliveryComponent{
 
-	constructor( private httpService: HttpService ) {
+	constructor( private httpService: HttpService,  private patientService: PatientService ) {
         
     }
     
    //simple call init function on controller
-    
-    patient= new PatientComponent(this.httpService);
-    
-    i=65;
-	step = 0;
+
 	
     deliveryData : any;
+    patientData : any;
 
-    patientData = this.patient.getPatientData();
     
     public ngOnInit(): any
     {
         console.log("reached here");
         this.getdeliveryData();
-        console.log("patiens in delivery " + this.patientData);
+        this.patientService.getPatientData();
+        this.patientData = this.patientService.patientData;
+        console.log(this.patientData);
+        
     }
     
     getdeliveryData(){
@@ -53,15 +51,7 @@ export class DeliveryComponent{
     }
 
 
-    getCurrentStep() {
-        return this.step;
-    }
 
-    goback(){
-        this.step = this.step - 1;    }
-
-    toReport(){
-        this.step = this.step + 1;    }
 }
 
 

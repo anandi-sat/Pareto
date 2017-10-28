@@ -8,13 +8,11 @@ import {Ng2PaginationModule} from 'ng2-pagination'
 import { AppComponent } from './app.component';
 import { PatientComponent } from './component/patient/patient';
 import { CampaignComponent } from './component/campaign/campaign';
-import { DeliveryComponent } from './component/delivery/deliveryplanner';
-
+import {HttpService} from './service/http.service';
 
 const appRoutes: Routes = [
   { path: 'patient', component: PatientComponent },
   { path: 'campaign', component: CampaignComponent },
-  { path: 'delivery', component: DeliveryComponent },
   {
     path: '',
     redirectTo: '/patient',
@@ -29,7 +27,8 @@ const appRoutes: Routes = [
     )],exports: [
     RouterModule
   ],
-  declarations: [AppComponent, PatientComponent, CampaignComponent, DeliveryComponent],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, PatientComponent, CampaignComponent],
+  bootstrap: [AppComponent],
+  providers: [HttpService]
 })
 export class AppModule { }
