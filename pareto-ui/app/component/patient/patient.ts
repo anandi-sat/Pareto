@@ -15,26 +15,40 @@ export class PatientComponent{
     
    //simple call init function on controller
    
-    i = 0;
+    i: number = 0;
     
     patientData: any;
     noofpatient: number = 0;
     alphabets : any = [];
     public ngOnInit(): any
     {
-        this.patientService.getPatientData();
-        this.patientData = this.patientService.patientData;
-        this.noofpatient = this.patientService.noofpatient;
-        // this.getIndex();      
-        console.log(this.patientData);
+        this.getPatient();
+        
+        // this.noofpatient = this.patientData.length;
+        this.getAlphabets();      
+        
     }
 
-    getIndex(){
-        console.log("reached here");
-        while( this.i <=26) {    
-            var j = this.i + 65;         
-            this.alphabets[this.i] =String.fromCharCode(j);      
+    getPatient(){
+        this.patientService.getPatientData().subscribe(
+        resp => {    
+            if(resp!=null){
+                
+                this.patientData= resp.response;
+            }
+            console.log(typeof this.patientData);
+            console.log(this.patientData);
+        },
+        error => {
+            console.log(error);
         }
+        );   
+    }
+    getAlphabets(){
+         while(this.i <=25) {    
+             this.alphabets[this.i] =String.fromCharCode(this.i + 65);      
+             this.i = this.i + 1;
+         }
         console.log(this.alphabets);
     }
 

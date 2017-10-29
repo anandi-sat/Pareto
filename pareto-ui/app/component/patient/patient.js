@@ -19,17 +19,26 @@ var PatientComponent = (function () {
         this.alphabets = [];
     }
     PatientComponent.prototype.ngOnInit = function () {
-        this.patientService.getPatientData();
-        this.patientData = this.patientService.patientData;
-        this.noofpatient = this.patientService.noofpatient;
-        // this.getIndex();      
-        console.log(this.patientData);
+        this.getPatient();
+        // this.noofpatient = this.patientData.length;
+        this.getAlphabets();
     };
-    PatientComponent.prototype.getIndex = function () {
-        console.log("reached here");
-        while (this.i <= 26) {
-            var j = this.i + 65;
-            this.alphabets[this.i] = String.fromCharCode(j);
+    PatientComponent.prototype.getPatient = function () {
+        var _this = this;
+        this.patientService.getPatientData().subscribe(function (resp) {
+            if (resp != null) {
+                _this.patientData = resp.response;
+            }
+            console.log(typeof _this.patientData);
+            console.log(_this.patientData);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    PatientComponent.prototype.getAlphabets = function () {
+        while (this.i <= 25) {
+            this.alphabets[this.i] = String.fromCharCode(this.i + 65);
+            this.i = this.i + 1;
         }
         console.log(this.alphabets);
     };

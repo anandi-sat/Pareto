@@ -134,32 +134,7 @@
             <div class="view">
             	<ul>
                 	<li class="green"><a href="#">View All</a></li>
-                    <li data-toggle="tooltip" data-placement="right" title="A"><a class="btn-default"  href="#">A</a></li>
-                     <li data-toggle="tooltip" data-placement="right" title="B"><a href="#">B</a></li>
-                      <li data-toggle="tooltip" data-placement="right" title="C"><a href="#">C</a></li>
-                       <li data-toggle="tooltip" data-placement="right" title="D"><a href="#">D</a></li>
-                        <li data-toggle="tooltip" data-placement="right" title="E"><a href="#">E</a></li>
-                         <li data-toggle="tooltip" data-placement="right" title="F"><a href="#">F</a></li>
-                          <li data-toggle="tooltip" data-placement="right" title="G"><a href="#">G</a></li>
-                           <li data-toggle="tooltip" data-placement="right" title="H"><a href="#">H</a></li>
-                            <li data-toggle="tooltip" data-placement="right" title="I"><a href="#">I</a></li>
-                             <li data-toggle="tooltip" data-placement="right" title="J"><a href="#">J</a></li>
-                              <li data-toggle="tooltip" data-placement="right" title="K"><a href="#">K</a></li>
-                               <li data-toggle="tooltip" data-placement="right" title="L"><a href="#">L</a></li>
-                                <li data-toggle="tooltip" data-placement="right" title="M"><a href="#">M</a></li>
-                                 <li data-toggle="tooltip" data-placement="right" title="N"><a href="#">N</a></li>
-                                  <li data-toggle="tooltip" data-placement="right" title="O"><a href="#">O</a></li>
-                                   <li data-toggle="tooltip" data-placement="right" title="P"><a href="#">P</a></li>
-                                    <li data-toggle="tooltip" data-placement="right" title="Q"><a href="#">Q</a></li>
-                                     <li data-toggle="tooltip" data-placement="right" title="R"><a href="#">R</a></li>
-                                      <li data-toggle="tooltip" data-placement="right" title="S"><a href="#">S</a></li>
-                                       <li data-toggle="tooltip" data-placement="right" title="T"><a href="#">T</a></li>
-                                        <li data-toggle="tooltip" data-placement="right" title="U"><a href="#">U</a></li>
-                                         <li data-toggle="tooltip" data-placement="right" title="V"><a href="#">V</a></li>
-                                          <li data-toggle="tooltip" data-placement="right" title="W"><a href="#">W</a></li>
-                                           <li data-toggle="tooltip" data-placement="right" title="X"><a href="#">X</a></li>
-                                            <li data-toggle="tooltip" data-placement="right" title="Y"><a href="#">Y</a></li>
-                                             <li data-toggle="tooltip" data-placement="right" title="Z"><a href="#">Z</a></li>
+                    <li data-toggle="tooltip" data-placement="right" *ngFor="let alphabet of alphabets" title="alphabet"><a href="#">{{alphabet}}</a></li>
                 </ul>
             </div>
             
@@ -185,7 +160,7 @@
                   <th class="text-center">Name</th>
                   <th class="text-center">Age</th>
                   <th class="text-center">Gender</th>
-                  <th class="text-center">Open Gaps</th>
+                  
                    <th class="text-center">Phone</th>
                     <th class="text-center">E-mail</th>
                     <th class="text-center">Address</th>
@@ -196,10 +171,10 @@
 				<tr *ngFor="let patient of patientData">
                   <td> {{patient.sno}}</td>
                   <td class="text-left">{{patient.sno}}</td>
-                  <td><a href="/delivery" class="reload_btn">{{patient.name}}</a></td>
+                  <td><a href="/delivery" class="reload_btn">{{patient.fname}}</a></td>
                   <td>{{patient.age}}</td>
                   <td>{{patient.sex}}</td>
-                  <td style="text-align:center">{{patient.opengaps}}</td>
+                  
                   <td>{{patient.phone}}</td>
                   <td>{{patient.email}}</td>
                   <td>{{patient.address}}</td>
@@ -264,35 +239,9 @@
 	 </div>
 	  <!--//innser poup--> 
 	  
-    <div class="message">
-    	<h2>Message</h2>
-        	<ul>
-            	
-                
-               <li><a href="#"> Welcome </a></li>
-               <li><a href="#"> Flu Shot Reminder </a></li>
-               <li><a href="#"> Post Visit Feedback </a></li>
-               <li><a href="#"> Pregnancy Test </a></li>
-               <li><a href="#"> Prostate Cancer Information </a></li>
-               <li><a href="#">  HbA1c Reminder </a></li>
-               <li><a href="#">Retinal Eye Exam</a></li>
-			   <li><a href="#"> Lipid Profile Reminder</a></li>
-            </ul>
-    </div>
     
-      <div class="channel">
-    	<h2>Channel</h2>
-        	<ul>
-            	
-                
-               <li><a href="#"> SMS </a></li>
-               <li><a href="#"> Email </a></li>
-               <li><a href="#"> Auto-Voice  </a></li>
-               <li><a href="#">  All </a></li>
-
-            </ul>
-           
-    </div>
+    
+      
      <nav class="btn_bx">
          <a href="images/iClin-Engager_Feedback_Ver1.01.pdf" target="_blank" class="overview_btn">Preview</a>
          </nav>

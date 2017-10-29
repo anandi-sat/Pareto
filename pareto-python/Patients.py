@@ -5,9 +5,9 @@ import MySQLdb
 #Write the below statements into a method "patientData"
 
 def patientData():
-    db = MySQLdb.connect(host="localhost",      # your host, usually localhost
+    db = MySQLdb.connect(host="13.126.123.18",      # your host, usually localhost
                      user="root",           # your username
-                     passwd="",             # your password
+                     passwd="password",             # your password
                      db="pareto")           # name of the data base
 
 
@@ -16,11 +16,11 @@ def patientData():
     cur = db.cursor()
 
 # Use all the SQL you like
-    cur.execute("SELECT * FROM patients")
+    cur.execute("SELECT * FROM patient")
 
     df = list(cur.fetchall())
 
-    keys = ["sno", "name", "age", "sex", "opengaps", "mobile", "email", "address"]
+    keys = ["sno", "fname", "lname", "dob", "sex", "nationality", "married", "ins1", "ins2", "mobile", "mobile2", "email", "guardian", "address"]
 
     result = [dict(zip(keys, values)) for values in df]
     db.close()
