@@ -119,7 +119,7 @@
                     </div>
                 </div><!--end-->
             </div>
-      <div class="col-sm-12" style="width: 106%;"><div class="col-sm-3" style="padding-left: 1px;">       
+      <div class="col-sm-12" style="width: 106%;" ng-controller="DeliveryComponent" *ngFor="let delivery of deliveryData"><div class="col-sm-3" style="padding-left: 1px;">       
             <div class="patients-box">
             	<div class="hdng">
                 <h4>Patients</h4>
@@ -137,14 +137,14 @@
                    <th>Sex</th>
                  </tr>
               </thead>
-              <tbody ng-controller="PatientComponent">
+              <tbody >
               
               
-              	<tr *ngFor="let patient of patientData">
-                  <td><span class="pt_close"></span>{{patient.sno}}</td>
-                  <td>{{patient.name}}</td>
-                  <td>{{patient.age}}</td>
-                  <td>{{patient.sex}}</td>
+              	<tr >
+                  <td><span class="pt_close"></span>{{delivery.Id}}</td>
+                  <td>{{delivery.fname}} {{delivery.lname}}</td>
+                  <td>{{delivery.dob}}</td>
+                  <td>{{delivery.gender}}</td>
                 </tr>
          
          </tbody>
@@ -173,13 +173,13 @@
                 
                  </tr>
               </thead>
-              <tbody ng-controller="DeliveryComponent">
+              <tbody >
               
                 
                  <tr *ngFor="let delivery of deliveryData">
-                  <td>{{delivery.Name}}</td>
+                  <td>{{delivery.fname}} {{delivery.lname}}</td>
                   <td>{{delivery.Touchpoint}}</td>
-                  <td>{{delivery.Channel}}</td>
+                  <td>SMS</td>
                   <td>{{delivery.TimeStamp}}</td>
                   <td>{{delivery.Status}}</td>
                 </tr>

@@ -10,6 +10,8 @@ from Patients import patientData
 
 from campaigns import campaignData
 
+from Delivery import deliveryData
+
 #import the method defined 'patientData' in Patients.py
 
 @app.route('/PatientData', methods=['GET'])
@@ -30,6 +32,17 @@ def retrievecampaignDetails():
 
 #To set the response as JSON, use the below code
     response=json.dumps(campaigns)
+    return response
+
+#import the method defined 'deliveryData' in campigns.py
+
+@app.route('/deliveryData', methods=['GET'])
+def retrievedeliveryDetails():
+    delivery = deliveryData()
+# call the method and set a new series variable 'deliveryData' here
+
+#To set the response as JSON, use the below code
+    response=json.dumps(delivery)
     return response
 
 def read_properties_file(file_path):
