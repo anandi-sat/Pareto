@@ -35,6 +35,7 @@ export class PatientComponent{
             if(resp!=null){
                 
                 this.patientData= resp.response;
+                this.noofpatient= resp.response.length;
             }
             console.log(typeof this.patientData);
             console.log(this.patientData);

@@ -28,6 +28,7 @@ var PatientComponent = (function () {
         this.patientService.getPatientData().subscribe(function (resp) {
             if (resp != null) {
                 _this.patientData = resp.response;
+                _this.noofpatient = resp.response.length;
             }
             console.log(typeof _this.patientData);
             console.log(_this.patientData);

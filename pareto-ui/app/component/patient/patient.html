@@ -168,14 +168,14 @@
               </thead>
               <tbody ng-controller="PatientComponent">
                 		
-				<tr *ngFor="let patient of patientData">
+				<tr *ngFor="let patient of patientData; let i=index">
                   <td> {{patient.sno}}</td>
-                  <td class="text-left">{{patient.sno}}</td>
-                  <td><a href="/delivery" class="reload_btn">{{patient.fname}}</a></td>
-                  <td>{{patient.age}}</td>
+                  <td class="text-left">{{i+1}}</td>
+                  <td><a href="/delivery" class="reload_btn">{{patient.fname}} {{patient.lname}}</a></td>
+                  <td>{{patient.dob}}</td>
                   <td>{{patient.sex}}</td>
                   
-                  <td>{{patient.phone}}</td>
+                  <td>{{patient.mobile}}</td>
                   <td>{{patient.email}}</td>
                   <td>{{patient.address}}</td>
                 </tr>
