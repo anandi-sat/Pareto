@@ -18,24 +18,28 @@
 		<div class="campaign_blok">
         	<div class="table-responsive">
                     
-            <table class="table text-center">
+            <table class="table text-left">
               <thead>
                 <tr>
-                  <th width="350">Program</th>
-                  <th>Enrolled Patients</th>
-                  <th  width="90"></th>
-                  <th  width="50">Modify</th>
-                   <th  width="50">Enroll</th>
+                  <th width="350">Campaign ID</th>
+                  <th>Campaing Name</th>
+                  <th  width="90">Enrolled Patients</th>
+                 <!-- <th  width="50">Triggered Formula</th>-->
+                  <th  width="50">Status</th>
+				  <th  width="50">Modify</th>
+				  <th  width="50">Enroll</th>
                  </tr>
               </thead>
               <tbody ng-controller="CampaignComponent">
               
                 <tr *ngFor="let campaign of campaignData">
-                  <td class="text-left"> <span class="stay"></span><a href="diabetes-program.html">{{campaign.Program}}</a> </td>
-                  <td>{{campaign.EnrolledPatients}}</td>
-                  <td>{{campaign.Status}}  </td>
-                  <td>{{campaign.Modify}}</td>
-                   <td><a href="#">{{campaign.Enroll}}</a></td>
+                  <td class="text-left"> <span class="stay"></span><a href="diabetes-program.html">{{campaign.Id}}</a> </td>
+                  <td>{{campaign.Name}}</td>
+                  <td>{{campaign.noofpatientsenrolled}}  </td>
+                <!--  <td>{{campaign.trigger}}</td>-->
+                  <td><a href="#">{{campaign.status}}</a></td>
+                  <td><span class="modfy"></span></td>
+                  <td><a href="#" id="enroll5"><span class="enroll"></span></a></td>
                 </tr>
                  
 

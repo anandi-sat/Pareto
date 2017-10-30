@@ -1,42 +1,41 @@
 import {Component} from '@angular/core';
-import {HttpService} from '../../service/http.service';
-
+import {CampaignService} from '../../service/campaigndetails/campaign.service';
 
 @Component({
     selector: 'campaignhtml',
     templateUrl: 'app/component/campaign/campaign.html',
-    providers: [HttpService]
+    providers: [CampaignService]
 })
 
 export class CampaignComponent{
 
-	constructor( private httpService: HttpService ) {
+	constructor( private CampaignService: CampaignService ) {
         
     }
     
    //simple call init function on controller
    
+    i: number = 0;
     
-    
-    i=65;
-	step = 0;
-	
-    campaignData : any;
- 
-    
+    campaignData: any;
+    noofcampaign: number = 0;
+    alphabets : any = [];
     public ngOnInit(): any
     {
-        console.log("reached here");
-        this.getcampaignData();
-    }
-    
-    getcampaignData(){
+        this.getcampaign();
         
-        this.httpService.getcampaigns("campaignData").subscribe(
+        // this.noofcampaign = this.campaignData.length;
+        this.getAlphabets();      
+        
+    }
+
+    getcampaign(){
+        this.CampaignService.getcampaignData().subscribe(
         resp => {    
             if(resp!=null){
                 
                 this.campaignData= resp.response;
+                this.noofcampaign= resp.response.length;
             }
             console.log(typeof this.campaignData);
             console.log(this.campaignData);
@@ -45,20 +44,18 @@ export class CampaignComponent{
             console.log(error);
         }
         );   
-
+    }
+    getAlphabets(){
+         while(this.i <=25) {    
+             this.alphabets[this.i] =String.fromCharCode(this.i + 65);      
+             this.i = this.i + 1;
+         }
+        console.log(this.alphabets);
     }
 
-    getCurrentStep() {
-        return this.step;
-    }
+    
+    
 
-    goback(){
-        this.step = this.step - 1;    }
-
-    toReport(){
-        this.step = this.step + 1;    }
+   
+   
 }
-
-
-
-

@@ -127,7 +127,7 @@
                 </div>
             
                 <div class="table-responsive">         
-            <table class="table table-bordered text-center">
+            <table class="table table-bordered text-left">
               <thead>
                 <tr>
                  
@@ -161,15 +161,15 @@
           
           
                     
-            <table class="table table-bordered text-center" align="right">
+            <table class="table table-bordered text-left" align="right">
               <thead>
                 <tr>
                  
-                  <th class="text-center" width="20%">Name</th>
-                  <th class="text-center">Touchpoint </th>
-                  <th class="text-center" width="20%">Channel</th>
+                  <th class="text-center" width="30%">Name</th>
+                  <th class="text-center" width="15%">Touchpoint </th>
+                  <th class="text-center" width="10%">Channel</th>
                   <th class="text-center">Time Stamp</th>
-                  <th class="text-center">Status</th>
+                  <th class="text-center" width="15%">Status</th>
                 
                  </tr>
               </thead>
@@ -181,7 +181,7 @@
                   <td>{{delivery.Touchpoint}}</td>
                   <td>SMS</td>
                   <td>{{delivery.TimeStamp}}</td>
-                  <td>{{delivery.Status}}</td>
+                  <td>{{delivery.Status}}<span class="delvrd"></span></td>
                 </tr>
                 
 
