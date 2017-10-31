@@ -10,18 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_service_1 = require('../../service/http.service');
-var patient_service_1 = require('../../service/patientdetails/patient.service');
 var DeliveryComponent = (function () {
-    function DeliveryComponent(httpService, patientService) {
+    function DeliveryComponent(httpService) {
         this.httpService = httpService;
-        this.patientService = patientService;
     }
     DeliveryComponent.prototype.ngOnInit = function () {
         console.log("reached here");
         this.getdeliveryData();
-        this.patientService.getPatientData();
-        this.patientData = this.patientService.patientData;
-        console.log(this.patientData);
     };
     DeliveryComponent.prototype.getdeliveryData = function () {
         var _this = this;
@@ -39,9 +34,9 @@ var DeliveryComponent = (function () {
         core_1.Component({
             selector: 'deliveryhtml',
             templateUrl: 'app/component/delivery/deliveryplanner.html',
-            providers: [http_service_1.HttpService, patient_service_1.PatientService]
+            providers: [http_service_1.HttpService]
         }), 
-        __metadata('design:paramtypes', [http_service_1.HttpService, patient_service_1.PatientService])
+        __metadata('design:paramtypes', [http_service_1.HttpService])
     ], DeliveryComponent);
     return DeliveryComponent;
 }());

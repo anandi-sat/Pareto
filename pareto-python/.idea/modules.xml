@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/PycharmProjects/MyPythonCode/.idea/MyPythonCode.iml" filepath="$USER_HOME$/PycharmProjects/MyPythonCode/.idea/MyPythonCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pareto-python.iml" filepath="$PROJECT_DIR$/.idea/pareto-python.iml" />
     </modules>
   </component>
 </project>

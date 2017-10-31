@@ -1,13 +1,13 @@
 #!/usr/bin/python
-#Rename the file to campigns.py
+#Rename the file to campaigns.py
 import MySQLdb
 
-#Write the below statements into a method "campignData"
+#Write the below statements into a method "campaignData"
 
 def campaignData():
-    db = MySQLdb.connect(host="localhost",      # your host, usually localhost
+    db = MySQLdb.connect(host="13.126.123.18",      # your host, usually localhost
                      user="root",           # your username
-                     passwd="",             # your password
+                     passwd="password",             # your password
                      db="pareto")           # name of the data base
 
 
@@ -16,10 +16,14 @@ def campaignData():
     cur = db.cursor()
 
 # Use all the SQL you like
-    cur.execute("SELECT * FROM campigns")
+    cur.execute("SELECT * FROM campaign")
 
     df = list(cur.fetchall())
+
+    keys = ["Id","Name","noofpatientsenrolled","trigger","status"]
+
+    result = [dict(zip(keys, values)) for values in df]
     db.close()
 
 #Return the series
-    return df
+    return {"response": result}

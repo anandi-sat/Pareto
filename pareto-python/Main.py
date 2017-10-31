@@ -5,7 +5,6 @@ from flask import Flask, request, json
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-
 from Patients import patientData
 
 from campaigns import campaignData
@@ -63,14 +62,13 @@ if __name__ == "__main__":
     propList = read_properties_file(filepath)
     if len(propList['host']) > 0:
         if len(propList['port']) > 0:
-            #print 'host and port'
             app.run(host=propList['host'], port=int(propList['port']))
         else:
-            #print 'only host'
+            #print('only host')
             app.run(host=propList['host'])
     elif len(propList['port']) > 0:
-        #print 'only port'
+        #print('only port')
         app.run(port=int(propList['port']))
     else:
-        #print 'none'
+        #print('none')
         app.run()

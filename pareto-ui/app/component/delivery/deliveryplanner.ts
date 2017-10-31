@@ -1,17 +1,15 @@
 import {Component} from '@angular/core';
 import {HttpService} from '../../service/http.service';
-import {PatientService} from '../../service/patientdetails/patient.service';
-
 
 @Component({
     selector: 'deliveryhtml',
     templateUrl: 'app/component/delivery/deliveryplanner.html',
-    providers: [HttpService, PatientService]
+    providers: [HttpService]
 })
 
 export class DeliveryComponent{
 
-	constructor( private httpService: HttpService,  private patientService: PatientService ) {
+	constructor( private httpService: HttpService ) {
         
     }
     
@@ -19,17 +17,11 @@ export class DeliveryComponent{
 
 	
     deliveryData : any;
-    patientData : any;
-
-    
+        
     public ngOnInit(): any
     {
         console.log("reached here");
         this.getdeliveryData();
-        this.patientService.getPatientData();
-        this.patientData = this.patientService.patientData;
-        console.log(this.patientData);
-        
     }
     
     getdeliveryData(){
