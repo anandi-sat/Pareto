@@ -15,13 +15,17 @@ var PatientComponent = (function () {
         this.patientService = patientService;
         //simple call init function on controller
         this.i = 0;
+        this.patientId = '';
         this.noofpatient = 0;
         this.alphabets = [];
     }
     PatientComponent.prototype.ngOnInit = function () {
         this.getPatient();
-        // this.noofpatient = this.patientData.length;
         this.getAlphabets();
+    };
+    PatientComponent.prototype.store = function (patient) {
+        console.log(patient);
+        console.log(this.patientId);
     };
     PatientComponent.prototype.getPatient = function () {
         var _this = this;

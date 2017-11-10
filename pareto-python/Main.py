@@ -8,7 +8,7 @@ CORS(app)
 from Patients import patientData
 
 from campaigns import campaignData
-
+from intervention import interventionData
 from Delivery import deliveryData
 
 #import the method defined 'patientData' in Patients.py
@@ -44,6 +44,19 @@ def retrievedeliveryDetails():
     response=json.dumps(delivery)
     return response
 
+#import the method defined 'deliveryData' in campigns.py
+
+@app.route('/interventionData', methods=['POST'])
+def retrieveinterventionDetails():
+    input_query = request.get_json()
+
+    patientId = input_query.get('patientId')
+    intervention = interventionData(patientId)
+# call the method and set a new series variable 'deliveryData' here
+
+#To set the response as JSON, use the below code
+    response=json.dumps(intervention)
+    return response
 def read_properties_file(file_path):
     with open(file_path) as f:
         config = io.StringIO()

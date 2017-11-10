@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {PatientService} from '../../service/patientdetails/patient.service';
 
+
 @Component({
     selector: 'patienthtml',
     templateUrl: 'app/component/patient/patient.html',
@@ -16,18 +17,22 @@ export class PatientComponent{
    //simple call init function on controller
    
     i: number = 0;
-    
+    patientId = ''
     patientData: any;
     noofpatient: number = 0;
     alphabets : any = [];
     public ngOnInit(): any
     {
         this.getPatient();
-        
-        // this.noofpatient = this.patientData.length;
         this.getAlphabets();      
         
     }
+
+    store(patient){
+        console.log(patient);
+        console.log(this.patientId);
+    }
+
 
     getPatient(){
         this.patientService.getPatientData().subscribe(

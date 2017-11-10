@@ -1,5 +1,5 @@
 import urllib,urllib.request,urllib.parse
-from flask import jsonify
+
 
 def sendSMS(mobilenumber, message):
 

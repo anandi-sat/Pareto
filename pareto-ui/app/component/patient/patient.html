@@ -145,14 +145,14 @@
                 <div class="right-tools">
                 	<a class="clear-btn" href="#"><span></span>Clear All</a>
                     <a class="add-btn" id="planname" href="#"><span></span>Add New</a>
-                     <a  onClick="$('#EnrollMembers').click()"  class="bulk-btn" href="#"><span></span>Bulk Upload</a>
+                     <a  (click)="$('#EnrollMembers').click()"  class="bulk-btn" href="#"><span></span>Bulk Upload</a>
                  <input id="EnrollMembers" type="file" style="visibility:hidden"/>
                 </div>
             </div>
          
             <div class="patnt-table-blk" style="height:413px;">
             	<div class="table-responsive" >
-              <table id="selectable" class="table table-bordered text-left" >
+              <table id="#selectable" class="table table-bordered text-left" >
               <thead style="position: sticky;">
                 <tr>
                   <th>Member ID</th>
@@ -168,10 +168,11 @@
               </thead>
               <tbody ng-controller="PatientComponent">
                 		
-				<tr *ngFor="let patient of patientData; let i=index">
-                  <td> {{patient.sno}}</td>
+				<tr *ngFor="let patient of patientData; let i=index ">
+
+                  <td><a [(ngModel)]="patientId" (click)=store(patientId) class="reload_btn" ngDefaultControl>{{patient.sno}}</a></td>
                   <td class="text-left">{{i+1}}</td>
-                  <td><a href="/delivery" class="reload_btn">{{patient.fname}} {{patient.lname}}</a></td>
+                  <td>{{patient.fname}} {{patient.lname}}</td>
                   <td>{{patient.dob}}</td>
                   <td>{{patient.sex}}</td>
                   
@@ -233,7 +234,7 @@
 	<div class="mini-poup">
     	<textarea></textarea>
     </div>
-    	 <a href="#" class="confirm_btn1"  onClick="Hide();">OK</a>
+    	 <a href="#" class="confirm_btn1"  (click)="Hide();">OK</a>
 	 </div>
 	 
 	 </div>
