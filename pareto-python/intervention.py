@@ -4,7 +4,7 @@ import MySQLdb
 
 #Write the below statements into a method "interventionData"
 
-def interventionData(patientId):
+def interventionData():
     db = MySQLdb.connect(host="13.126.123.18",      # your host, usually localhost
                      user="root",           # your username
                      passwd="password",             # your password
@@ -17,7 +17,7 @@ def interventionData(patientId):
 
     select_query = f"""SELECT p.PatientID,p.FirstName,p.LastName,p.DOB,p.Gender,pc.CampaignID,pc.Status, c.Name,c.NoOfEnrolledPatients,
     dp.TouchpointID, dp.ScheduledTime, dp.Message, dp.Contact, dp.Status FROM patient AS p, patient_campaign AS pc, delivery_planner as dp, campaign as c 
-    where p.PatientID=pc.PatientID and p.PatientID = dp.PatientID and c.CampaignID = pc.CampaignID and p.PatientID = '{patientId}';"""
+    where p.PatientID=pc.PatientID and p.PatientID = dp.PatientID and c.CampaignID = pc.CampaignID and p.PatientID = 'ALMNA001';"""
 # Use all the SQL you like
     cur.execute(select_query)
 

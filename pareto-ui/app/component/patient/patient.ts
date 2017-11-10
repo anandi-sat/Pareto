@@ -9,6 +9,7 @@ import {PatientService} from '../../service/patientdetails/patient.service';
 })
 
 export class PatientComponent{
+    
 
 	constructor( private patientService: PatientService ) {
         

@@ -119,76 +119,82 @@
                     </div>
                 </div><!--end-->
             </div>
-      <div class="col-sm-12" style="width: 106%;" ng-controller="DeliveryComponent" *ngFor="let delivery of deliveryData"><div class="col-sm-3" style="padding-left: 1px;">       
-            <div class="patients-box">
-            	<div class="hdng">
-                <h4>Patients</h4>
-                <a href="#" class="btn">View All</a>
-                </div>
+            <div class="col-sm-12" style="width: 106%;" ng-controller="DeliveryComponent" *ngFor="let delivery of deliveryData"><div class="col-sm-3" style="padding-left: 1px;">       
+                <div class="hdng1">
+                  <h4><b>Patients</b></h4>
+                  <a href="#" class="btn1">View All</a>
+                  </div>           
+         <div class="patients-box">
+  
+              
+                  <div class="table-responsive2">         
+              <table class="table table-bordered text-left">
+                <thead>
+                  <tr>
+                   
+                    <th class="text-center">Patient ID</th>
+                    <th class="text-center">Name </th>
+                    <th class="text-center">Age</th>
+                     <th>Sex</th>
+                   </tr>
+                </thead>
+                <tbody >
+                
+                
+                  <tr >
+                    <td><span class="pt_close"></span>{{delivery.Id}}</td>
+                    <td>{{delivery.fname}} {{delivery.lname}}</td>
+                    <td>{{delivery.dob}}</td>
+                    <td>{{delivery.gender}}</td>
+                  </tr>
+           
+           </tbody>
+              </table>
+            </div> </div></div>
+            <div class="col-sm-1">&nbsp;&nbsp;&nbsp;</div>
+            <div class="col-sm-8">
+            <div class="table-responsive">
+              <div class="hdng2">
+                  <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Touchpoints</b></h4>
+                  <a href="#" class="btn2">View All</a>
+                  </div>
+            <div class="tchpoint-box">
+  
             
-                <div class="table-responsive">         
-            <table class="table table-bordered text-left">
-              <thead>
-                <tr>
-                 
-                  <th class="text-center">Patient ID</th>
-                  <th class="text-center">Name </th>
-                  <th class="text-center">Age</th>
-                   <th>Sex</th>
-                 </tr>
-              </thead>
-              <tbody >
-              
-              
-              	<tr >
-                  <td><span class="pt_close"></span>{{delivery.Id}}</td>
-                  <td>{{delivery.fname}} {{delivery.lname}}</td>
-                  <td>{{delivery.dob}}</td>
-                  <td>{{delivery.gender}}</td>
-                </tr>
-         
-         </tbody>
-            </table>
-          </div> </div></div>
-          <div class="col-sm-1">&nbsp;&nbsp;&nbsp;</div>
-          <div class="col-sm-8">
-          <div class="table-responsive"> 
-          <div class="tchpoint-box">
-          	<div class="hdng">
-                <h4>Touchpoints</h4>
-                <a href="#" class="btn">View All</a>
-                </div>
-          
-          
-                    
-            <table class="table table-bordered text-left" align="right">
-              <thead>
-                <tr>
-                 
-                  <th class="text-center" width="30%">Name</th>
-                  <th class="text-center" width="15%">Touchpoint </th>
-                  <th class="text-center" width="10%">Channel</th>
-                  <th class="text-center">Time Stamp</th>
-                  <th class="text-center" width="15%">Status</th>
+            
+                      
+              <table class="table table-bordered text-left" align="right">
+                <thead>
+                  <tr>
+                   
+                    <th class="text-center" width="17%">Name</th>
+                    <th class="text-center" width="12%">Touchpoint </th>
+                    <th class="text-center" width="10%">Channel</th>
+                    <th class="text-center" width="15%">Time Stamp</th>
+            <th class="text-center" width="15%">Message</th>
+            <th class="text-center" width="15%">Contact</th>
+                    <th class="text-center" width="15%">Status</th>
+                  
+                   </tr>
+                </thead>
+                <tbody >
                 
-                 </tr>
-              </thead>
-              <tbody >
-              
-                
-                 <tr *ngFor="let delivery of deliveryData">
-                  <td>{{delivery.fname}} {{delivery.lname}}</td>
-                  <td>{{delivery.Touchpoint}}</td>
-                  <td>SMS</td>
-                  <td>{{delivery.TimeStamp}}</td>
-                  <td>{{delivery.Status}}<span class="delvrd"></span></td>
-                </tr>
-                
-
-              </tbody>
-            </table>
-          </div></div></div>
-        </div> 
+                  
+                   <tr *ngFor="let delivery of deliveryData">
+                    <td>{{delivery.fname}} {{delivery.lname}}</td>
+                    <td>{{delivery.Touchpoint}}</td>
+                    <td>SMS</td>
+                    <td>{{delivery.TimeStamp}}</td>
+            <td>{{delivery.Message}}</td>
+            <td>{{delivery.Contact}}</td>
+                    <td>{{delivery.Status}}<span class="delvrd"></span></td>
+                  </tr>
+                  
+  
+                </tbody>
+              </table>
+            </div></div></div>
+          </div> 
         
         </div>
         

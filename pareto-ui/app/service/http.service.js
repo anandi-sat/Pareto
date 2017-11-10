@@ -31,11 +31,10 @@ var HttpService = (function () {
         var options = new http_1.RequestOptions({ headers: headers });
         return this.http.get("http://127.0.0.1:5000/" + action, options).map(function (res) { return res.json(); });
     };
-    HttpService.prototype.getintervention = function (params, action) {
+    HttpService.prototype.getintervention = function (action) {
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
-        console.log(params);
-        return this.http.post("http://127.0.0.1:5000/" + action, params, options).map(function (res) { return res.json(); });
+        return this.http.get("http://127.0.0.1:5000/" + action, options).map(function (res) { return res.json(); });
     };
     HttpService = __decorate([
         core_1.Injectable(), 

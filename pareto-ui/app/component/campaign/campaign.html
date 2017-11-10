@@ -33,8 +33,8 @@
               <tbody ng-controller="CampaignComponent">
               
                 <tr *ngFor="let campaign of campaignData">
-                  <td class="text-left"> <span class="stay"></span><a href="diabetes-program.html">{{campaign.Id}}</a> </td>
-                  <td>{{campaign.Name}}</td>
+                  <td class="text-left"> <span class="stay"></span>{{campaign.Id}}</td>
+                  <td><a href="/delivery">{{campaign.Name}}</a></td>
                   <td>{{campaign.noofpatientsenrolled}}  </td>
                 <!--  <td>{{campaign.trigger}}</td>-->
                   <td><a href="#">{{campaign.status}}</a></td>

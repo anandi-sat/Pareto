@@ -14,8 +14,8 @@ var InterventionService = (function () {
     function InterventionService(httpService) {
         this.httpService = httpService;
     }
-    InterventionService.prototype.getinterventionData = function (jsonBody) {
-        this.interventionData = this.httpService.getintervention(jsonBody, "interventionData");
+    InterventionService.prototype.getinterventionData = function () {
+        this.interventionData = this.httpService.getintervention("interventionData");
         console.log(this.interventionData);
         return this.interventionData;
     };

@@ -10,9 +10,9 @@ export class InterventionService {
     interventionData: any;
   
 
-    getinterventionData(jsonBody: any){
+    getinterventionData(){
         
-        this.interventionData = this.httpService.getintervention(jsonBody, "interventionData");
+        this.interventionData = this.httpService.getintervention("interventionData");
         console.log(this.interventionData);
         return this.interventionData;
 

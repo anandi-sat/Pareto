@@ -3,14 +3,30 @@
 Table
 */
 
-
+.table-responsive2 {
+	min-height:.01%;
+	overflow-x:scroll;
+}
+.table-responsive2 {
+	width:100%;
+	height:auto;
+		margin-bottom:15px;
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+.table-responsive2>.table {
+	margin-bottom:0
+}
+.table-responsive2>.table>tbody>tr>td, .table-responsive>.table>tbody>tr>th, .table-responsive>.table>tfoot>tr>td, .table-responsive>.table>tfoot>tr>th, .table-responsive>.table>thead>tr>td, .table-responsive>.table>thead>tr>th {
+	white-space:nowrap
+}
 .table-responsive {
 	min-height:.01%;
 	overflow-x:scroll;
 }
 .table-responsive {
-	width:100%;
-	height:auto;
+	width:605px;
+	height:336px;
 		margin-bottom:15px;
 	overflow-y:hidden;
 	overflow-x:hidden;
@@ -359,7 +375,7 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 	float:left;
 	margin-right: 10px;
 	border:1px solid #f0f0f0;
-	width:105px;
+	width:150px;
 	-moz-border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -663,16 +679,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 }
 .patients-box {
 	float:left;
-	margin-top: 10px;
+	margin-top: 5px;
 	width:350px;
 
 	height:238px;
 	border-bottom:1px solid #d9d9d9;
 }
-.patients-box .hdng {
+.patients-box .hdng1 {
 	height:40px;
 }
-.patients-box .hdng h4 {
+.hdng1 h4 {
 	color: #00a3e4;
 	font-family: "opensans_bold";
 	font-size: 14px;
@@ -680,18 +696,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	display: block;
 	margin: 15px 0 0 0;
 }
-.patients-box .btn {
+.btn1 {
 	background:#bcbcbc;
 	color:#000;
 	padding:3px 3px;
 	float:right;
 	position: relative;
 	top: 8px;
-	right: 3px;
+	right: -120px;
 	border-radius:5px;
 	border:1px solid #9fa19b;
 }
-.tchpoint-box .hdng h4 {
+.hdng2 h4 {
 	color: #00a3e4;
 	font-family: "opensans_bold";
 	font-size: 14px;
@@ -700,7 +716,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	height:20px;
 	margin: 16px 0px 3px 0;
 }
-.tchpoint-box .btn {
+.btn2 {
 	background:#bcbcbc;
 	color:#000;
 	padding:3px 3px;
@@ -713,7 +729,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 }
 .tchpoint-box {
 	float:center;
-	margin-top: 10px;
+	margin-top: -3px;
 	width:605px;
 	height:238px;
 	padding-left: 30px;

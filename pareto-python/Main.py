@@ -46,12 +46,14 @@ def retrievedeliveryDetails():
 
 #import the method defined 'deliveryData' in campigns.py
 
-@app.route('/interventionData', methods=['POST'])
+@app.route('/interventionData', methods=['GET'])
 def retrieveinterventionDetails():
-    input_query = request.get_json()
+    intervention = interventionData()
+    #input_query = request.get_json()
 
-    patientId = input_query.get('patientId')
-    intervention = interventionData(patientId)
+    #patientId = input_query.get('patientId')
+    #intervention = interventionData(patientId)
+
 # call the method and set a new series variable 'deliveryData' here
 
 #To set the response as JSON, use the below code
