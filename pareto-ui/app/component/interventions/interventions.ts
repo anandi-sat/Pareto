@@ -3,17 +3,18 @@ import {HttpService} from '../../service/http.service';
 import {InterventionService} from '../../service/intervention/intervention.service';
 import {PatientService} from '../../service/patientdetails/patient.service';
 import {CampaignService} from '../../service/campaigndetails/campaign.service';
+import {SharedService} from '../../service/shared.service';
 
 @Component({
     selector: 'interventionhtml',
     templateUrl: 'app/component/interventions/intervention.html',
-    providers: [InterventionService, CampaignService]
+    providers: [InterventionService, CampaignService, SharedService]
 })
 
 export class InterventionComponent{
     
 
-	constructor(private InterventionService: InterventionService , private campaignService: CampaignService) {
+	constructor(private InterventionService: InterventionService , private campaignService: CampaignService, private sharedService: SharedService ) {
        
     }
     
@@ -33,7 +34,7 @@ export class InterventionComponent{
     
     
     getinterventionData(){
-        
+        console.log(this.sharedService.getData());
        // var jsonBody = JSON.stringify(this.patientId);
         this.InterventionService.getinterventionData().subscribe(
         resp => {    

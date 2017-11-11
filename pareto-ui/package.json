@@ -27,8 +27,6 @@
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~2.0.2",
     "ng2-bootstrap": "^1.2.5",
-    "ng2-opd-popup": "^1.1.21",
-    "ng2-pagination": "^2.0.1",
     "ngx-bootstrap": "^1.9.3",
     "ngx-pagination": "^3.0.3",
     "reflect-metadata": "^0.1.8",

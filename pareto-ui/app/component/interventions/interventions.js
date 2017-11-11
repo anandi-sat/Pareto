@@ -11,10 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var intervention_service_1 = require('../../service/intervention/intervention.service');
 var campaign_service_1 = require('../../service/campaigndetails/campaign.service');
+var shared_service_1 = require('../../service/shared.service');
 var InterventionComponent = (function () {
-    function InterventionComponent(InterventionService, campaignService) {
+    function InterventionComponent(InterventionService, campaignService, sharedService) {
         this.InterventionService = InterventionService;
         this.campaignService = campaignService;
+        this.sharedService = sharedService;
         this.patientId = '';
         this.noofcampaign = 0;
     }
@@ -25,6 +27,7 @@ var InterventionComponent = (function () {
     };
     InterventionComponent.prototype.getinterventionData = function () {
         var _this = this;
+        console.log(this.sharedService.getData());
         // var jsonBody = JSON.stringify(this.patientId);
         this.InterventionService.getinterventionData().subscribe(function (resp) {
             if (resp != null) {
@@ -53,9 +56,9 @@ var InterventionComponent = (function () {
         core_1.Component({
             selector: 'interventionhtml',
             templateUrl: 'app/component/interventions/intervention.html',
-            providers: [intervention_service_1.InterventionService, campaign_service_1.CampaignService]
+            providers: [intervention_service_1.InterventionService, campaign_service_1.CampaignService, shared_service_1.SharedService]
         }), 
-        __metadata('design:paramtypes', [intervention_service_1.InterventionService, campaign_service_1.CampaignService])
+        __metadata('design:paramtypes', [intervention_service_1.InterventionService, campaign_service_1.CampaignService, shared_service_1.SharedService])
     ], InterventionComponent);
     return InterventionComponent;
 }());

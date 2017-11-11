@@ -14,14 +14,13 @@ var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var ng2_bootstrap_1 = require('ng2-bootstrap');
 var router_1 = require('@angular/router');
-var ng2_pagination_1 = require('ng2-pagination');
-var ngx_pagination_1 = require('ngx-pagination');
 var app_component_1 = require('./app.component');
 var patient_1 = require('./component/patient/patient');
 var campaign_1 = require('./component/campaign/campaign');
 var deliveryplanner_1 = require('./component/delivery/deliveryplanner');
 var interventions_1 = require('./component/interventions/interventions');
 var http_service_1 = require('./service/http.service');
+var shared_service_1 = require('./service/shared.service');
 var appRoutes = [
     { path: 'patient', component: patient_1.PatientComponent },
     { path: 'campaign', component: campaign_1.CampaignComponent },
@@ -38,13 +37,13 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, ng2_pagination_1.Ng2PaginationModule, ngx_pagination_1.NgxPaginationModule, http_1.HttpModule, ng2_bootstrap_1.AlertModule.forRoot(), ng2_bootstrap_1.TooltipModule.forRoot(), ng2_bootstrap_1.ModalModule.forRoot(), router_1.RouterModule.forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, http_1.HttpModule, ng2_bootstrap_1.AlertModule.forRoot(), ng2_bootstrap_1.TooltipModule.forRoot(), ng2_bootstrap_1.ModalModule.forRoot(), router_1.RouterModule.forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
                 )], exports: [
                 router_1.RouterModule
             ],
             declarations: [app_component_1.AppComponent, patient_1.PatientComponent, campaign_1.CampaignComponent, deliveryplanner_1.DeliveryComponent, interventions_1.InterventionComponent],
             bootstrap: [app_component_1.AppComponent],
-            providers: [http_service_1.HttpService]
+            providers: [http_service_1.HttpService, shared_service_1.SharedService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

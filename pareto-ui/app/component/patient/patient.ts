@@ -1,17 +1,18 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {PatientService} from '../../service/patientdetails/patient.service';
+import {SharedService} from '../../service/shared.service';
 
 
 @Component({
     selector: 'patienthtml',
     templateUrl: 'app/component/patient/patient.html',
-    providers: [PatientService]
+    providers: [PatientService, SharedService]
 })
 
 export class PatientComponent{
     
 
-	constructor( private patientService: PatientService ) {
+	constructor( private patientService: PatientService, private sharedService: SharedService ) {
         
     }
     
@@ -31,7 +32,8 @@ export class PatientComponent{
 
     store(patient){
         console.log(patient);
-        console.log(this.patientId);
+        this.sharedService.saveData(patient);
+        console.log(this.sharedService.getData());
     }
 
 

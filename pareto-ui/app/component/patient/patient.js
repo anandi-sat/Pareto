@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var patient_service_1 = require('../../service/patientdetails/patient.service');
+var shared_service_1 = require('../../service/shared.service');
 var PatientComponent = (function () {
-    function PatientComponent(patientService) {
+    function PatientComponent(patientService, sharedService) {
         this.patientService = patientService;
+        this.sharedService = sharedService;
         //simple call init function on controller
         this.i = 0;
         this.patientId = '';
@@ -25,7 +27,8 @@ var PatientComponent = (function () {
     };
     PatientComponent.prototype.store = function (patient) {
         console.log(patient);
-        console.log(this.patientId);
+        this.sharedService.saveData(patient);
+        console.log(this.sharedService.getData());
     };
     PatientComponent.prototype.getPatient = function () {
         var _this = this;
@@ -51,9 +54,9 @@ var PatientComponent = (function () {
         core_1.Component({
             selector: 'patienthtml',
             templateUrl: 'app/component/patient/patient.html',
-            providers: [patient_service_1.PatientService]
+            providers: [patient_service_1.PatientService, shared_service_1.SharedService]
         }), 
-        __metadata('design:paramtypes', [patient_service_1.PatientService])
+        __metadata('design:paramtypes', [patient_service_1.PatientService, shared_service_1.SharedService])
     ], PatientComponent);
     return PatientComponent;
 }());

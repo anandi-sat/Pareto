@@ -5,14 +5,13 @@ import { HttpModule } from '@angular/http';
 import { AlertModule, TooltipModule, ModalModule } from 'ng2-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 import {Ng2PaginationModule} from 'ng2-pagination';
-import {NgxPaginationModule} from 'ngx-pagination';
 import { AppComponent } from './app.component';
 import { PatientComponent } from './component/patient/patient';
 import { CampaignComponent } from './component/campaign/campaign';
 import { DeliveryComponent } from './component/delivery/deliveryplanner';
 import { InterventionComponent } from './component/interventions/interventions';
 import {HttpService} from './service/http.service';
-
+import {SharedService} from './service/shared.service';
 
 
 const appRoutes: Routes = [
@@ -28,7 +27,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, Ng2PaginationModule, NgxPaginationModule, HttpModule, AlertModule.forRoot(), TooltipModule.forRoot(), ModalModule.forRoot(),RouterModule.forRoot(
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpModule, AlertModule.forRoot(), TooltipModule.forRoot(), ModalModule.forRoot(),RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )],exports: [
@@ -36,6 +35,6 @@ const appRoutes: Routes = [
   ],
   declarations: [AppComponent, PatientComponent, CampaignComponent, DeliveryComponent, InterventionComponent],
   bootstrap: [AppComponent],
-  providers: [HttpService]
+  providers: [HttpService, SharedService]
 })
 export class AppModule { }
