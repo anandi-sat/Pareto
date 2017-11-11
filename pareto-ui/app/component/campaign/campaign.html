@@ -34,7 +34,8 @@
               
                 <tr *ngFor="let campaign of campaignData">
                   <td class="text-left"> <span class="stay"></span>{{campaign.Id}}</td>
-                  <td><a href="/delivery">{{campaign.Name}}</a></td>
+                  <td><a [tooltip]="'Click on a campaign to view the patients 
+                  enrolled to the campaign and the touchpoints they have received'" href="/delivery">{{campaign.Name}}</a></td>
                   <td>{{campaign.noofpatientsenrolled}}  </td>
                 <!--  <td>{{campaign.trigger}}</td>-->
                   <td><a href="#">{{campaign.status}}</a></td>

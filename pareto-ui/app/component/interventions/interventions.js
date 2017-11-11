@@ -56,7 +56,7 @@ var InterventionComponent = (function () {
         core_1.Component({
             selector: 'interventionhtml',
             templateUrl: 'app/component/interventions/intervention.html',
-            providers: [intervention_service_1.InterventionService, campaign_service_1.CampaignService, shared_service_1.SharedService]
+            providers: [intervention_service_1.InterventionService, campaign_service_1.CampaignService]
         }), 
         __metadata('design:paramtypes', [intervention_service_1.InterventionService, campaign_service_1.CampaignService, shared_service_1.SharedService])
     ], InterventionComponent);

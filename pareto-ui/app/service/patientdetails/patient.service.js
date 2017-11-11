@@ -13,12 +13,9 @@ var http_service_1 = require('../../service/http.service');
 var PatientService = (function () {
     function PatientService(httpService) {
         this.httpService = httpService;
-        this.noofpatient = 0;
     }
     PatientService.prototype.getPatientData = function () {
-        this.patientData = this.httpService.getPatients("PatientData");
-        console.log(this.patientData);
-        return this.patientData;
+        return this.httpService.getPatients("PatientData");
     };
     PatientService = __decorate([
         core_1.Injectable(), 

@@ -170,7 +170,7 @@
                 		
 				<tr *ngFor="let patient of patientData; let i=index ">
 
-                  <td><a href="/intervention" (click)=store(patient.sno) class="reload_btn">{{patient.sno}}</a></td>
+                  <td><a [tooltip]="'Select a Patient to see his/her interventions'" (click)=store(patient.sno) class="reload_btn">{{patient.sno}}</a></td>
                   <td class="text-left">{{i+1}}</td>
                   <td>{{patient.fname}} {{patient.lname}}</td>
                   <td>{{patient.dob}}</td>

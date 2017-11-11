@@ -8,13 +8,13 @@ import {SharedService} from '../../service/shared.service';
 @Component({
     selector: 'interventionhtml',
     templateUrl: 'app/component/interventions/intervention.html',
-    providers: [InterventionService, CampaignService, SharedService]
+    providers: [InterventionService, CampaignService]
 })
 
 export class InterventionComponent{
     
 
-	constructor(private InterventionService: InterventionService , private campaignService: CampaignService, private sharedService: SharedService ) {
+	constructor(private InterventionService: InterventionService , private campaignService: CampaignService, public sharedService: SharedService ) {
        
     }
     

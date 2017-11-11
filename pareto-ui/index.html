@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="app/resource/css/campaign.css" />    
     <link rel="stylesheet" type="text/css" href="app/resource/css/patient-manager.css" />   
     <link rel="stylesheet" type="text/css" href="app/resource/css/campaignpopup.css" />
-   
+    
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     
     <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>-->
@@ -61,13 +61,20 @@
                 
                    
                    <div class="nav-menu">
-                       <ul>
-                        <li  class="active"><a href="/patient">Patient</a></li>
+                       <ul class = "list-group">
+                        <li><a href="/patient">Patient</a></li>
                         <li><a href="/campaign">Campaign</a></li>
                         <li><a href="report.html">Reports</a></li>
                          <li><a href="work-list.html">Work List</a></li>
                 
                     </ul>
+                    <script>
+                    $(function () {
+                        $('.list-group li').click(function() {
+                            $(this).addClass('active').siblings().removeClass('active');
+                        });
+                    })
+                    </script>
                     
                 
                         </div>
