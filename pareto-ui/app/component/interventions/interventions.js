@@ -17,19 +17,18 @@ var InterventionComponent = (function () {
         this.InterventionService = InterventionService;
         this.campaignService = campaignService;
         this.sharedService = sharedService;
-        this.patientId = '';
+        this.patient = new Patient();
         this.noofcampaign = 0;
     }
     InterventionComponent.prototype.ngOnInit = function () {
-        this.patientId = '';
         this.getinterventionData();
         this.getcampaign();
     };
     InterventionComponent.prototype.getinterventionData = function () {
         var _this = this;
-        console.log(this.sharedService.getData());
-        // var jsonBody = JSON.stringify(this.patientId);
-        this.InterventionService.getinterventionData().subscribe(function (resp) {
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getinterventionData(reqJsonBody).subscribe(function (resp) {
             if (resp != null) {
                 _this.interventionData = resp.response;
             }
@@ -63,4 +62,9 @@ var InterventionComponent = (function () {
     return InterventionComponent;
 }());
 exports.InterventionComponent = InterventionComponent;
+var Patient = (function () {
+    function Patient() {
+    }
+    return Patient;
+}());
 //# sourceMappingURL=interventions.js.map

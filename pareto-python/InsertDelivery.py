@@ -21,7 +21,7 @@ def insert(msg_txt, mobile_number, status, delivery_time, response_id):
     finally:
         cur.close()
 		
-	def insertEmail(email_txt, Email, status, delivery_time, response_id):
+def insertEmail(email_txt, Email, status, delivery_time, response_id):
     connection = db = MySQLdb.connect(host="13.126.123.18", # your host, usually localhost
     user="root", # your username
     passwd="password", # your password

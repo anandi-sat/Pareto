@@ -12,8 +12,6 @@ import { DeliveryComponent } from './component/delivery/deliveryplanner';
 import { InterventionComponent } from './component/interventions/interventions';
 import {HttpService} from './service/http.service';
 import {SharedService} from './service/shared.service';
-import {BusyModule} from 'angular2-busy';
-
 
 const appRoutes: Routes = [
   { path: 'patient', component: PatientComponent },
@@ -28,7 +26,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, BusyModule, HttpModule, AlertModule.forRoot(), TooltipModule.forRoot(), ModalModule.forRoot(),RouterModule.forRoot(
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpModule, AlertModule.forRoot(), TooltipModule.forRoot(), ModalModule.forRoot(),RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )],exports: [

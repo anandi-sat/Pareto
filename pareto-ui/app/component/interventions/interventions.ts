@@ -23,20 +23,19 @@ export class InterventionComponent{
     campaignData: any;
     interventionData : any;
     patientData : any;
-    patientId = '';
+    patient = new Patient();
     noofcampaign: number = 0;
     public ngOnInit(): any
     {
-        this.patientId = '';
         this.getinterventionData();
         this.getcampaign();
     }
     
     
     getinterventionData(){
-        console.log(this.sharedService.getData());
-       // var jsonBody = JSON.stringify(this.patientId);
-        this.InterventionService.getinterventionData().subscribe(
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getinterventionData(reqJsonBody).subscribe(
         resp => {    
             if(resp!=null){
                 
@@ -71,6 +70,10 @@ export class InterventionComponent{
 
 
 
+}
+
+class Patient{
+    patientId : String;
 }
 
 
