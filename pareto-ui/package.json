@@ -28,7 +28,7 @@
     "grunt-usemin": "~2.0.2",
     "ng2-bootstrap": "^1.2.5",
     "ngx-bootstrap": "^1.9.3",
-    "ngx-pagination": "^3.0.3",
+    "ng2-pagination": "^2.0.1",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-rc.4",
     "systemjs": "0.19.40",

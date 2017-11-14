@@ -168,7 +168,7 @@
               </thead>
               <tbody ng-controller="PatientComponent">
                 		
-				<tr *ngFor="let patient of patientData; let i=index ">
+				<tr *ngFor="let patient of patientData | paginate: { itemsPerPage: 50, currentPage: p }; let i=index ">
 
                   <td><a [tooltip]="'Select a Patient to see his/her interventions'" (click)=store(patient.sno) class="reload_btn">{{patient.sno}}</a></td>
                   <td class="text-left">{{i+1}}</td>
@@ -182,6 +182,9 @@
                 </tr>
               </tbody>
             </table>
+            <div class="pull-right">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
         </div>
           </div>
             <!--</div>-->
