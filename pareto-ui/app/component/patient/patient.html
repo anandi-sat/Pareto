@@ -7,7 +7,7 @@
 <!-- header -->
 
 
-<div id="main" style="margin-top:-75px;">
+<div id="main" >
 
 	<!--side menu-->
 	<aside class="side-menu">
@@ -54,7 +54,7 @@
         </div>
         <!--End side menu-->
         
-        <div class="custom_heading">Custom Selection</div>
+      <!--  <div class="custom_heading">Custom Selection</div>
         
       <div class="column">
             <label class="control-label">Filters</label>
@@ -65,7 +65,7 @@
         </div>
         
         <!--left-edit-block-->
-        <div class="left-edit-block">
+        <!--<div class="left-edit-block">
         	<h3>Gender<br> equals 'F'</h3>
             <h3>AND Age <br>greater than '50'</h3>
             <a href="#">Edit</a> <a href="#">Remove</a>
@@ -117,7 +117,7 @@
        		<a id="ok" class="edit_btn" href="#">Cancel</a>
        	</div>
         </div>
-        </div>
+        </div>-->
         <!--End left-edit-block-->
         
     </aside>
@@ -141,7 +141,7 @@
             
             <div class="enroll-block">
             	<a href="#" id="enroll" class="enroll-btn"><span></span>Enroll Selected</a>
-                <div class="right-tools">
+                <div class="right-tools" align="right">
                 	<a class="clear-btn" href="#"><span></span>Clear All</a>
                     
                      <a  (click)="$('#EnrollMembers').click()"  class="bulk-btn" href="#"><span></span>Bulk Upload</a>
@@ -182,6 +182,7 @@
                 	
               </tbody>
             </table>
+			<br>
             <div class="pull-right">
                 <pagination-controls (pageChange)="p = $event"></pagination-controls>
             </div>
