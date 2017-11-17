@@ -21,17 +21,22 @@ var PatientComponent = (function () {
         this.i = 0;
         this.patientId = '';
         this.noofpatient = 0;
-        this.alphabets = [];
     }
     PatientComponent.prototype.ngOnInit = function () {
         this.getPatient();
-        this.getAlphabets();
     };
     PatientComponent.prototype.store = function (patient) {
         console.log(patient);
         this.sharedService.saveData(patient);
         console.log(this.sharedService.getData());
         this.router.navigate(['/intervention']);
+    };
+    PatientComponent.prototype.filterPatientData = function (alphabet) {
+        console.log(alphabet);
+        // for (var i = 0; i < this.patientData.length; i++) {
+        //     if(this.patientData[i].fname.startswith;
+        //     console.log(patient);
+        // }
     };
     PatientComponent.prototype.getPatient = function () {
         var _this = this;
@@ -45,13 +50,6 @@ var PatientComponent = (function () {
         }, function (error) {
             console.log(error);
         });
-    };
-    PatientComponent.prototype.getAlphabets = function () {
-        while (this.i <= 25) {
-            this.alphabets[this.i] = String.fromCharCode(this.i + 65);
-            this.i = this.i + 1;
-        }
-        console.log(this.alphabets);
     };
     PatientComponent = __decorate([
         core_1.Component({

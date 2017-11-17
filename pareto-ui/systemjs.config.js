@@ -15,6 +15,7 @@
 			'@angular/forms' : 'npm:@angular/forms/bundles/forms.umd.js',
 			'rxjs' : 'npm:rxjs',
 			'ng2-pagination' : 'npm:ng2-pagination',
+			'ng2-search-filter': 'node_modules/ng2-search-filter',
 		    'ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ngx-bootstrap.umd.js',
 		    'core-js': 'node_modules/core-js'
 		},
@@ -33,8 +34,10 @@
             'core-js': {
                 main: './index.js',
                 defaultExtension: 'js'
-            }
-
+            },
+			'ng2-search-filter': 
+				{ main: 'dist/index.js' 
+			}
 		}
 	});
 })(this);

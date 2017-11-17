@@ -127,24 +127,23 @@
     <div id="patnt-content">
     	<div class="conatiner"><div class="page-heading">
             	    <h2>Patient Manager</h2>
-                <label>{{noofpatient}}</label>
-                <div class="search-patnt-blk"><span>Search Patients</span><input  type="text" maxlength="120"></div>
+                <label [tooltip]="'Number of Patients'">{{noofpatient}}</label>
+                <div class="search-patnt-blk"><span>Search Patients</span><input  type="text" [(ngModel)]="search" maxlength="120"></div>
             </div>
             
-            <div class="view">
+      <!--    <div class="view">
             	<ul>
                 	<li class="green"><a href="#">View All</a></li>
-                    <li data-toggle="tooltip" data-placement="right" *ngFor="let alphabet of alphabets" title="alphabet"><a href="#">{{alphabet}}</a></li>
+                    <li data-toggle="tooltip" data-placement="right" *ngFor="let alphabet of alphabets" title="alphabet"><a (click)=filterPatientData(alphabet) >{{alphabet}}</a></li>
                 </ul>
-            </div>
+            </div> -->
             
             
             <div class="enroll-block">
             	<a href="#" id="enroll" class="enroll-btn"><span></span>Enroll Selected</a>
-                
                 <div class="right-tools">
                 	<a class="clear-btn" href="#"><span></span>Clear All</a>
-                    <a class="add-btn" id="planname" href="#"><span></span>Add New</a>
+                    
                      <a  (click)="$('#EnrollMembers').click()"  class="bulk-btn" href="#"><span></span>Bulk Upload</a>
                  <input id="EnrollMembers" type="file" style="visibility:hidden"/>
                 </div>
@@ -167,9 +166,9 @@
                   </tr>
               </thead>
               <tbody ng-controller="PatientComponent">
-                		
-				<tr *ngFor="let patient of patientData | paginate: { itemsPerPage: 50, currentPage: p }; let i=index ">
-
+                
+				<tr *ngFor="let patient of patientData | filter:search:startsWith | paginate: { itemsPerPage: 50, currentPage: p }; let i=index ">
+                  
                   <td><a [tooltip]="'Select a Patient to see his/her interventions'" (click)=store(patient.sno) class="reload_btn">{{patient.sno}}</a></td>
                   <td class="text-left">{{i+1}}</td>
                   <td>{{patient.fname}} {{patient.lname}}</td>
@@ -180,6 +179,7 @@
                   <td>{{patient.email}}</td>
                   <td>{{patient.address}}</td>
                 </tr>
+                	
               </tbody>
             </table>
             <div class="pull-right">
@@ -263,58 +263,6 @@
         
   
   
-  <!--poup -2-->
-  
-      <div class="overlay" id="overlay" style="display:none;"></div>
-
- <div class="patnt-table-blk" id="box-a" style="position:fixed; width:650px; top:-900px;left:20%;  z-index:999;padding:15px; height:auto; background:#fff;">
-     
-   <div class="ptnt-heading"> 	<h2>Add New</h2>
-
-            </div>
-        
-          <a class="boxclose" id="boxclose-a"></a>
-            	<div style="background:#F0F0F0;padding: 25px;">
-                    
-            <table class="table-noborder" >
-       
-              <tbody>
-              <!--  <tr>
-                  <td colspan="3">
-                  <div class="input-group">
-                    <input style="width: 610px;" type="text" class="form-control">
-                                
-				</div>
-                    </td>
-                </tr>-->
-                
-                 <tr>
-                  <td> <div class="input-group"> <label>Name</label> <input style="width:160px"  type="text" class="form-control"></div></td>
-                  <td> <div class="input-group"> <label>Age</label> <input style="width:160px"  type="text" class="form-control"></div></td>
-                   <td> <div class="input-group"> <label>Sex</label> <input style="width:160px"  type="text" class="form-control"></div></td>
-                </tr>
-                
-                 <tr>
-                  <td> <div class="input-group"> <label>Phone</label> <input style="width:160px"  type="text" class="form-control"></div></td>
-                  <td> <div class="input-group"> <label>E-mail</label> <input style="width:160px"  type="text" class="form-control"></div></td>
-                   <td> <div class="input-group"> <label>Address</label> <input style="width:160px"  type="text" class="form-control"></div></td>
-                </tr>
-                
-              
-				
-              </tbody>
-            </table>
-          </div>
-          <nav class="btn_bx">
-         <a href="#" class="confirm_btn">Cancel</a>  
-         <a href="#" class="confirm_btn">Create</a>  
-         </nav>
-            </div>
-  <!--End popup-2-->
-   
-
-
-
 <footer style="background:#fff; height:27px;" id="footerWrapper">
     <div class="footer">
         

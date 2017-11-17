@@ -23,11 +23,10 @@ export class PatientComponent{
     patientId = ''
     patientData: any;
     noofpatient: number = 0;
-    alphabets : any = [];
+    
     public ngOnInit(): any
     {
         this.getPatient();
-        this.getAlphabets();      
         
     }
 
@@ -38,6 +37,13 @@ export class PatientComponent{
         this.router.navigate(['/intervention'])
     }
 
+    filterPatientData(alphabet){
+        console.log(alphabet);
+        // for (var i = 0; i < this.patientData.length; i++) {
+        //     if(this.patientData[i].fname.startswith;
+        //     console.log(patient);
+        // }
+    }
 
     getPatient(){
         this.patientService.getPatientData().subscribe(
@@ -55,17 +61,4 @@ export class PatientComponent{
         }
         );   
     }
-    getAlphabets(){
-         while(this.i <=25) {    
-             this.alphabets[this.i] =String.fromCharCode(this.i + 65);      
-             this.i = this.i + 1;
-         }
-        console.log(this.alphabets);
-    }
-
-    
-    
-
-   
-   
 }

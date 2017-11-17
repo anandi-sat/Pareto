@@ -12,6 +12,7 @@ import { DeliveryComponent } from './component/delivery/deliveryplanner';
 import { InterventionComponent } from './component/interventions/interventions';
 import {HttpService} from './service/http.service';
 import {SharedService} from './service/shared.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 const appRoutes: Routes = [
   { path: 'patient', component: PatientComponent },
@@ -26,7 +27,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, Ng2PaginationModule, HttpModule, AlertModule.forRoot(), TooltipModule.forRoot(), ModalModule.forRoot(),RouterModule.forRoot(
+  imports: [BrowserModule, FormsModule, Ng2SearchPipeModule, ReactiveFormsModule, Ng2PaginationModule, HttpModule, AlertModule.forRoot(), TooltipModule.forRoot(), ModalModule.forRoot(),RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )],exports: [

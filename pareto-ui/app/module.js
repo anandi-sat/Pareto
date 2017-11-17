@@ -22,6 +22,7 @@ var deliveryplanner_1 = require('./component/delivery/deliveryplanner');
 var interventions_1 = require('./component/interventions/interventions');
 var http_service_1 = require('./service/http.service');
 var shared_service_1 = require('./service/shared.service');
+var ng2_search_filter_1 = require('ng2-search-filter');
 var appRoutes = [
     { path: 'patient', component: patient_1.PatientComponent },
     { path: 'campaign', component: campaign_1.CampaignComponent },
@@ -38,7 +39,7 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, ng2_pagination_1.Ng2PaginationModule, http_1.HttpModule, ng2_bootstrap_1.AlertModule.forRoot(), ng2_bootstrap_1.TooltipModule.forRoot(), ng2_bootstrap_1.ModalModule.forRoot(), router_1.RouterModule.forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, ng2_search_filter_1.Ng2SearchPipeModule, forms_1.ReactiveFormsModule, ng2_pagination_1.Ng2PaginationModule, http_1.HttpModule, ng2_bootstrap_1.AlertModule.forRoot(), ng2_bootstrap_1.TooltipModule.forRoot(), ng2_bootstrap_1.ModalModule.forRoot(), router_1.RouterModule.forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
                 )], exports: [
                 router_1.RouterModule
             ],
