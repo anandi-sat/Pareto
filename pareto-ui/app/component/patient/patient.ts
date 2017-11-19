@@ -20,7 +20,7 @@ export class PatientComponent{
    //simple call init function on controller
    
     i: number = 0;
-    patientId = ''
+    patientId = '';
     patientData: any;
     noofpatient: number = 0;
     

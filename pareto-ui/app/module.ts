@@ -8,17 +8,21 @@ import {Ng2PaginationModule} from 'ng2-pagination';
 import { AppComponent } from './app.component';
 import { PatientComponent } from './component/patient/patient';
 import { CampaignComponent } from './component/campaign/campaign';
+import {CreateCampaignComponent} from './component/campaign/createcampaign';
 import { DeliveryComponent } from './component/delivery/deliveryplanner';
 import { InterventionComponent } from './component/interventions/interventions';
 import {HttpService} from './service/http.service';
 import {SharedService} from './service/shared.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
+
 const appRoutes: Routes = [
   { path: 'patient', component: PatientComponent },
   { path: 'campaign', component: CampaignComponent },
   { path: 'delivery', component: DeliveryComponent },
   { path: 'intervention', component: InterventionComponent },
+  { path: 'createcampaign', component: CreateCampaignComponent},
+
   {
     path: '',
     redirectTo: '/patient',
@@ -33,7 +37,7 @@ const appRoutes: Routes = [
     )],exports: [
     RouterModule
   ],
-  declarations: [AppComponent, PatientComponent, CampaignComponent, DeliveryComponent, InterventionComponent],
+  declarations: [AppComponent, PatientComponent, CampaignComponent, DeliveryComponent, InterventionComponent, CreateCampaignComponent],
   bootstrap: [AppComponent],
   providers: [HttpService, SharedService]
 })

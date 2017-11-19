@@ -52,73 +52,10 @@
                  </ul>
        
         </div>
-        <!--End side menu-->
-        
-      <!--  <div class="custom_heading">Custom Selection</div>
-        
-      <div class="column">
-            <label class="control-label">Filters</label>
-   <div class="edit_main">
-        	<a  class="edit_btn" href="#">Add</a>
-       	</div>
-
-        </div>
-        
-        <!--left-edit-block-->
-        <!--<div class="left-edit-block">
-        	<h3>Gender<br> equals 'F'</h3>
-            <h3>AND Age <br>greater than '50'</h3>
-            <a href="#">Edit</a> <a href="#">Remove</a>
-            
-            
-            <div class="input-block" id="addbox" style="display:none;">
-                
-                                <label class="drop margin_btm">
-            <select>
-            		<option>AND</option>
-                	<option>OR</option>
-                 </select>
-
-        </label>
         
         
-           
-                                <label class="drop margin_btm">
-          <select>
-            		<option>Member Id</option>
-                	<option>Name</option>
-               		<option>Age</option>
-              	    <option>Sex</option>
-					<option>Open Gaps</option>
-					<option>Condition</option>
-                 </select>
-
-        </label>
-        
-                
-                           <label class="drop margin_btm">
-           <select>
-            	<option>Equals</option>
-                <option>Not-Equals</option>
-                <option>Greater than</option>
-                <option>Lesser than</option>
-                
-            </select>
-
-        </label>
-        
-         <label class="search-container">
-            <input id="activator" type="text" maxlength="120">
-
-        </label>
-        
-       <div class="edit_blk">
-        	<a   class="edit_btn" href="#">OK</a>
-       		<a id="ok" class="edit_btn" href="#">Cancel</a>
-       	</div>
-        </div>
-        </div>-->
-        <!--End left-edit-block-->
+      
+      
         
     </aside>
     <!--//End side menu-->
@@ -167,7 +104,7 @@
               </thead>
               <tbody ng-controller="PatientComponent">
                 
-				<tr *ngFor="let patient of patientData | filter:search:startsWith | paginate: { itemsPerPage: 50, currentPage: p }; let i=index ">
+				<tr *ngFor="let patient of patientData | filter:search:startsWith | paginate: { itemsPerPage: 15, currentPage: p }; let i=index ">
                   
                   <td><a [tooltip]="'Select a Patient to see his/her interventions'" (click)=store(patient.sno) class="reload_btn">{{patient.sno}}</a></td>
                   <td class="text-left">{{i+1}}</td>

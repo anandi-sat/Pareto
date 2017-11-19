@@ -18,6 +18,7 @@ var ng2_pagination_1 = require('ng2-pagination');
 var app_component_1 = require('./app.component');
 var patient_1 = require('./component/patient/patient');
 var campaign_1 = require('./component/campaign/campaign');
+var createcampaign_1 = require('./component/campaign/createcampaign');
 var deliveryplanner_1 = require('./component/delivery/deliveryplanner');
 var interventions_1 = require('./component/interventions/interventions');
 var http_service_1 = require('./service/http.service');
@@ -28,6 +29,7 @@ var appRoutes = [
     { path: 'campaign', component: campaign_1.CampaignComponent },
     { path: 'delivery', component: deliveryplanner_1.DeliveryComponent },
     { path: 'intervention', component: interventions_1.InterventionComponent },
+    { path: 'createcampaign', component: createcampaign_1.CreateCampaignComponent },
     {
         path: '',
         redirectTo: '/patient',
@@ -43,7 +45,7 @@ var AppModule = (function () {
                 )], exports: [
                 router_1.RouterModule
             ],
-            declarations: [app_component_1.AppComponent, patient_1.PatientComponent, campaign_1.CampaignComponent, deliveryplanner_1.DeliveryComponent, interventions_1.InterventionComponent],
+            declarations: [app_component_1.AppComponent, patient_1.PatientComponent, campaign_1.CampaignComponent, deliveryplanner_1.DeliveryComponent, interventions_1.InterventionComponent, createcampaign_1.CreateCampaignComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [http_service_1.HttpService, shared_service_1.SharedService]
         }), 
