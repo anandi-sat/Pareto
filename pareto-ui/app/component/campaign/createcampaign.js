@@ -9,13 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_service_1 = require('../../service/http.service');
 var CreateCampaignComponent = (function () {
     function CreateCampaignComponent() {
     }
     CreateCampaignComponent = __decorate([
         core_1.Component({
             selector: 'createcampaignhtml',
-            templateUrl: 'app/component/campaign/createcampaign.html'
+            templateUrl: 'app/component/campaign/createcampaign.html',
+            providers: [http_service_1.HttpService]
         }), 
         __metadata('design:paramtypes', [])
     ], CreateCampaignComponent);

@@ -1,46 +1,29 @@
+<link rel="stylesheet" type="text/css" href="../../resource/css/create-campaign.css" />
 
-<div class="wrapper-holder">
-<!-- wrapper -->
-<div id="wrapper">
-<!-- header -->
-<header class="aza-header">
-    <!-- header-frame -->
-   <div class="aza-logo"></div>
-   
-   <div class="nav-menu">
-   	<ul>
-    	<li><a href="patient.html">Patient</a></li>
-        <li class="active"><a href="campaign.html">Campaign</a></li>
-        <li><a href="report.html">Reports</a></li>
-         <li><a href="work-list.html">Work List</a></li>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('tr').click(function(){
+			$(this).toggleClass('actve');
+		});
+		
+	});
+</script>
+  <script>
+  $(function() {
+    $( ".lttr-icn" ).draggable({   cursor: "move",
+    revert: "invalid",
+    helper: "clone"});
+    $( ".touchpoint-main>.tools>.lttr-icn" ).droppable({
+    drop: function (ev, ui) {
+                                    $(this).replaceWith($(ui.draggable).clone());
+    }
+    });
+  });
+  </script>
 
-    </ul>
-    
-
-        </div>
-        
-            <div class="header-holder">
-            <ul class="inform">
-             <li><a href="#" style="cursor:pointer;" title="Home">item01</a></li>
-                <li class="style01"><a href="#" title="Information">item02</a></li>
-                <li class="print"><a href="configuration.html" title="print" >Config</a></li>
-                            <li><a class="back" href="" onclick="history.go(-1)">Go Back</a></li>
-                
-            </ul>
-            
-         <div class="log_in_bx">
-                            	
-                                <a href="login.html">LOGOUT</a>
-                            </div>
-   </div>
-    
-   
-
-
-</header>
 
 <div id="main">
-	<div class="container">
+	<div class="container" style="height:auto;">
     
     	
     
@@ -49,12 +32,7 @@
                 <div class="catgry-block" style=" visibility:hidden">
                     <a href="#"><h2>200</h2><span class="title">Patients Enrolled</span></a>	
                 </div>
-                
-               
-                
-              
-                
-                
+
                 <div class="session_bar">
                 <div class="title"><span class="flushot"></span><p style="width:240px;" name="Insert Campaign Name">Insert Campaign Name</p></div>
              
@@ -81,8 +59,8 @@
                 </div>
                 
                
-            </div>
-             <div class="prgrm-title">Create Campaign</div>
+           
+             <div class="prgrm-title"><br><br>Create Campaign</div>
 		<div class="campaign_blok">
         	<div class="prgm-ovrviw">
             	<div class="line-one"></div>
@@ -90,7 +68,7 @@
             	<div class="day-blk" ><h4>Channel <p>(Drop from Channel Bar to 
 Add/Shuffle Order)</p></h4></div>
 
-                <div class="days" style="width: 22px;">0 Day Lapsed</div>
+                <div class="days" >0 Day Lapsed</div>
             	<div class="touchpoint-main">
                 	<div class="blue-blok">
                     <div class="line"></div>
@@ -156,13 +134,12 @@ Add/Shuffle Order)</p></h4></div>
                 </div><!--end-->
                 
                 
-                
+             
                 <div class="channl-avlble">
-                
-                	<div class="day-blk-one"><h4>Channel<br>
-Available 
-</h4></div>
-                	<div class="channel-main">
+                <div class="channel-main">
+                    <div class="day-blk-one"><h4>Channel<br>Available</h4></div>
+            
+                	
                 	<div class="tools">
                     	  <span class="lttr-icn"><span class="book draggable"></span></span>
                             <span class="lttr-icn"><span class="phone draggable"></span></span>
@@ -197,20 +174,17 @@ Available
                     	<div class="lttr-icn"><span id="draggable" class="mail draggable"></span></div>
                         <span class="lttr-icn"><span class="sms draggable"></span></span>
                     </div>
-                    
-                    
-                    
+
                     </div>
                 </div>
-                
-                <div class="enroll-blk">
-                	<div class="day-blk-one"><h4>Days from<br>
- Enrollment</h4></div>
+           <hr>
+        
+                	<div class="day-blk-one"><h4>Days from<br>Enrollment</h4></div>
                     
                     <div class="input-block">
                     
-                    	<label class="drop" \>
-            <select style="width:50px;">
+                    	<label class="drop">
+            <select style="width:60px;">
            	    <option>0</option>
             	<option>1</option>
 				<option>2</option>
@@ -262,62 +236,8 @@ Available
                     
                     <div class="input-block">
                     
-                    	<label class="drop" \>
-            <select style="width:50px;">
-           	    <option>0</option>
-            	<option>1</option>
-				<option>2</option>
-				<option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-            	<option>8</option>
-				<option>9</option>
-				<option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-            	<option>15</option>
-				<option>16</option>
-				<option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-            	<option>22</option>
-				<option>23</option>
-				<option>24</option>
-                <option>25</option>
-                <option>26</option>
-                <option>27</option>
-                <option>28</option>
-                <option>29</option>
-                <option>30</option>
-                <option>31</option>
-  
-            </select>
-
-        </label>
-        
-        <label class="drop">
-            <select>
-            	<option>Days</option>
-				<option>Weeks</option>
-                <option>Months</option>
-            </select>
-
-        </label>
-
-                    </div>
-                    
-                    
-                    
-                    <div class="input-block">
-                    
-                    	<label class="drop" \>
-            <select style="width:50px;">
+                    	<label class="drop">
+            <select style="width:60px;">
            	    <option>0</option>
             	<option>1</option>
 				<option>2</option>
@@ -370,8 +290,8 @@ Available
                     
                     <div class="input-block">
                     
-                    	<label class="drop" \>
-            <select style="width:50px;">
+                    	<label class="drop">
+            <select style="width:60px;">
            	    <option>0</option>
             	<option>1</option>
 				<option>2</option>
@@ -419,14 +339,69 @@ Available
         </label>
 
                     </div>
-                
-                </div>
+                    
+                    
+                    
+                    <div class="input-block">
+                    
+                    	<label class="drop">
+            <select style="width:60px;">
+           	    <option>0</option>
+            	<option>1</option>
+				<option>2</option>
+				<option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+            	<option>8</option>
+				<option>9</option>
+				<option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+            	<option>15</option>
+				<option>16</option>
+				<option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+            	<option>22</option>
+				<option>23</option>
+				<option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+  
+            </select>
+
+        </label>
+        
+        <label class="drop">
+            <select>
+            	<option>Days</option>
+				<option>Weeks</option>
+                <option>Months</option>
+            </select>
+
+        </label>
+
+                    </div>
+                 </div>
+               </div>
             </div>
-            
-            
+     </div>
+
             <div class="buttn-blk-mn">
             <div class="buttn-blk"><a href="#" class="add-btn"><span></span>Add New Touchpoint</a>  <a href="#" class="save"><span></span>Save</a></div>
-          
+           </div>
+        
               <div class="Instructions-blk">
               <h3>Instructions for Campaign Design</h3>
               <ul>
@@ -437,11 +412,10 @@ Available
 </ul>
               </div>
           
-        </div></div>
-        
-    
-        
-	</div>
+       
+   </div>  
+      
+	
 	
 	
       <!--popup-->
@@ -719,14 +693,13 @@ Available
         </div>
         <!--End Poup-->
 
-</div>
+
 
 
 
    
       
 
-</div>
 
 
       

@@ -103,7 +103,7 @@ th {
 	background:#f6f6f6;
 }
 .campaign_blok {
-	height: 388px;
+	height: auto;
 	margin-top: 5px;
 }
 .deactive {
@@ -131,33 +131,33 @@ th {
 .mmbr, .flu, .stay, .prgnnt, .nutri, .obsity, .hlth {
 	width:18px;
 	height:18px;
-	background:url(../Images/gap-anlysis.png) -145px -114px;
+	background:url(app/resource/images/gap-anlysis.png) -145px -114px;
 	float:left;
 	margin-right:5px;
 }
 .flu {
-	background:url(../Images/gap-anlysis.png) -168px -114px!important;
+	background:url(app/resource/images/gap-anlysis.png) -168px -114px!important;
 }
 .stay {
-	background:url(../Images/gap-anlysis.png) -184px -114px!important;
+	background:url(app/resource/images/gap-anlysis.png) -184px -114px!important;
 }
 .prgnnt {
-	background:url(../Images/gap-anlysis.png) -228px -114px!important;
+	background:url(app/resource/images/gap-anlysis.png) -228px -114px!important;
 	width:11px!important;
 }
 .nutri {
-	background:url(../Images/gap-anlysis.png) -241px -114px!important;
+	background:url(app/resource/images/gap-anlysis.png) -241px -114px!important;
 }
 .obsity {
-	background:url(../Images/gap-anlysis.png) -258px -116px!important;
+	background:url(app/resource/images/gap-anlysis.png) -258px -116px!important;
 }
 .hlth {
-	background:url(../Images/gap-anlysis.png) -145px -114px!important;
+	background:url(app/resource/images/gap-anlysis.png) -145px -114px!important;
 }
 .modfy {
 	width: 14px;
 	height: 18px;
-	background: url(../Images/gap-anlysis.png) -148px -134px;
+	background: url(app/resource/images/gap-anlysis.png) -148px -134px;
 	margin-right: 5px;
 	text-align: center;
 	display: inline-block;
@@ -166,7 +166,7 @@ th {
 .enroll {
 	width: 18px;
 	height: 18px;
-	background: url(../Images/gap-anlysis.png) -168px -134px;
+	background: url(app/resource/images/gap-anlysis.png) -168px -134px;
 	margin-right: 5px;
 	text-align: center;
 	display: inline-block;
@@ -187,7 +187,7 @@ th {
 	left: -2px;
 }
 .enroll-block .right-tools .add-desc {
-	background: url(../Images/gap-anlysis.png) -166px -205px;
+	background: url(app/resource/images/gap-anlysis.png) -166px -205px;
 	width: 22px;
 	height: 18px;
 	float: left;
@@ -195,7 +195,7 @@ th {
 	left: 78px;
 }
 .enroll-block .right-tools .add-btn {
-	height:20px;
+	height:27px;
 	padding:3px 8px;
 	min-width:75px;
 	line-height:21px;
@@ -220,7 +220,7 @@ th {
 	height:20px;
 	float:left;
 	margin-right: 3px;
-	background:url(../Images/gap-anlysis.png) -100px -109px;
+	background:url(app/resource/images/gap-anlysis.png) -100px -109px;
 }
 .top_block {
 	height:60px;
@@ -284,7 +284,7 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 	-moz-border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
-	height:36px;
+	height:50px;
 	margin: 3px 1px 3px 1px;
 	padding:8px;
 	background: rgb(37,176,233); /* Old browsers */
@@ -338,15 +338,15 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 .session_bar .title .flushot {
 	width: 28px;
 	height: 25px;
-	background: url(../Images/gap-anlysis.png) -38px -204px;
+	background: url(app/resource/images/gap-anlysis.png) -38px -204px;
 	float: left;
 }
 .prgm-ovrviw {
 	background:#f6f6f6;
 	border:1px solid #e2e2e2;
 	border-radius:4px;
-	height: 204px;
-	padding: 10px;
+	height: 220px;
+	padding: 15px;
 }
 .prgm-ovrviw .line-one {
 	border: 1px solid #dddddd;
@@ -362,7 +362,7 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 	margin-right:0;
 }
 .touchpoint-main .blue-blok {
-	height:47px;
+	height:65px;
 	padding:8px;
 	-moz-border-radius:5px;
 	-moz-border-radius:5px;
@@ -405,7 +405,7 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 	width: 23px;
 	height: 23px;
 	float: left;
-	background: url(../Images/gap-anlysis.png) -11px -204px;
+	background: url(app/resource/images/gap-anlysis.png) -11px -204px;
 	position: relative;
 	/* right: 15px; */
 	left: 139px;
@@ -415,7 +415,7 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
 .touchpoint-main .blue-blok .tch-icon {
 	width: 25px;
 	height: 25px;
-	background: url(../Images/gap-anlysis.png) -38px -202px;
+	background: url(app/resource/images/gap-anlysis.png) -38px -202px;
 	vertical-align: middle;
 	margin: 0 auto;
 	;
@@ -441,7 +441,7 @@ base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦EiIGhlaWdodD0iMS
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dadada', endColorstr='#c8c8c8', GradientType=0 ); /* IE6-9 */
 }
 .touchpoint-main .tools .lttr-icn.mail {
-  background: url(../Images/gap-anlysis.png) -60px -143px;
+  background: url(app/resource/images/gap-anlysis.png) -60px -143px;
 }
 .touchpoint-main .tools .lttr-icn {
 	width:25px;
@@ -464,14 +464,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .touchpoint-main .tools .lttr-icn.blank {
 }
 .touchpoint-main .tools .lttr-icn .mail {
-	background: url(../Images/gap-anlysis.png) -91px -202px;
+	background: url(app/resource/images/gap-anlysis.png) -91px -202px;
 	width: 23px;
 	height: 22px;
 	float: left;
 }
 
 .touchpoint-main .tools .lttr-icn .sms {
-	background: url(../Images/gap-anlysis.png) -217px -164px;
+	background: url(app/resource/images/gap-anlysis.png) -217px -164px;
 	width: 23px;
 	height: 22px;
 	float: left;
@@ -495,7 +495,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 
 
 .touchpoint-main .tools .lttr-icn .book {
-	background: url(../Images/gap-anlysis.png) -214px -142px;
+	background: url(app/resource/images/gap-anlysis.png) -214px -142px;
 	width: 23px;
 	height: 22px;
 	float: left;
@@ -532,7 +532,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 
 
 .touchpoint-main .tools .lttr-icn .phone {
-	background: url(../Images/gap-anlysis.png) -263px -142px;
+	background: url(app/resource/images/gap-anlysis.png) -263px -142px;
 	width: 23px;
 	height: 22px;
 	float: left;
@@ -557,13 +557,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 
 
 .touchpoint-main .tools .lttr-icn.sms {
-	background: url(../Images/gap-anlysis.png) -41px -166px;
+	background: url(app/resource/images/gap-anlysis.png) -41px -166px;
 }
 .touchpoint-main .tools .lttr-icn.phone {
-	background: url(../Images/gap-anlysis.png) -83px -145px;
+	background: url(app/resource/images/gap-anlysis.png) -83px -145px;
 }
 .touchpoint-main .tools .lttr-icn.book {
-	background: url(../Images/gap-anlysis.png) -35px -144px;
+	background: url(app/resource/images/gap-anlysis.png) -35px -144px;
 }
 .days {
 	color: #a0c539;
@@ -574,6 +574,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	float: left;
 	margin-top: 80px;
 	padding-left: 10px;
+	padding-bottom: 20px
 }
 .days.arrow {
 	content: '';
@@ -753,14 +754,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	margin-top: 5px;
 }
 .channl-avlble .channel-main {
-	width: 807px;
+	width: auto;
 	float: left;/* margin-right: 70px; */
 }
 .channl-avlble .tools {
 	height:33px;
 	border-radius:6px;
 	float:left;
-	margin-right:58px;
+	margin-right:55px;
 }
 .channl-avlble .tools:last-child {
 	margin-right:0;
@@ -786,13 +787,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .channl-avlble .tools .lttr-icn.blank {
 }
 .channl-avlble .tools .lttr-icn .mail {
-	background: url(../Images/gap-anlysis.png) -58px -144px;
+	background: url(app/resource/images/gap-anlysis.png) -58px -144px;
 	width: 27px;
 	height: 24px;
 	float: left;
 }
 .channl-avlble .tools .lttr-icn .sms {
-	background: url(../Images/gap-anlysis.png) -39px -166px;
+	background: url(app/resource/images/gap-anlysis.png) -39px -166px;
 	width: 27px;
 	height: 24px;
 	float: left;
@@ -801,13 +802,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	width: 27px;
 	height: 24px;
 	float: left;
-	background: url(../Images/gap-anlysis.png) -85px -145px;
+	background: url(app/resource/images/gap-anlysis.png) -85px -145px;
 }
 .channl-avlble .tools .lttr-icn .book {
 	width: 24px;
 	height: 24px;
 	float: left;
-	background: url(../Images/gap-anlysis.png) -37px -144px;
+	background: url(app/resource/images/gap-anlysis.png) -37px -144px;
 }
 .day-blk-one {
 	width:130px;
@@ -845,10 +846,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	font-size:10px;
 }
 .input-block {
-	margin: 8px 0 8px 0;
+	margin: 8px 0 0 0;
 	width: 160px;
 	float: left;
-	margin-right:55px;
+	margin-right:43px;
 }
 .input-block:last-child {
 	margin-right:0;
@@ -903,10 +904,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .Instructions-blk {
 	border:1px solid #dedede;
 	height: 115px;
-	margin-top:5px;
+	margin-top:10px;
 	padding:15px;
 	float: left;
-	width: 927px;
+	width: 100%;
 }
 .Instructions-blk p {
 	margin-bottom:5px;
@@ -924,7 +925,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	margin-top: 5px;
 }
 .buttn-blk .add-btn {
-	height:20px;
+	height:27px;
 	padding:3px 8px;
 	min-width:75px;
 	line-height:20px;
@@ -949,10 +950,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adafae', end
 	height:20px;
 	float:left;
 	margin-right: 3px;
-	background:url(../Images/gap-anlysis.png) -71px -206px;
+	background:url(app/resource/images/gap-anlysis.png) -71px -206px;
 }
 .buttn-blk .save {
-	height:20px;
+	height:27px;
 	padding:3px 8px;
 	min-width:75px;
 	line-height:20px;
@@ -977,7 +978,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aecd55', end
 	height:20px;
 	float:left;
 	margin-right: 3px;
-	background:url(../Images/gap-anlysis.png) -13px -175px;
+	background:url(app/resource/images/gap-anlysis.png) -13px -175px;
 }
 
 
@@ -999,7 +1000,7 @@ height: 100px;
 }
 
 .aza-header .aza-logo {
-background:url('../images/samp-logo.jpg') no-repeat;
+background:url('app/resource/images/samp-logo.jpg') no-repeat;
     border: none;
     width:200px;
 	float:left;
@@ -1106,7 +1107,7 @@ a.boxclose {
   float: right;
   width: 26px;
   height: 26px;
-  background: transparent url(../images/close-icon.png) no-repeat;
+  background: transparent url(app/resource/images/close-icon.png) no-repeat;
   margin-top: 6px;
   margin-right: 3px;
   cursor: pointer;
@@ -1331,7 +1332,7 @@ a.boxclose {
   float: right;
   width: 26px;
   height: 26px;
-  background: transparent url(../images/close-icon.png) no-repeat;
+  background: transparent url(app/resource/images/close-icon.png) no-repeat;
   margin-top: 6px;
   margin-right: 3px;
   cursor: pointer;
@@ -1430,7 +1431,7 @@ a.boxclose {
   float: right;
   width: 26px;
   height: 26px;
-  background: transparent url(../images/close-icon.png) no-repeat;
+  background: transparent url(app/resource/images/close-icon.png) no-repeat;
   margin-top: 6px;
   margin-right: 3px;
   cursor: pointer;
@@ -1614,7 +1615,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 .aza-header .back_btn {
 width: 28px;
   height: 29px;
-  background: url(../Images/back.png) no-repeat;
+  background: url(app/resource/images/back.png) no-repeat;
   position: absolute;
   right: 154px;
   top: 19px;

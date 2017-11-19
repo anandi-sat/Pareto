@@ -8,7 +8,7 @@ import {Ng2PaginationModule} from 'ng2-pagination';
 import { AppComponent } from './app.component';
 import { PatientComponent } from './component/patient/patient';
 import { CampaignComponent } from './component/campaign/campaign';
-import {CreateCampaignComponent} from './component/campaign/createcampaign';
+import { CreateCampaignComponent } from './component/campaign/createcampaign';
 import { DeliveryComponent } from './component/delivery/deliveryplanner';
 import { InterventionComponent } from './component/interventions/interventions';
 import {HttpService} from './service/http.service';
