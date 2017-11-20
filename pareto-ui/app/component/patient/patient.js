@@ -21,6 +21,7 @@ var PatientComponent = (function () {
         this.i = 0;
         this.patientId = '';
         this.noofpatient = 0;
+        this.selectedPatientArray = [];
     }
     PatientComponent.prototype.ngOnInit = function () {
         this.getPatient();
@@ -50,6 +51,16 @@ var PatientComponent = (function () {
         }, function (error) {
             console.log(error);
         });
+    };
+    PatientComponent.prototype.addPatientToArray = function (person, event) {
+        this.toggleItemInArr(this.selectedPatientArray, person);
+    };
+    PatientComponent.prototype.isPatientSelected = function (patient) {
+        return this.selectedPatientArray.indexOf(patient) != -1;
+    };
+    PatientComponent.prototype.toggleItemInArr = function (arr, item) {
+        var index = arr.indexOf(item);
+        index === -1 ? arr.push(item) : arr.splice(index, 1);
     };
     PatientComponent = __decorate([
         core_1.Component({
