@@ -23,6 +23,7 @@ export class PatientComponent{
     patientId = '';
     patientData: any;
     noofpatient: number = 0;
+    selectedPatientArray = [];
     
     public ngOnInit(): any
     {
@@ -60,5 +61,18 @@ export class PatientComponent{
             console.log(error);
         }
         );   
+    }
+
+    addPatientToArray(person: any, event) {
+        this.toggleItemInArr(this.selectedPatientArray, person);
+    }
+
+    isPatientSelected(patient: any){
+        return this.selectedPatientArray.indexOf(patient) != -1;
+    }
+
+    toggleItemInArr(arr, item) {
+        const index = arr.indexOf(item);
+        index === - 1 ? arr.push(item) : arr.splice(index, 1);
     }
 }

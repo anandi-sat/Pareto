@@ -1,7 +1,6 @@
 ﻿
 <script src="app/resource/js/patientpopup.js"></script>
 
-
 <!-- wrapper--> 
 <div id="wrapper">
 <!-- header -->
@@ -68,7 +67,7 @@
                 <div class="search-patnt-blk"><span>Search Patients</span><input  type="text" [(ngModel)]="search" maxlength="120"></div>
             </div>
             
-
+            
             <div class="enroll-block">
             	<a href="#" id="enroll" class="enroll-btn"><span></span>Enroll Selected</a>
                 <div class="right-tools" align="right">
@@ -81,7 +80,7 @@
          
             <div class="patnt-table-blk" style="height:413px;">
             	<div class="table-responsive" >
-              <table id="#selectable" class="table table-bordered text-left" >
+              <table id="selectable" class="table table-bordered text-left" >
               <thead style="position: sticky;">
                 <tr>
                   <th>Member ID</th>
@@ -97,7 +96,7 @@
               </thead>
               <tbody ng-controller="PatientComponent">
                 
-				<tr *ngFor="let patient of patientData | filter:search:startsWith | paginate: { itemsPerPage: 15, currentPage: p }; let i=index ">
+				<tr *ngFor="let patient of patientData | filter:search:startsWith | paginate: { itemsPerPage: 15, currentPage: p }; let i=index " (click)="addPatientToArray(patient, $event)" [class.active]="isPatientSelected(patient)">
                   
                   <td><a [tooltip]="'Select a Patient to see his/her interventions'" (click)=store(patient.pid) class="reload_btn">{{patient.pid}}</a></td>
                   <td class="text-left">{{i+1}}</td>
@@ -255,9 +254,3 @@
 		
             });
         </script>
-        
-        <script src="../../resource/js/tooltip.js"></script>
-<script>
-   $(function () { $("[data-toggle='tooltip']").tooltip(); });
-</script>
-
