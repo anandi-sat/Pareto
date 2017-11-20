@@ -22,13 +22,20 @@ export class InterventionComponent{
 
     campaignData: any;
     interventionData : any;
+    patientvisitsData : any;
+    patientcampaignsData : any;
+    diagnosisData :any;
     patientData : any;
     patient = new Patient();
     noofcampaign: number = 0;
+    
     public ngOnInit(): any
     {
         this.getinterventionData();
         this.getcampaign();
+        this.getpatientvisitsData();
+        this.getpatientcampaignsData();
+        this.getdiagnosisData();
     }
     
     
@@ -43,6 +50,63 @@ export class InterventionComponent{
             }
             console.log(typeof this.interventionData);
             console.log(this.interventionData);
+        },
+        error => {
+            console.log(error);
+        }
+        );   
+
+    }
+
+    getpatientvisitsData(){
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getpatientvisitsData(reqJsonBody).subscribe(
+        resp => {    
+            if(resp!=null){
+                
+                this.patientvisitsData= resp.response;
+            }
+            console.log(typeof this.patientvisitsData);
+            console.log(this.patientvisitsData);
+        },
+        error => {
+            console.log(error);
+        }
+        );   
+
+    }
+
+    getpatientcampaignsData(){
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getpatientcampaignsData(reqJsonBody).subscribe(
+        resp => {    
+            if(resp!=null){
+                
+                this.patientcampaignsData= resp.response;
+            }
+            console.log(typeof this.patientcampaignsData);
+            console.log(this.patientcampaignsData);
+        },
+        error => {
+            console.log(error);
+        }
+        );   
+
+    }
+
+    getdiagnosisData(){
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getdiagnosisData(reqJsonBody).subscribe(
+        resp => {    
+            if(resp!=null){
+                
+                this.diagnosisData= resp.response;
+            }
+            console.log(typeof this.diagnosisData);
+            console.log(this.diagnosisData);
         },
         error => {
             console.log(error);

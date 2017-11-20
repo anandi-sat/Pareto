@@ -16,11 +16,15 @@ def patientData():
     cur = db.cursor()
 
 # Use all the SQL you like
-    cur.execute("SELECT * FROM patient")
+    cur.execute("""Select patient.PatientId,concat(FirstName, LastName) as Name,DATEDIFF(patient.DOB, Now() / 365.25) as age,max(appointmentDateTime) as LastVisitDate,
+Count(ServiceTaken) - Sum(ServiceTaken) as OpenTreatment,Now() as NextExepectedDate,4 as EngagementScore,Count(pc.CampaignID) as Campaigns From pareto.Patient patient
+left outer join  pareto.appointment appointment on patient.PatientID = appointment.PatientID and appointment.Status not in ('Unconfirmed', 'Missed', 'Cancelled', 'Will Call')
+left outer join  pareto.services on services.PatientID = patient.PatientID left outer join  pareto.patient_campaign as pc on patient.PatientID = pc.PatientID and pc.status = 'Active'
+group by patient.PatientId;""")
 
     df = list(cur.fetchall())
 
-    keys = ["sno", "fname", "lname", "dob", "sex", "nationality", "married", "ins1", "ins2", "mobile", "mobile2", "email", "guardian", "address"]
+    keys = ["pid", "name", "age", "lastvisitdate", "opentreatment", "nextexpecteddate", "engagementscore", "campaigns"]
 
     result = [dict(zip(keys, values)) for values in df]
     db.close()

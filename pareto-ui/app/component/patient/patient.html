@@ -68,14 +68,7 @@
                 <div class="search-patnt-blk"><span>Search Patients</span><input  type="text" [(ngModel)]="search" maxlength="120"></div>
             </div>
             
-      <!--    <div class="view">
-            	<ul>
-                	<li class="green"><a href="#">View All</a></li>
-                    <li data-toggle="tooltip" data-placement="right" *ngFor="let alphabet of alphabets" title="alphabet"><a (click)=filterPatientData(alphabet) >{{alphabet}}</a></li>
-                </ul>
-            </div> -->
-            
-            
+
             <div class="enroll-block">
             	<a href="#" id="enroll" class="enroll-btn"><span></span>Enroll Selected</a>
                 <div class="right-tools" align="right">
@@ -95,26 +88,26 @@
                   <th class="text-center">S.No</th>
                   <th class="text-center">Name</th>
                   <th class="text-center">Age</th>
-                  <th class="text-center">Gender</th>
-                  
-                   <th class="text-center">Phone</th>
-                    <th class="text-center">E-mail</th>
-                    <th class="text-center">Address</th>
+                  <th class="text-center">Last Visit Date</th>
+                  <th class="text-center">Open Treatment</th>
+                   <th class="text-center">Next Expected Date</th>
+                    <th class="text-center">Engagement Score</th>
+                    <th class="text-center">Cmapaigns</th>
                   </tr>
               </thead>
               <tbody ng-controller="PatientComponent">
                 
 				<tr *ngFor="let patient of patientData | filter:search:startsWith | paginate: { itemsPerPage: 15, currentPage: p }; let i=index ">
                   
-                  <td><a [tooltip]="'Select a Patient to see his/her interventions'" (click)=store(patient.sno) class="reload_btn">{{patient.sno}}</a></td>
+                  <td><a [tooltip]="'Select a Patient to see his/her interventions'" (click)=store(patient.pid) class="reload_btn">{{patient.pid}}</a></td>
                   <td class="text-left">{{i+1}}</td>
-                  <td>{{patient.fname}} {{patient.lname}}</td>
-                  <td>{{patient.dob}}</td>
-                  <td>{{patient.sex}}</td>
-                  
-                  <td>{{patient.mobile}}</td>
-                  <td>{{patient.email}}</td>
-                  <td>{{patient.address}}</td>
+                  <td>{{patient.name}}</td>
+                  <td>{{patient.age}}</td>
+                  <td>{{patient.lastvisitdate}}</td>
+                  <td>{{patient.opentreatment}}</td>
+                  <td>{{patient.nextexpecteddate}}</td>
+                  <td>{{patient.engagementscore}}</td>
+                  <td>{{patient.campaigns}}</td>
                 </tr>
                 	
               </tbody>
@@ -201,12 +194,7 @@
         
   
   
-<footer style="background:#fff; height:27px;" id="footerWrapper">
-    <div class="footer">
-        
-        <p><strong>Contact:&nbsp;</strong><a href="mailto:#">Pareto Healthcare</a></p>
-    </div>
-</footer>
+
 
 
 

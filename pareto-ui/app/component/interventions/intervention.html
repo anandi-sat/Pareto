@@ -1,19 +1,19 @@
 <link rel="stylesheet" type="text/css" href="../../resource/css/campaign-1.css" />
 
-<div id="main" ng-controller="InterventionComponent"  *ngFor="let intervention of interventionData">
+<div id="main" >
 	<div class="container" >
 
     <div class="top_block">
             	  
                 <div class="session_bar" >
                 	                   	 <img src="app/resource/images/prof-pic.png">
-					<div class="header-profile" >
+					<div class="header-profile" ng-controller="InterventionComponent"  *ngFor="let intervention of interventionData">
                      	<p><label>Name: </label>{{intervention.fname}} {{intervention.lname}} </p>
                         <p><label>DOB: </label>{{intervention.dob}}</p>
                         <p><label>Patient ID: </label>{{intervention.Id}}</p>
                         <p><label>Gender: </label>{{intervention.gender}}</p>
                      	<p><label>Contact:(M): </label>{{intervention.dpcontact}}</p>
-                        <p><label>Email: </label>{{intervention.email}}</p>
+                        <p><label>Email: </label>{{intervention.email}}</p><br><br>
                     </div>
 
                 </div>
@@ -42,21 +42,19 @@
                         <thead>
                           <tr>
                         
-                            <th width="20%">Campaing Name</th>
+                            <th width="20%">Vists Date</th>
 
                            <!-- <th  width="50">Triggered Formula</th>-->
-                            <th  width="15%">Status</th>
+                            <th  width="15%">Visit Status</th>
 
                            </tr>
                         </thead>
                         <tbody >
                         
-                          <tr *ngFor="let intervention of interventionData">
+                          <tr ng-controller="InterventionComponent" *ngFor="let patientvisits of patientvisitsData">
                          
-                            <td>{{intervention.Cname}}</td>
-                     
-                          <!--  <td>{{campaign.trigger}}</td>-->
-                            <td><a href="#">{{intervention.Pcstatus}}</a></td>
+                            <td>{{patientvisits.appdate}}</td>
+                            <td><a href="#">{{patientvisits.pvstatus}}</a></td>
 
                           </tr>
                         </tbody>
@@ -73,27 +71,23 @@
                 <thead>
                   <tr>
                    
-                    <th class="text-center" width="17%">Name</th>
-                    <th class="text-center" width="12%">Touchpoint </th>
-                    <th class="text-center" width="10%">Channel</th>
-                    <th class="text-center" width="15%">Time Stamp</th>
-                    <th class="text-center" width="15%">Message</th>
-                    <th class="text-center" width="15%">Contact</th>
+                    <th class="text-center" width="17%">Diagnosis Code</th>
+                    <th class="text-center" width="12%">Diagnosis Date</th>
+                    <th class="text-center" width="10%">Description</th>
                     <th class="text-center" width="15%">Status</th>
+
                   
                    </tr>
                 </thead>
                 <tbody >
                 
                   
-                   <tr *ngFor="let intervention of interventionData">
-                    <td>{{intervention.fname}} {{intervention.lname}}</td>
-                    <td>{{intervention.dptouchpoint}}</td>
-                    <td>SMS</td>
-                    <td>{{intervention.dpstime}}</td>
-                    <td>{{intervention.dpmsg}}</td>
-                    <td>{{intervention.dpcontact}}</td>
-                    <td>{{intervention.status}}<span class="delvrd"></span></td>
+                   <tr ng-controller="InterventionComponent" *ngFor="let diagnosis of diagnosisData">
+                    <td>{{diagnosis.diagid}}</td>
+                    <td>-</td>
+                    <td>{{diagnosis.diagdes}}</td>
+                    <td>{{diagnosis.diagst}}</td>
+
                   </tr>
                   
   
@@ -102,39 +96,7 @@
            
           </div></div></div>
           
-          
-      <!--    <div class="history-table" style="overflow:inherit; margin-top:15px;">
-            <div class="table-condensed">
-             <div class="crm-table-title">Previous Illnesses	</div>
-                    <table class="table " style="width: 100%">
-                                <thead>
-                                    <tr style="background-color: #EEF3DA;color:#333;">
-                                        <th>Service Date</th>
-                                        <th>Code</th>
-                                         <th>Description</th>
-
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>03/15/2014</td>
-                                        <td>ICD-272.2</td>
-                                        <td>Benign Essential Hypertension</td>
-                                    </tr>
-                                    
-                                          <tr>
-                                        <td>03/15/2014</td>
-                                        <td>ICD-780.57</td>
-                                        <td>Unspecified Sleep Apnea</td>
-                                    </tr>
-                            
-                                </tbody>
-                            </table>
-            
-          </div></div>-->
-          
-          
+ 
           
         </div>
 	<div class="col-sm-12" style="padding-left: 0px; padding-right: 0px;">
@@ -148,8 +110,8 @@
                         <thead>
                           <tr>
                         
-                            <th width="20%">Campaing Name</th>
-
+                            <th width="20%">Campaign Name</th>
+                            <th  width="15%">Enrollment Date</th>
                            <!-- <th  width="50">Triggered Formula</th>-->
                             <th  width="15%">Status</th>
 
@@ -157,12 +119,11 @@
                         </thead>
                         <tbody >
                         
-                          <tr *ngFor="let intervention of interventionData">
+                          <tr ng-controller="InterventionComponent" *ngFor="let patientcampaigns of patientcampaignsData">
                          
-                            <td>{{intervention.Cname}}</td>
-                     
-                          <!--  <td>{{campaign.trigger}}</td>-->
-                            <td><a href="#">{{intervention.Pcstatus}}</a></td>
+                            <td>{{patientcampaigns.campname}}</td>
+                            <td>1-1-1883</td>
+                            <td><a href="#">{{patientcampaigns.campstatus}}</a></td>
 
                           </tr>
                         </tbody>

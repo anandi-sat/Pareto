@@ -23,6 +23,9 @@ var InterventionComponent = (function () {
     InterventionComponent.prototype.ngOnInit = function () {
         this.getinterventionData();
         this.getcampaign();
+        this.getpatientvisitsData();
+        this.getpatientcampaignsData();
+        this.getdiagnosisData();
     };
     InterventionComponent.prototype.getinterventionData = function () {
         var _this = this;
@@ -34,6 +37,48 @@ var InterventionComponent = (function () {
             }
             console.log(typeof _this.interventionData);
             console.log(_this.interventionData);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    InterventionComponent.prototype.getpatientvisitsData = function () {
+        var _this = this;
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getpatientvisitsData(reqJsonBody).subscribe(function (resp) {
+            if (resp != null) {
+                _this.patientvisitsData = resp.response;
+            }
+            console.log(typeof _this.patientvisitsData);
+            console.log(_this.patientvisitsData);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    InterventionComponent.prototype.getpatientcampaignsData = function () {
+        var _this = this;
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getpatientcampaignsData(reqJsonBody).subscribe(function (resp) {
+            if (resp != null) {
+                _this.patientcampaignsData = resp.response;
+            }
+            console.log(typeof _this.patientcampaignsData);
+            console.log(_this.patientcampaignsData);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    InterventionComponent.prototype.getdiagnosisData = function () {
+        var _this = this;
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getdiagnosisData(reqJsonBody).subscribe(function (resp) {
+            if (resp != null) {
+                _this.diagnosisData = resp.response;
+            }
+            console.log(typeof _this.diagnosisData);
+            console.log(_this.diagnosisData);
         }, function (error) {
             console.log(error);
         });

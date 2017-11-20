@@ -19,6 +19,21 @@ var InterventionService = (function () {
         console.log(this.interventionData);
         return this.interventionData;
     };
+    InterventionService.prototype.getpatientvisitsData = function (reqJsonBody) {
+        this.patientvisitsData = this.httpService.getpatientvisits("patientvisitsData", reqJsonBody);
+        console.log(this.patientvisitsData);
+        return this.patientvisitsData;
+    };
+    InterventionService.prototype.getpatientcampaignsData = function (reqJsonBody) {
+        this.patientcampaignsData = this.httpService.getpatientcampaigns("patientcampaignsData", reqJsonBody);
+        console.log(this.patientcampaignsData);
+        return this.patientcampaignsData;
+    };
+    InterventionService.prototype.getdiagnosisData = function (reqJsonBody) {
+        this.diagnosisData = this.httpService.getdiagnosis("diagnosisData", reqJsonBody);
+        console.log(this.diagnosisData);
+        return this.diagnosisData;
+    };
     InterventionService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_service_1.HttpService])

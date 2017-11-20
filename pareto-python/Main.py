@@ -10,6 +10,9 @@ from Patients import patientData
 from campaigns import campaignData
 from intervention import interventionData
 from Delivery import deliveryData
+from patientvisits import patientvisitsData
+from patientcampaigns import patientcampaignsData
+from diagnosis import diagnosisData
 
 #import the method defined 'patientData' in Patients.py
 
@@ -46,20 +49,61 @@ def retrievedeliveryDetails():
 
 #import the method defined 'deliveryData' in campigns.py
 
+@app.route('/patientvisitsData', methods=['POST'])
+def retrievepatientvisitsDetails():
+    #patientvisits = patientvisitsData()
+    input_query = request.get_json()
+    print(input_query)
+    patientId = input_query.get('patientId')
+    print(patientId)
+    patientvisits = patientvisitsData(patientId)
+
+    # To set the response as JSON, use the below code
+    response = json.dumps(patientvisits)
+    return response
+
+
+@app.route('/patientcampaignsData', methods=['POST'])
+def retrievepatientcampaignsDetails():
+    #patientcampaigns = patientcampaignsData()
+    input_query = request.get_json()
+    print(input_query)
+    patientId = input_query.get('patientId')
+    print(patientId)
+    patientcampaigns = patientcampaignsData(patientId)
+
+    # To set the response as JSON, use the below code
+    response = json.dumps(patientcampaigns)
+    return response
+
+@app.route('/diagnosisData', methods=['POST'])
+def retrievediagnosisDetails():
+    #diagnosis = diagnosisData()
+    input_query = request.get_json()
+    print(input_query)
+    patientId = input_query.get('patientId')
+    print(patientId)
+    diagnosis = diagnosisData(patientId)
+
+    # To set the response as JSON, use the below code
+    response = json.dumps(diagnosis)
+    return response
+
 @app.route('/interventionData', methods=['POST'])
 def retrieveinterventionDetails():
-    #intervention = interventionData()
+    # intervention = interventionData()
     input_query = request.get_json()
     print(input_query)
     patientId = input_query.get('patientId')
     print(patientId)
     intervention = interventionData(patientId)
 
-# call the method and set a new series variable 'deliveryData' here
+
 
 #To set the response as JSON, use the below code
     response=json.dumps(intervention)
     return response
+
 def read_properties_file(file_path):
     with open(file_path) as f:
         config = io.StringIO()

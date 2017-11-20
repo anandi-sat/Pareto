@@ -31,5 +31,22 @@ export class HttpService {
        console.log("params:", params);
        return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
    }
-
+   getpatientvisits( action: string, params: any ) {
+    let headers = new Headers( { 'Content-Type': 'application/json' });
+    let options = new RequestOptions( { headers: headers });
+    console.log("params:", params);
+    return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
+}
+getpatientcampaigns( action: string, params: any ) {
+    let headers = new Headers( { 'Content-Type': 'application/json' });
+    let options = new RequestOptions( { headers: headers });
+    console.log("params:", params);
+    return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
+}
+getdiagnosis( action: string, params: any ) {
+    let headers = new Headers( { 'Content-Type': 'application/json' });
+    let options = new RequestOptions( { headers: headers });
+    console.log("params:", params);
+    return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
+}
 }
