@@ -69,7 +69,7 @@
             
             
             <div class="enroll-block">
-            	<a href="#" id="enroll" class="enroll-btn"><span></span>Enroll Selected</a>
+            	<button id="enroll" class="enroll-btn" (click)="addPatienttoCampaign(selectedPatientArray)" data-toggle="modal" data-target="#overlay"><span></span>Enroll Selected</button>
                 <div class="right-tools" align="right">
                 	<a class="clear-btn" href="#"><span></span>Clear All</a>
                     
@@ -127,68 +127,37 @@
 
         
       <!--popup-->
-     <div class="overlay" id="overlay" style="display:none;"></div>
-	
-       <div class="main_box" id="box" >
-            <a class="boxclose" id="boxclose"></a>
+     <div class="overlay" id="overlay" role="dialog" style="display:none;">
+        <div class="modal-dialog">
+       
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             
-            <div class="box-main">    <div class="ptnt-heading">
-            	<h2>Patients Selected</h2>
+                <h4 class="modal-title">Patients Selected</h4>
                 <!--<label>14</label>-->
-            </div>
-            
-            
-            
-            
-    <div class="closing_gap_list">
-    <ul>
-		<li class="margin_rt"><span>Welcome Program</span></li>
-		<li><span>Flu Shot Campaign</span></li>
-		 <li class="margin_rt"><span>DRE Program</span></li>
-		<li><span>Obesity Program</span></li>
-       <li class="margin_rt"><span>Colorectal Cancer Screening Program</span></li>
-        <li ><span>Breast Cancer Screening Campaign</span></li>
-           <li class="margin_rt"><span>HbA1c Campaign</span></li>
-             <li><span>Survey Campaign</span></li>
-
-	</ul>
-   
-   </div>
-   
-   <div class="adhoc-blk">
-   	<div class="adhc-heading"><h2>Adhoc</h2></div>
-    <div class="adhc-btn"><a href="#" onclick='Show();'>Adhoc Writer</a></div>
-   <!--innser poup--> 
-     <div  class="overlay" id="overlay1" style="display:none;">
-	 
-	 <div class="inner-pop-box">
-
-     
-	<div class="mini-poup">
-    	<textarea></textarea>
-    </div>
-    	 <a href="#" class="confirm_btn1"  (click)="Hide();">OK</a>
-	 </div>
-	 
-	 </div>
-	  <!--//innser poup--> 
-	  
-    
-    
-      
-     <nav class="btn_bx">
-         <a href="images/iClin-Engager_Feedback_Ver1.01.pdf" target="_blank" class="overview_btn">Preview</a>
-         </nav>
-    
-   </div>
-         
-         
-         <nav class="btn_bx">
-         <a href="#" class="confirm_btn" >OK</a>
-         </nav>
-
+                </div>
+            <div class="modal-body">       
+                <div class="closing_gap_list">
+                <ul>
+		            <li class="margin_rt"><span>Welcome Program</span></li>
+		            <li><span>Flu Shot Campaign</span></li>
+		            <li class="margin_rt"><span>DRE Program</span></li>
+		            <li><span>Obesity Program</span></li>
+                    <li class="margin_rt"><span>Colorectal Cancer Screening Program</span></li>
+                    <li ><span>Breast Cancer Screening Campaign</span></li>
+                    <li class="margin_rt"><span>HbA1c Campaign</span></li>
+                    <li><span>Survey Campaign</span></li>
+            	</ul>
+                </div>
+                <nav class="btn_bx">
+                    <a href="#" class="confirm_btn" >OK</a>
+                </nav>
             </div>
         </div>
+        </div>
+    </div>
+    
         <!--End Poup-->
         
   

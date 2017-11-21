@@ -75,4 +75,8 @@ export class PatientComponent{
         const index = arr.indexOf(item);
         index === - 1 ? arr.push(item) : arr.splice(index, 1);
     }
+
+    addPatienttoCampaign(selectedPatients) {
+        console.log(selectedPatients);
+    }
 }

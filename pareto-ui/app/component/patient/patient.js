@@ -62,6 +62,9 @@ var PatientComponent = (function () {
         var index = arr.indexOf(item);
         index === -1 ? arr.push(item) : arr.splice(index, 1);
     };
+    PatientComponent.prototype.addPatienttoCampaign = function (selectedPatients) {
+        console.log(selectedPatients);
+    };
     PatientComponent = __decorate([
         core_1.Component({
             selector: 'patienthtml',
