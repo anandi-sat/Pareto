@@ -69,7 +69,7 @@
             
             
             <div class="enroll-block">
-            	<button id="enroll" class="enroll-btn" (click)="addPatienttoCampaign(selectedPatientArray)" data-toggle="modal" data-target="#overlay"><span></span>Enroll Selected</button>
+            	<button id="enroll" class="enroll-btn" (click)="addPatienttoCampaign(selectedPatientArray)" data-toggle="modal" data-target="#myModal"><span></span>Enroll Selected</button>
                 <div class="right-tools" align="right">
                 	<a class="clear-btn" href="#"><span></span>Clear All</a>
                     
@@ -127,36 +127,30 @@
 
         
       <!--popup-->
-     <div class="overlay" id="overlay" role="dialog" style="display:none;">
-        <div class="modal-dialog">
-       
-        <div class="modal-content">
+      <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            
-                <h4 class="modal-title">Patients Selected</h4>
-                <!--<label>14</label>-->
-                </div>
-            <div class="modal-body">       
-                <div class="closing_gap_list">
-                <ul>
-		            <li class="margin_rt"><span>Welcome Program</span></li>
-		            <li><span>Flu Shot Campaign</span></li>
-		            <li class="margin_rt"><span>DRE Program</span></li>
-		            <li><span>Obesity Program</span></li>
-                    <li class="margin_rt"><span>Colorectal Cancer Screening Program</span></li>
-                    <li ><span>Breast Cancer Screening Campaign</span></li>
-                    <li class="margin_rt"><span>HbA1c Campaign</span></li>
-                    <li><span>Survey Campaign</span></li>
-            	</ul>
-                </div>
-                <nav class="btn_bx">
-                    <a href="#" class="confirm_btn" >OK</a>
-                </nav>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Campaigns list</h4>
             </div>
+            <div class="modal-body" >
+                <div class="list-group" >
+                    <button type="button" class="list-group-item list-group-item-action active">
+                        Campaign Name
+                      </button>
+                   
+                    <button type="button" ng-controller="CampaignComponent" class="list-group-item list-group-item-action" *ngFor="let campaigns of campaignData">{{campaigns.Name}}</button>
+                  
+                </div>
+            </div>
+            <div class="modal-footer enroll-block">
+              <button type="button"  class="enroll-btn" data-dismiss="modal">Close</button>
+              <button type="button" class="enroll-btn">Ok</button>
+            </div>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
     
         <!--End Poup-->
         

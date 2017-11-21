@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var patient_service_1 = require('../../service/patientdetails/patient.service');
+var campaign_service_1 = require('../../service/campaigndetails/campaign.service');
 var shared_service_1 = require('../../service/shared.service');
 var router_1 = require('@angular/router');
 var PatientComponent = (function () {
-    function PatientComponent(patientService, router, sharedService) {
+    function PatientComponent(patientService, campaignService, router, sharedService) {
         this.patientService = patientService;
+        this.campaignService = campaignService;
         this.router = router;
         this.sharedService = sharedService;
         //simple call init function on controller
@@ -22,9 +24,11 @@ var PatientComponent = (function () {
         this.patientId = '';
         this.noofpatient = 0;
         this.selectedPatientArray = [];
+        this.noofcampaign = 0;
     }
     PatientComponent.prototype.ngOnInit = function () {
         this.getPatient();
+        this.getcampaign();
     };
     PatientComponent.prototype.store = function (patient) {
         console.log(patient);
@@ -65,13 +69,26 @@ var PatientComponent = (function () {
     PatientComponent.prototype.addPatienttoCampaign = function (selectedPatients) {
         console.log(selectedPatients);
     };
+    PatientComponent.prototype.getcampaign = function () {
+        var _this = this;
+        this.campaignService.getcampaignData().subscribe(function (resp) {
+            if (resp != null) {
+                _this.campaignData = resp.response;
+                _this.noofcampaign = resp.response.length;
+            }
+            console.log(typeof _this.campaignData);
+            console.log(_this.campaignData);
+        }, function (error) {
+            console.log(error);
+        });
+    };
     PatientComponent = __decorate([
         core_1.Component({
             selector: 'patienthtml',
             templateUrl: 'app/component/patient/patient.html',
-            providers: [patient_service_1.PatientService]
+            providers: [patient_service_1.PatientService, campaign_service_1.CampaignService]
         }), 
-        __metadata('design:paramtypes', [patient_service_1.PatientService, router_1.Router, shared_service_1.SharedService])
+        __metadata('design:paramtypes', [patient_service_1.PatientService, campaign_service_1.CampaignService, router_1.Router, shared_service_1.SharedService])
     ], PatientComponent);
     return PatientComponent;
 }());

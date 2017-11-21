@@ -11,6 +11,7 @@ import { CampaignComponent } from './component/campaign/campaign';
 import { CreateCampaignComponent } from './component/campaign/createcampaign';
 import { DeliveryComponent } from './component/delivery/deliveryplanner';
 import { InterventionComponent } from './component/interventions/interventions';
+import { LoginComponent } from './component/login/login';
 import {HttpService} from './service/http.service';
 import {SharedService} from './service/shared.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
@@ -21,11 +22,12 @@ const appRoutes: Routes = [
   { path: 'campaign', component: CampaignComponent },
   { path: 'delivery', component: DeliveryComponent },
   { path: 'intervention', component: InterventionComponent },
-  { path: 'createcampaign', component: CreateCampaignComponent},
+  { path: 'createcampaign', component: CreateCampaignComponent },
+  { path: 'login', component: LoginComponent },
 
   {
     path: '',
-    redirectTo: '/patient',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
 ];
@@ -37,7 +39,7 @@ const appRoutes: Routes = [
     )],exports: [
     RouterModule
   ],
-  declarations: [AppComponent, PatientComponent, CampaignComponent, DeliveryComponent, InterventionComponent, CreateCampaignComponent],
+  declarations: [AppComponent, LoginComponent, PatientComponent, CampaignComponent, DeliveryComponent, InterventionComponent, CreateCampaignComponent],
   bootstrap: [AppComponent],
   providers: [HttpService, SharedService]
 })

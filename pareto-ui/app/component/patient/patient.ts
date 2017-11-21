@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {PatientService} from '../../service/patientdetails/patient.service';
+import {CampaignService} from '../../service/campaigndetails/campaign.service';
 import {SharedService} from '../../service/shared.service';
 import {Router} from '@angular/router'
 
@@ -7,13 +8,13 @@ import {Router} from '@angular/router'
 @Component({
     selector: 'patienthtml',
     templateUrl: 'app/component/patient/patient.html',
-    providers: [PatientService]
+    providers: [PatientService ,CampaignService]
 })
 
 export class PatientComponent{
     
 
-	constructor( private patientService: PatientService, private router: Router, public sharedService: SharedService ) {
+	constructor( private patientService: PatientService, private campaignService: CampaignService, private router: Router, public sharedService: SharedService ) {
         
     }
     
@@ -24,10 +25,13 @@ export class PatientComponent{
     patientData: any;
     noofpatient: number = 0;
     selectedPatientArray = [];
-    
+    noofcampaign: number = 0;
+    campaignData: any;
+
     public ngOnInit(): any
     {
         this.getPatient();
+        this.getcampaign();
         
     }
 
@@ -78,5 +82,22 @@ export class PatientComponent{
 
     addPatienttoCampaign(selectedPatients) {
         console.log(selectedPatients);
+    }
+    getcampaign(){
+        this.campaignService.getcampaignData().subscribe(
+        resp => {    
+            if(resp!=null){
+                
+                this.campaignData= resp.response;
+                this.noofcampaign= resp.response.length;
+            }
+            console.log(typeof this.campaignData);
+            console.log(this.campaignData);
+        },
+        error => {
+            console.log(error);
+        }
+        
+        );   
     }
 }

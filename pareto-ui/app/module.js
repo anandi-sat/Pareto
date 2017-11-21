@@ -21,6 +21,7 @@ var campaign_1 = require('./component/campaign/campaign');
 var createcampaign_1 = require('./component/campaign/createcampaign');
 var deliveryplanner_1 = require('./component/delivery/deliveryplanner');
 var interventions_1 = require('./component/interventions/interventions');
+var login_1 = require('./component/login/login');
 var http_service_1 = require('./service/http.service');
 var shared_service_1 = require('./service/shared.service');
 var ng2_search_filter_1 = require('ng2-search-filter');
@@ -31,9 +32,10 @@ var appRoutes = [
     { path: 'delivery', component: deliveryplanner_1.DeliveryComponent },
     { path: 'intervention', component: interventions_1.InterventionComponent },
     { path: 'createcampaign', component: createcampaign_1.CreateCampaignComponent },
+    { path: 'login', component: login_1.LoginComponent },
     {
         path: '',
-        redirectTo: '/patient',
+        redirectTo: '/login',
         pathMatch: 'full'
     },
 ];
@@ -46,7 +48,7 @@ var AppModule = (function () {
                 )], exports: [
                 router_1.RouterModule
             ],
-            declarations: [app_component_1.AppComponent, patient_1.PatientComponent, campaign_1.CampaignComponent, deliveryplanner_1.DeliveryComponent, interventions_1.InterventionComponent, createcampaign_1.CreateCampaignComponent],
+            declarations: [app_component_1.AppComponent, login_1.LoginComponent, patient_1.PatientComponent, campaign_1.CampaignComponent, deliveryplanner_1.DeliveryComponent, interventions_1.InterventionComponent, createcampaign_1.CreateCampaignComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [http_service_1.HttpService, shared_service_1.SharedService]
         }), 
