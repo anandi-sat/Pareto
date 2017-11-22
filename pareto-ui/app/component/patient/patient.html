@@ -2,7 +2,36 @@
 <script src="app/resource/js/patientpopup.js"></script>
 
 <!-- wrapper--> 
-<div id="wrapper">
+<div class="col-sm-12" style="margin-bottom:-20px; top:-60px;">
+<div class="col-sm-2"></div>
+<div class="col-sm-8" align = "center">
+<div class="nav-menu" style="color:#FFFFFF">
+        
+          <div class="btn-group">
+<button type="button" class="btn btn-primary"><a href="/patient" style="color:#FFFFFF">Patient</a></button>
+<button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Campaign</a></button>
+<button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Reports</a></button>
+<button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Work List</a></button>
+          
+
+
+
+      
+  
+          </div>
+          
+
+      
+</div>
+</div>
+<div class="col-sm-2">
+        <div class="header-holder">
+                <div class="log_in_bx" style="margin-bottom:25px; top:10px;">
+                    <a href="/login">LOGOUT</a>
+                </div>
+        </div>
+</div>
+</div>
 <!-- header -->
 
 
@@ -111,6 +140,7 @@
                 	
               </tbody>
             </table>
+            
 			<br>
             <div class="pull-right">
                 <pagination-controls (pageChange)="p = $event"></pagination-controls>
@@ -146,7 +176,7 @@
             </div>
             <div class="modal-footer enroll-block">
               <button type="button"  class="enroll-btn" data-dismiss="modal">Close</button>
-              <button type="button" class="enroll-btn">Ok</button>
+              <button type="button" class="enroll-btn" data-dismiss="modal">Ok</button>
             </div>
           </div>
         </div>

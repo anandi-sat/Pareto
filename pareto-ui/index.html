@@ -19,9 +19,8 @@
     <link rel="stylesheet" type="text/css" href="app/resource/libs/css/main.css" />
     <link rel="stylesheet" type="text/css" href="app/resource/libs/css/styles.css" />
     <link rel="stylesheet" type="text/css" href="app/resource/css/all.css" />
-     
-    <link rel="stylesheet" type="text/css" href="app/resource/css/patient-manager.css" />   
-    <link rel="stylesheet" type="text/css" href="app/resource/css/campaignpopup.css" />
+    <link rel="stylesheet" type="text/css" href="app/resource/css/patient-manager.css" /> 
+    <!--<link rel="stylesheet" type="text/css" href="app/resource/css/campaignpopup.css" />-->
     <link rel="stylesheet" href="node_modules/ng2-drag-drop/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     
@@ -60,43 +59,22 @@
                     <!-- header-frame -->
                    <div class="aza-logo"></div>
                 
-                   
-                   <div class="nav-menu" style="color:#FFFFFF">
-                      
-                        <div class="btn-group">
-		<button type="button" class="btn btn-primary"><a href="/patient" style="color:#FFFFFF">Patient</a></button>
-		<button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Campaign</a></button>
-		<button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Reports</a></button>
-		<button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Work List</a></button>
-						
 
-                
-                  
-                    <script>
-                    $(function () {
-                        $('.btn-group button').click(function() {
-                            $(this).addClass('active').siblings().removeClass('active');
-                        });
-                    })
-                    </script>
-                    
-                
-                        </div>
-                        
-                   <div class="header-holder">
-                           <div class="log_in_bx" style="margin-bottom:25px; top:24px;">
-                               <a href="/login">LOGOUT</a>
-                           </div>
-                   </div>
-                    
-                   
                 
                 
                 </header>
-  <patient><img src="app/resource/images/preloader.gif" height="20px" width="20px"/></patient>
+  <patient><img src="app/resource/images/preloader.gif" style="position: absolute;top: 50%;left: 50%;margin-left: -(40/2)px;margin-top: -(40/2)px;" height="40px" width="40px"/></patient>
 </div>
 
 </div>
 </body>
+                  
+<script>
+        $(function () {
+            $('.btn-group button').click(function() {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+        })
+        </script>
 
 </html>

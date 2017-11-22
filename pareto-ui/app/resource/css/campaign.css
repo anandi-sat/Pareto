@@ -203,7 +203,7 @@ float:right;
 }
 
 .enroll-block .right-tools .add-btn{
-	height:25px;
+	height:30px;
 	padding:3px 8px;
 	min-width:75px;
 	line-height:21px;
@@ -230,7 +230,7 @@ float:right;
 	height:20px;
 	float:left;
 	margin-right: 3px;
-	background:url('../images/gap-anlysis.png') -100px -109px;
+	background:url(app/resource/images/gap-anlysis.png) -100px -109px;
 }
 
 

@@ -291,7 +291,7 @@ th {
 	text-align: left;
 }
 .enroll-block .right-tools .add-btn {
-	height:25px;
+	height:28px;
 	padding:3px 8px;
 	min-width:75px;
 	line-height:21px;
@@ -320,7 +320,7 @@ th {
 }
 .top_block {
 	height:60px;
-	width:959px;
+	width: 960px;
 	padding: 0 2px;
 	margin-top: 5px;
 	border: 1px solid #bfbfbf;
@@ -679,7 +679,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 }
 .patients-box {
 	float:left;
-	margin-top: 5px;
+	margin-top: 9px;
 	width:350px;
 
 	height:238px;
@@ -732,7 +732,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	margin-top: -3px;
 	width:605px;
 	height:238px;
-	padding-left: 30px;
+	padding-left: 25px;
 
 }
 .channl-avlble {
@@ -972,7 +972,7 @@ Aza Header
 	color:#7f7f7f;
 }
 .log_in_bx a {
-	height: 15px;
+	height: 20px;
 	padding: 3px 13px;
 	background: #a0c539;
 	border-radius: 20px;
@@ -1308,7 +1308,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adafae', end
 	float:left;
 }
 .tools-bitton-box .patnt-btn {
-	height: 25px;
+	height: 28px;
 	padding: 3px 8px;
 	margin-right:5px;
 	text-align:center;

@@ -6,6 +6,7 @@ import { AlertModule, TooltipModule, ModalModule } from 'ng2-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 import {Ng2PaginationModule} from 'ng2-pagination';
 import { AppComponent } from './app.component';
+import { LoadingImage } from './loader';
 import { PatientComponent } from './component/patient/patient';
 import { CampaignComponent } from './component/campaign/campaign';
 import { CreateCampaignComponent } from './component/campaign/createcampaign';
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
     )],exports: [
     RouterModule
   ],
-  declarations: [AppComponent, LoginComponent, PatientComponent, CampaignComponent, DeliveryComponent, InterventionComponent, CreateCampaignComponent],
+  declarations: [AppComponent, LoadingImage, LoginComponent, PatientComponent, CampaignComponent, DeliveryComponent, InterventionComponent, CreateCampaignComponent],
   bootstrap: [AppComponent],
   providers: [HttpService, SharedService]
 })

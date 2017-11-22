@@ -1,24 +1,46 @@
 <link rel="stylesheet" type="text/css" href="../../resource/css/campaign-1.css" />
+<div class="col-sm-12" style="margin-bottom:-20px; top:-60px;">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8" align = "center">
+    <div class="nav-menu" style="color:#FFFFFF">
+            
+              <div class="btn-group">
+    <button type="button" class="btn btn-primary"><a href="/patient" style="color:#FFFFFF">Patient</a></button>
+    <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Campaign</a></button>
+    <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Reports</a></button>
+    <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Work List</a></button>
 
+              </div>
+   
+    </div>
+    </div>
+    <div class="col-sm-2">
+            <div class="header-holder">
+                    <div class="log_in_bx" style="margin-bottom:25px; top:10px;">
+                        <a href="/login">LOGOUT</a>
+                    </div>
+            </div>
+    </div>
+    </div>
 <div id="main" >
 	<div class="container" >
 
-    <div class="top_block">
+    <div class="top_block"style="overflow: hidden">
             	  
                 <div class="session_bar" >
-                	                   	 <img src="app/resource/images/prof-pic.png">
-					<div class="header-profile" ng-controller="InterventionComponent"  *ngFor="let intervention of interventionData">
+                <img src="app/resource/images/prof-pic.png"/>
+					      <div class="header-profile"  ng-controller="InterventionComponent"  *ngFor="let intervention of interventionData">
                      	<p><label>Name: </label>{{intervention.fname}} {{intervention.lname}} </p>
-                        <p><label>DOB: </label>{{intervention.dob}}</p>
-                        <p><label>Patient ID: </label>{{intervention.Id}}</p>
-                        <p><label>Gender: </label>{{intervention.gender}}</p>
+                      <p><label>DOB: </label>{{intervention.dob}}</p>
+                      <p><label>Patient ID: </label>{{intervention.Id}}</p><br>
+                      <p><label>Gender: </label>{{intervention.gender}}</p>
                      	<p><label>Contact:(M): </label>{{intervention.dpcontact}}</p>
-                        <p><label>Email: </label>{{intervention.email}}</p><br><br>
-                    </div>
+                      <p><label>Email: </label>{{intervention.email}}</p><br>
+                </div><br>
 
                 </div>
 
-            </div>
+    </div>
     
 	<div class="campaign_blok">
       <div class="col-sm-12" style="padding-left: 0px; padding-right: 0px;">
@@ -143,7 +165,7 @@
                 <tbody >
                 
                   
-                   <tr *ngFor="let intervention of interventionData">
+                   <tr ng-controller="InterventionComponent" *ngFor="let intervention of interventionData">
                     <td>{{intervention.fname}} {{intervention.lname}}</td>
                     <td>{{intervention.dptouchpoint}}</td>
                     <td>SMS</td>

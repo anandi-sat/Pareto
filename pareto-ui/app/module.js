@@ -16,6 +16,7 @@ var ng2_bootstrap_1 = require('ng2-bootstrap');
 var router_1 = require('@angular/router');
 var ng2_pagination_1 = require('ng2-pagination');
 var app_component_1 = require('./app.component');
+var loader_1 = require('./loader');
 var patient_1 = require('./component/patient/patient');
 var campaign_1 = require('./component/campaign/campaign');
 var createcampaign_1 = require('./component/campaign/createcampaign');
@@ -48,7 +49,7 @@ var AppModule = (function () {
                 )], exports: [
                 router_1.RouterModule
             ],
-            declarations: [app_component_1.AppComponent, login_1.LoginComponent, patient_1.PatientComponent, campaign_1.CampaignComponent, deliveryplanner_1.DeliveryComponent, interventions_1.InterventionComponent, createcampaign_1.CreateCampaignComponent],
+            declarations: [app_component_1.AppComponent, loader_1.LoadingImage, login_1.LoginComponent, patient_1.PatientComponent, campaign_1.CampaignComponent, deliveryplanner_1.DeliveryComponent, interventions_1.InterventionComponent, createcampaign_1.CreateCampaignComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [http_service_1.HttpService, shared_service_1.SharedService]
         }), 
