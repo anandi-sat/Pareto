@@ -49,4 +49,9 @@ getdiagnosis( action: string, params: any ) {
     console.log("params:", params);
     return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
 }
+getprogramoverview( action: string ) {
+    let headers = new Headers( { 'Content-Type': 'application/json' });
+    let options = new RequestOptions( { headers: headers });
+    return this.http.get( "http://127.0.0.1:5000/" + action,  options ).map( res => res.json() );
+}
 }

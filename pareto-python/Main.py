@@ -13,7 +13,7 @@ from Delivery import deliveryData
 from patientvisits import patientvisitsData
 from patientcampaigns import patientcampaignsData
 from diagnosis import diagnosisData
-
+from programoverview import programoverviewData
 #import the method defined 'patientData' in Patients.py
 
 @app.route('/PatientData', methods=['GET'])
@@ -48,6 +48,16 @@ def retrievedeliveryDetails():
     return response
 
 #import the method defined 'deliveryData' in campigns.py
+
+@app.route('/programoverviewData', methods=['GET'])
+def retrieveprogramoverviewDetails():
+    programoverview = programoverviewData()
+# call the method and set a new series variable 'deliveryData' here
+
+#To set the response as JSON, use the below code
+    response=json.dumps(programoverview)
+    return response
+
 
 @app.route('/patientvisitsData', methods=['POST'])
 def retrievepatientvisitsDetails():

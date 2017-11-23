@@ -17,6 +17,7 @@ var DeliveryComponent = (function () {
     DeliveryComponent.prototype.ngOnInit = function () {
         console.log("reached here");
         this.getdeliveryData();
+        this.getprogramoverviewData();
     };
     DeliveryComponent.prototype.getdeliveryData = function () {
         var _this = this;
@@ -26,6 +27,18 @@ var DeliveryComponent = (function () {
             }
             console.log(typeof _this.deliveryData);
             console.log(_this.deliveryData);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    DeliveryComponent.prototype.getprogramoverviewData = function () {
+        var _this = this;
+        this.httpService.getprogramoverview("programoverviewData").subscribe(function (resp) {
+            if (resp != null) {
+                _this.programoverviewData = resp.response;
+            }
+            console.log(typeof _this.programoverviewData);
+            console.log(_this.programoverviewData);
         }, function (error) {
             console.log(error);
         });

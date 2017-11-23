@@ -70,25 +70,34 @@
 				<div class="prgm-ovrviw">
             
             	<div class="day-blk"><h4>Channel <p>(Channel sequence)</p></h4></div>
-                <div class="days">0 Day Lapsed</div>
-            	<div class="touchpoint-main">
-                	<div class=" blue-blok">
+                <div class="days1">0 Days Lapsed</div>
+               
+            	<div class="touchpoint-main"  ng-controller="DeliveryComponent" *ngFor="let programoverview of programoverviewData">
+                	<div class=" blue-blok" >
                       <div class="line"></div>
+                      
                     	<div class="tch-icon awarenss"></div>
-                        <h3><p>Awareness Message</p></h3>
+                        <h3><p>{{programoverview.pftname}}</p></h3>
+                        <div class="days" align="right">{{programoverview.pfinterval}} Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 <br>Lapsed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                     </div>
-                    
-                    <div class="tools">
+                   
+                    <div class="tools" style="overflow-x:hidden;">
                    <!--  <a href="#" target="_blank"> <span class="lttr-icn book" title="Print"></span></a>
                          <a href="#" >  <span class="lttr-icn phone" title="IVRS"></span></a>-->
+                         
                     	<a href="images/Email_Diabetic Retinal Eye Exam.pdf" target="_blank" ><span class="lttr-icn mail" title="E-mail"></span></a>
                           <a href="images/SMS_Diabetic Retinal Eye Exam.pdf" target="_blank">   <span  title="SMS"class="lttr-icn sms"></span> </a>
 						  <a target="_blank"><span  title="SMS"class="lttr-icn sms"></span> </a>
-                    </div>
+                       
+                        </div>
+                       
                 </div><!--end-->
-                <div class="days">2 Days Lapsed</div>
-                
-                <div class="touchpoint-main">
+               
+               
+             <!--   <div class="touchpoint-main">
                 	<div class=" blue-blok">
                       <div class="line"></div>
                     	<div class="tch-icon cmptr"></div>
@@ -102,11 +111,11 @@
                         <a href="images/dre_TP2_Sms.pdf"> <span class="lttr-icn sms"></span></a>
                         <a href="images/Print_Eye Exam Center Info.pdf" target="_blank"> <span class="lttr-icn mail"></span></a>
                     </div>
-                </div><!--end-->
-                <div class="days">3 Days Lapsed</div>
+                </div>end-->
+              <!--  <div class="days">3 Days Lapsed</div>
                 
                 
-                <div class="touchpoint-main">
+               <div class="touchpoint-main">
                 	<div class=" blue-blok">
                       <div class="line"></div>
                     	<div class="tch-icon reminder"></div>
@@ -118,8 +127,8 @@
                     	<a href="images/dre_TP3_Sms.pdf"><span class="lttr-icn sms"></span></a>
 						<a href="images/dre_TP3_Ivr.pdf"><span class="lttr-icn phone"></span></a>
                     </div>
-                </div><!--end-->
-                <div class="days">2 Days Lapsed</div>
+                </div>end-->
+               <!-- <div class="days">2 Days Lapsed</div>
                 
                 
                 <div class="touchpoint-main">
@@ -133,7 +142,7 @@
                     	<a href="images/dre_TP4_Sms.pdf"><span class="lttr-icn sms"></span></a>
 						<span class="lttr-icn sms"></span>
                     </div>
-                </div><!--end-->
+                </div>end-->
             </div>
             <div class="col-sm-12" style="width: 106%;" ng-controller="DeliveryComponent" *ngFor="let delivery of deliveryData"><div class="col-sm-3" style="padding-left: 1px;">       
                 <div class="hdng1">
