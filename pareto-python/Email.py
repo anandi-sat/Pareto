@@ -157,7 +157,7 @@ def sendemail():
 
 
 
-from InsertEmailDelivery import insertEmail
+from InsertDelivery import insertEmail
 from datetime import datetime
 def getEmailHistory(emailcontent,to_email_add, status, delivery_time, message_id):
 

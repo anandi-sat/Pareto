@@ -82,6 +82,9 @@ var PatientComponent = (function () {
             console.log(error);
         });
     };
+    PatientComponent.prototype.clearSelection = function () {
+        this.selectedPatientArray = [];
+    };
     PatientComponent = __decorate([
         core_1.Component({
             selector: 'patienthtml',

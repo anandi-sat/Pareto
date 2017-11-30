@@ -5,8 +5,8 @@ from flask import Flask, request, json
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-from Patients import patientData
 
+from Patients import patientData
 from campaigns import campaignData
 from intervention import interventionData
 from Delivery import deliveryData
@@ -14,6 +14,7 @@ from patientvisits import patientvisitsData
 from patientcampaigns import patientcampaignsData
 from diagnosis import diagnosisData
 from programoverview import programoverviewData
+from enrollselected import enrollselectedData
 #import the method defined 'patientData' in Patients.py
 
 @app.route('/PatientData', methods=['GET'])
@@ -108,10 +109,23 @@ def retrieveinterventionDetails():
     print(patientId)
     intervention = interventionData(patientId)
 
-
-
 #To set the response as JSON, use the below code
     response=json.dumps(intervention)
+    return response
+
+@app.route('/enrollselectedData', methods=['POST'])
+def retrieveenrollselectedDetails():
+    # enrollselected = enrollselectedData()
+    input_query = request.get_json()
+    print(input_query)
+    patientId = input_query.get('patientId')
+    campaignId = input_query.get('campaignId')
+    print(patientId)
+    print(campaignId)
+    enrollselected = enrollselectedData(patientId, campaignId)
+
+#To set the response as JSON, use the below code
+    response=json.dumps(enrollselected)
     return response
 
 def read_properties_file(file_path):

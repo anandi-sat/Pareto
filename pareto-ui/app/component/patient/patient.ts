@@ -100,4 +100,7 @@ export class PatientComponent{
         
         );   
     }
+    clearSelection(){
+        this.selectedPatientArray = [];
+        }
 }

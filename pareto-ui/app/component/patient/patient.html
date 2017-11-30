@@ -100,7 +100,7 @@
             <div class="enroll-block">
             	<button id="enroll" class="enroll-btn" (click)="addPatienttoCampaign(selectedPatientArray)" data-toggle="modal" data-target="#myModal"><span></span>Enroll Selected</button>
                 <div class="right-tools" align="right">
-                	<a class="clear-btn" href="#"><span></span>Clear All</a>
+                	<button id="clear" class="clear-btn" (click)="clearSelection()"><span></span>Clear All</button>
                     
                      <a  (click)="$('#EnrollMembers').click()"  class="bulk-btn" href="#"><span></span>Bulk Upload</a>
                  <input id="EnrollMembers" type="file" style="visibility:hidden"/>
@@ -110,7 +110,7 @@
             <div class="patnt-table-blk" style="height:413px;">
             	<div class="table-responsive" >
               <table id="selectable" class="table table-bordered text-left" >
-              <thead style="position: sticky;">
+              <thead style="position: sticky; table-layout: fixed; ">
                 <tr>
                   <th>Member ID</th>
                   <th class="text-center">S.No</th>
@@ -176,7 +176,7 @@
             </div>
             <div class="modal-footer enroll-block">
               <button type="button"  class="enroll-btn" data-dismiss="modal">Close</button>
-              <button type="button" class="enroll-btn" data-dismiss="modal">Ok</button>
+              <button type="submit" class="enroll-btn" data-dismiss="modal">Ok</button>
             </div>
           </div>
         </div>
