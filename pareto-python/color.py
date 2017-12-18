@@ -1,10 +1,10 @@
 #!/usr/bin/python
-#Rename the file to campaigns.py
+#Rename the file to Patients.py
 import MySQLdb
 
-#Write the below statements into a method "campaignData"
+#Write the below statements into a method "patientData"
 
-def campaignData():
+def colorData():
     db = MySQLdb.connect(host="13.126.123.18",      # your host, usually localhost
                      user="root",           # your username
                      passwd="password",             # your password
@@ -16,11 +16,11 @@ def campaignData():
     cur = db.cursor()
 
 # Use all the SQL you like
-    cur.execute("SELECT * FROM campaign")
+    cur.execute("select c.color  from color as c, patient as p where c.EngagementScore = p.EngagementScore")
 
     df = list(cur.fetchall())
 
-    keys = ["Id","Name","noofpatientsenrolled","status"]
+    keys = ["pid"]
 
     result = [dict(zip(keys, values)) for values in df]
     db.close()

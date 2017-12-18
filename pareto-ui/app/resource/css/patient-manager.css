@@ -1239,7 +1239,52 @@ Input Group
 
 
 
+@import "bourbon";
 
+$outof: 5;
+@mixin star-content($num) {
+  $chr: "\2605";
+  $content: $chr;
+  @for $i from 1 to $num {
+      $content: $content + $chr;
+  }
+  content: "#{$content}";
+}
+
+.rating {
+  color: #000;
+  cursor: default;
+  font-size: 0;
+  &:after {
+    color: #a03c3c;
+    font-size: 18px;
+    font-weight: bold;
+    $shadow: -1px 1px 2px rgba(0,0,0,0.3);
+    @include prefixer(text-shadow, $shadow, webkit moz ms spec);
+  }
+}
+@for $i from 1 through $outof {
+  .rating[title="#{$i} of #{$outof}"]:after {
+    @include star-content($i);
+  }
+}
+
+.hreview {
+  padding: 0.5em;
+  width: em(320);
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #fdfdfd;
+  &:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  .item {
+    width: 72%;
+    display: inline-block;
+    font-weight: 600;
+    color: #333;
+    backgroud: transparent;
+  }
+}
 
 
 

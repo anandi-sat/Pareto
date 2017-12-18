@@ -16,7 +16,7 @@ def programoverviewData():
     cur = db.cursor()
 
 # Use all the SQL you like
-    cur.execute("select ts.TouchpointName, ts.Interval from touchpoint_story as ts where CampaignID = '2002';")
+    cur.execute("select ts.TouchpointName, ts.Interval from touchpoint_story as ts where CampaignID = '2000';")
 
     df = list(cur.fetchall())
 
