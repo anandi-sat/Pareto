@@ -11,6 +11,7 @@ export class InterventionService {
     patientvisitsData: any;
     patientcampaignsData :any;
     diagnosisData :any;
+    detailsData :any;
 
     getinterventionData(reqJsonBody: any){
         
@@ -38,6 +39,13 @@ export class InterventionService {
         this.diagnosisData = this.httpService.getdiagnosis("diagnosisData", reqJsonBody);
         console.log(this.diagnosisData);
         return this.diagnosisData;
+
+    }
+    getdetailsData(reqJsonBody: any){
+        
+        this.detailsData = this.httpService.getdetails("detailsData", reqJsonBody);
+        console.log(this.detailsData);
+        return this.detailsData;
 
     }
 }

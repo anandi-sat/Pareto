@@ -26,6 +26,7 @@ var InterventionComponent = (function () {
         this.getpatientvisitsData();
         this.getpatientcampaignsData();
         this.getdiagnosisData();
+        this.getdetailsData();
     };
     InterventionComponent.prototype.getinterventionData = function () {
         var _this = this;
@@ -79,6 +80,20 @@ var InterventionComponent = (function () {
             }
             console.log(typeof _this.diagnosisData);
             console.log(_this.diagnosisData);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    InterventionComponent.prototype.getdetailsData = function () {
+        var _this = this;
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getdetailsData(reqJsonBody).subscribe(function (resp) {
+            if (resp != null) {
+                _this.detailsData = resp.response;
+            }
+            console.log(typeof _this.detailsData);
+            console.log(_this.detailsData);
         }, function (error) {
             console.log(error);
         });

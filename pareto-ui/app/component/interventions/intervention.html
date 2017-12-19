@@ -29,13 +29,13 @@
             	  
                 <div class="session_bar" >
                 <img src="app/resource/images/prof-pic.png"/>
-					      <div class="header-profile"  ng-controller="InterventionComponent"  *ngFor="let intervention of interventionData">
-                     	<p><label>Name: </label>{{intervention.fname}} {{intervention.lname}} </p>
-                      <p><label>DOB: </label>{{intervention.dob}}</p>
-                      <p><label>Patient ID: </label>{{intervention.Id}}</p><br>
-                      <p><label>Gender: </label>{{intervention.gender}}</p>
-                     	<p><label>Contact:(M): </label>{{intervention.dpcontact}}</p>
-                      <p><label>Email: </label>{{intervention.email}}</p><br>
+					      <div class="header-profile"  ng-controller="InterventionComponent"  *ngFor="let details of detailsData">
+                     	<p><label>Name: </label>{{details.defname}} {{details.delname}} </p>
+                      <p><label>DOB: </label>{{details.dedob}}</p>
+                      <p><label>Patient ID: </label>{{details.depid}}</p><br>
+                      <p><label>Gender: </label>{{details.degender}}</p>
+                     	<p><label>Contact:(M): </label>{{details.dephone}}</p>
+                      <p><label>Email: </label>{{details.demail}}</p><br>
                 </div><br>
 
                 </div>

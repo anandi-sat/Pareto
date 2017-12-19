@@ -26,6 +26,7 @@ export class InterventionComponent{
     patientcampaignsData : any;
     diagnosisData :any;
     patientData : any;
+    detailsData : any;
     patient = new Patient();
     noofcampaign: number = 0;
     
@@ -36,6 +37,7 @@ export class InterventionComponent{
         this.getpatientvisitsData();
         this.getpatientcampaignsData();
         this.getdiagnosisData();
+        this.getdetailsData();
     }
     
     
@@ -107,6 +109,25 @@ export class InterventionComponent{
             }
             console.log(typeof this.diagnosisData);
             console.log(this.diagnosisData);
+        },
+        error => {
+            console.log(error);
+        }
+        );   
+
+    }
+
+    getdetailsData(){
+        this.patient.patientId = this.sharedService.getData();
+        var reqJsonBody = JSON.stringify(this.patient);
+        this.InterventionService.getdetailsData(reqJsonBody).subscribe(
+        resp => {    
+            if(resp!=null){
+                
+                this.detailsData= resp.response;
+            }
+            console.log(typeof this.detailsData);
+            console.log(this.detailsData);
         },
         error => {
             console.log(error);

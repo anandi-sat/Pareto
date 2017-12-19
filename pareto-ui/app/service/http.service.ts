@@ -49,6 +49,12 @@ getdiagnosis( action: string, params: any ) {
     console.log("params:", params);
     return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
 }
+getdetails( action: string, params: any ) {
+    let headers = new Headers( { 'Content-Type': 'application/json' });
+    let options = new RequestOptions( { headers: headers });
+    console.log("params:", params);
+    return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
+}
 getprogramoverview( action: string ) {
     let headers = new Headers( { 'Content-Type': 'application/json' });
     let options = new RequestOptions( { headers: headers });

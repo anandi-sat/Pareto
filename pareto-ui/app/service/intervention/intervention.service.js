@@ -34,6 +34,11 @@ var InterventionService = (function () {
         console.log(this.diagnosisData);
         return this.diagnosisData;
     };
+    InterventionService.prototype.getdetailsData = function (reqJsonBody) {
+        this.detailsData = this.httpService.getdetails("detailsData", reqJsonBody);
+        console.log(this.detailsData);
+        return this.detailsData;
+    };
     InterventionService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_service_1.HttpService])

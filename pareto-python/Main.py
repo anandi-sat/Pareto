@@ -15,6 +15,7 @@ from patientcampaigns import patientcampaignsData
 from diagnosis import diagnosisData
 from programoverview import programoverviewData
 from enrollselected import enrollselectedData
+from details import detailsData
 #import the method defined 'patientData' in Patients.py
 
 @app.route('/PatientData', methods=['GET'])
@@ -71,6 +72,19 @@ def retrievepatientvisitsDetails():
 
     # To set the response as JSON, use the below code
     response = json.dumps(patientvisits)
+    return response
+
+@app.route('/detailsData', methods=['POST'])
+def retrievedetailsDetails():
+    #patientvisits = patientvisitsData()
+    input_query = request.get_json()
+    print(input_query)
+    patientId = input_query.get('patientId')
+    print(patientId)
+    details = detailsData(patientId)
+
+    # To set the response as JSON, use the below code
+    response = json.dumps(details)
     return response
 
 
