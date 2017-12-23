@@ -7,21 +7,12 @@
 <div class="col-sm-8" align = "center">
 <div class="nav-menu" style="color:#FFFFFF">
         
-          <div class="btn-group">
+<div class="btn-group">
 <button type="button" class="btn btn-primary"><a href="/patient" style="color:#FFFFFF">Patient</a></button>
 <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Campaign</a></button>
 <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Reports</a></button>
 <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Work List</a></button>
-          
-
-
-
-      
-  
-          </div>
-          
-
-      
+</div>
 </div>
 </div>
 <div class="col-sm-2">
@@ -33,7 +24,6 @@
 </div>
 </div>
 <!-- header -->
-
 
 <div id="main" >
 
@@ -80,11 +70,6 @@
                  </ul>
        
         </div>
-        
-        
-      
-      
-        
     </aside>
     <!--//End side menu-->
     
@@ -98,7 +83,7 @@
             
             
             <div class="enroll-block">
-            	<button id="enroll" class="enroll-btn" (click)="addPatienttoCampaign(selectedPatientArray)" data-toggle="modal" data-target="#myModal"><span></span>Enroll Selected</button>
+            	<button id="enroll" class="enroll-btn" data-toggle="modal" data-target="#myModal"><span></span>Enroll Selected</button>
                 <div class="right-tools" align="right">
                 	<button id="clear" class="clear-btn" (click)="clearSelection()"><span></span>Clear All</button>
                     
@@ -154,8 +139,6 @@
 
 </div>
 
-
-        
       <!--popup-->
       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
         <div class="modal-dialog" role="document">
@@ -170,80 +153,28 @@
                         Campaign Name
                       </button>
                    
-                    <button type="button" ng-controller="CampaignComponent" class="list-group-item list-group-item-action" *ngFor="let campaigns of campaignData">{{campaigns.Name}}</button>
+                    <button type="button" ng-controller="CampaignComponent" class="list-group-item list-group-item-action" *ngFor="let campaigns of campaignData" (click)="addCampaign(campaigns, $event)">{{campaigns.Name}}</button>
                   
                 </div>
             </div>
             <div class="modal-footer enroll-block">
               <button type="button"  class="enroll-btn" data-dismiss="modal">Close</button>
-              <button type="submit" class="enroll-btn" data-dismiss="modal">Ok</button>
+              <button type="submit" (click)="addPatienttoCampaign(selectedPatientArray, selectedCampaign)" class="enroll-btn" data-dismiss="modal">Ok</button>
             </div>
           </div>
         </div>
       </div>
+
+      <button id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#Enroll">Open Modal</button>
+      <div class="modal" id="Enroll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+                <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Enrolled Patients</h4>
+                      </div>
+            <div class="modal-body" >
+                {{enrollMessage}}
+                </div></div></div></div>
     
         <!--End Poup-->
-        
-  
-  
-
-
-
-
-
-
-<script src="../../resource/Scripts/app.js"></script>
- <script type="text/javascript">
- function Show()
- {
- document.getElementById("overlay1").style.display='block';
- }
- function Hide()
- {
- document.getElementById("overlay1").style.display='none';
- }
-            $(function() {
-                $('#enroll').click(function(){
-				
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box').animate({'top':'75px'},500);
-                    });
-                });
-                $('#boxclose').click(function(){
-                    $('#box').animate({'top':'-750px'},500,function(){
-                        $('#overlay').fadeOut('fast');
-                    });
-                });
-				
-				
-				
-					
-				    $('#planname').click(function(){
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box-a').animate({'top':'75px'},500);
-                    });
-                });
-                $('#boxclose-a').click(function(){
-                    $('#box-a').animate({'top':'-750px'},500,function(){
-                        $('#overlay').fadeOut('fast');
-                    });
-                });
-				
-					$('.confirm_btn').click(function(){
-                    $('#box,#box-a').animate({'top':'-750px'},500,function(){
-                        $('#overlay').fadeOut('fast');
-                    });
-                $('td').removeClass('active');
-				});
-				
-					
-				$('.cancel_btn').click(function(){
-                    $('#box').animate({'top':'-750px'},500,function(){
-                        $('#overlay').fadeOut('fast');
-                    });
-                
-				});
-				
-		
-            });
-        </script>

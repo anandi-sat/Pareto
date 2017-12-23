@@ -7,21 +7,12 @@
         <div class="col-sm-8" align = "center">
         <div class="nav-menu" style="color:#FFFFFF">
                 
-                  <div class="btn-group">
-        <button type="button" class="btn btn-primary"><a href="/patient" style="color:#FFFFFF">Patient</a></button>
-        <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Campaign</a></button>
-        <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Reports</a></button>
-        <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Work List</a></button>
-                  
-        
-        
-        
-              
-          
-                  </div>
-                  
-        
-              
+<div class="btn-group">
+    <button type="button" class="btn btn-primary"><a href="/patient" style="color:#FFFFFF">Patient</a></button>
+    <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Campaign</a></button>
+    <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Reports</a></button>
+    <button type="button" class="btn btn-primary"><a href="/campaign" style="color:#FFFFFF">Work List</a></button>
+</div>
         </div>
         </div>
         <div class="col-sm-2">
@@ -56,8 +47,6 @@
                   <th  width="90">Enrolled Patients</th>
                  <!-- <th  width="50">Triggered Formula</th>-->
                   <th  width="50">Status</th>
-				  <th  width="50">Modify</th>
-				  <th  width="50">Enroll</th>
                  </tr>
               </thead>
               <tbody ng-controller="CampaignComponent">
@@ -69,14 +58,7 @@
                   <td>{{campaign.noofpatientsenrolled}}  </td>
                 <!--  <td>{{campaign.trigger}}</td>-->
                   <td><a href="#">{{campaign.status}}</a></td>
-                  <td><span class="modfy"></span></td>
-                  <td><a href="#" id="enroll1"><span class="enroll"></span></a></td>
                 </tr>
-                 
-
-               
-               
-               
               </tbody>
             </table>
           </div>
@@ -84,157 +66,9 @@
 	</div>
 
 </div>
-
- <!--popup-->
-     <div class="overlay" id="overlay" style="display:none;"></div>
-       <div class="main_box" id="box" >
-            <a class="boxclose" id="boxclose"></a>
-            
-            <div class="box-main">
-            
-            <div class="ptnt-heading">
-            	<h2>Add Patients</h2>
-                <label></label>
-            </div> 
-            
-            
-            
-            
-    <div class="closing_gap_list" style="width:740px;">
-
-
-    
-   </div>
- <div style="clear:both;"></div>        
-         
-         <nav class="btn_bx">
-         <a href="#" class="confirm_btn" >Save</a>
-         </nav>
-
-            </div>
-        </div>
-        <!--End Poup-->
-   
-      
-   
-
-
-
 <footer style="background:#fff; height:27px;" id="footerWrapper">
     <div class="footer">
         
         <p><strong>Contact:&nbsp;</strong><a href="mailto:#">Pareto Healthcare</a></p>
     </div>
 </footer>
-
-
-
-
-<!--   <script>
-
-   function goBack(){alert(1);
-        window.history.back();
-    }
-
-</script>-->
-
- <script type="text/javascript">
-
-            //$(function() {
-                $('#enroll').click(function(){
-				
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box').animate({'top':'75px'},500);
-                    });
-                });
-                $('#boxclose').click(function(){
-                    $('#box').animate({'top':'-750px'},500,function(){
-                        $('#overlay').fadeOut('fast');
-                    });
-                });
-				
-				
-				
-					
-				    $('#planname').click(function(){
-                    $('#save-overlay').fadeIn('fast',function(){
-                        $('#box-a').animate({'top':'200px'},500);
-                    });
-                });
-                $('#boxclose-a').click(function(){
-                    $('#box-a').animate({'top':'-750px'},500,function(){
-                        $('#save-overlay').fadeOut('fast');
-                    });
-                });
-				
-					$('.confirm_btn').click(function(){
-                    $('#box').animate({'top':'-750px'},500,function(){
-                        $('#overlay').fadeOut('fast');
-                    });
-                $('td').removeClass('active');
-				});
-				
-					
-				$('.cancel_btn').click(function(){
-                    $('#box').animate({'top':'-750px'},500,function(){
-                        $('#overlay').fadeOut('fast');
-                    });
-                
-				});
-				
-				
-			//$(function() {
-                $('#enroll1').click(function(){
-				
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box').animate({'top':'75px'},500);
-                    });
-                });
-
-							//$(function() {
-                $('#enroll2').click(function(){
-				
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box').animate({'top':'75px'},500);
-                    });
-                });
-				//$(function() {
-				 $('#enroll3').click(function(){
-				
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box').animate({'top':'75px'},500);
-                    });
-                });
-
-				//$(function() {
-                $('#enroll4').click(function(){
-				
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box').animate({'top':'75px'},500);
-                    });
-                });
-				                $('#enroll5').click(function(){
-				
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box').animate({'top':'75px'},500);
-                    });
-                });
-				                $('#enroll6').click(function(){
-				
-                    $('#overlay').fadeIn('fast',function(){
-                        $('#box').animate({'top':'75px'},500);
-                    });
-                });
-
-				
-		
-            //});
-			
-			$('#right_button').on('click',function(){
-			$('#right_Box table>tbody').prepend($('#left_Box tr.actve').removeClass('actve'));
-			});
-			
-			$('#left_button').on('click',function(){
-			$('#left_Box table>tbody').prepend($('#right_Box tr.actve').removeClass('actve'));
-			});
-        </script>

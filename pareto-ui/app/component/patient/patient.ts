@@ -27,6 +27,8 @@ export class PatientComponent{
     selectedPatientArray = [];
     noofcampaign: number = 0;
     campaignData: any;
+    selectedCampaign: any;
+    enrollMessage = '';
 
     public ngOnInit(): any
     {
@@ -79,9 +81,31 @@ export class PatientComponent{
         const index = arr.indexOf(item);
         index === - 1 ? arr.push(item) : arr.splice(index, 1);
     }
+    addCampaign(camp: any, event){
+        this.selectedCampaign = camp;
+    }
 
-    addPatienttoCampaign(selectedPatients) {
-        console.log(selectedPatients);
+    addPatienttoCampaign(selectedPatients, selectedCampaign) {
+        var patientCamp = new PatientCampaign();
+        patientCamp.campaignId = selectedCampaign.Id;
+        for(var i in selectedPatients){
+            patientCamp.patientIds.push(selectedPatients[i].pid);
+        }
+        var reqJsonBody = JSON.stringify(patientCamp);
+        this.patientService.enrollSelected(reqJsonBody).subscribe(
+            resp => {    
+                if(resp!=null){
+                    this.enrollMessage= resp.response;
+                }
+                console.log(this.enrollMessage);
+                document.getElementById("openModalButton").click();
+            },
+            error => {
+                console.log(error);
+            }
+            );  
+            this.clearSelection();
+
     }
     getcampaign(){
         this.campaignService.getcampaignData().subscribe(
@@ -102,5 +126,10 @@ export class PatientComponent{
     }
     clearSelection(){
         this.selectedPatientArray = [];
-        }
+    }
+}
+
+class PatientCampaign{
+    patientIds: any = [];
+    campaignId: number;
 }

@@ -11,7 +11,7 @@ export class CampaignService {
 
     getcampaignData(){
         
-        this.campaignData = this.httpService.getcampaigns("campaignData");
+        this.campaignData = this.httpService.gets("campaignData");
         console.log(this.campaignData);
         return this.campaignData;
 

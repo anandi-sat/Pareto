@@ -23,10 +23,6 @@ export class CampaignComponent{
     public ngOnInit(): any
     {
         this.getcampaign();
-        
-        // this.noofcampaign = this.campaignData.length;
-        this.getAlphabets();      
-        
     }
 
     getcampaign(){
@@ -45,17 +41,4 @@ export class CampaignComponent{
         }
         );   
     }
-    getAlphabets(){
-         while(this.i <=25) {    
-             this.alphabets[this.i] =String.fromCharCode(this.i + 65);      
-             this.i = this.i + 1;
-         }
-        console.log(this.alphabets);
-    }
-
-    
-    
-
-   
-   
 }

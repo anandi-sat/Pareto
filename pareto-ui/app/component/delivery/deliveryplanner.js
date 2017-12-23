@@ -21,7 +21,7 @@ var DeliveryComponent = (function () {
     };
     DeliveryComponent.prototype.getdeliveryData = function () {
         var _this = this;
-        this.httpService.getdelivery("deliveryData").subscribe(function (resp) {
+        this.httpService.gets("deliveryData").subscribe(function (resp) {
             if (resp != null) {
                 _this.deliveryData = resp.response;
             }
@@ -33,7 +33,7 @@ var DeliveryComponent = (function () {
     };
     DeliveryComponent.prototype.getprogramoverviewData = function () {
         var _this = this;
-        this.httpService.getprogramoverview("programoverviewData").subscribe(function (resp) {
+        this.httpService.gets("programoverviewData").subscribe(function (resp) {
             if (resp != null) {
                 _this.programoverviewData = resp.response;
             }

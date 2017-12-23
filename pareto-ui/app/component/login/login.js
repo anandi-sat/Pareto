@@ -9,15 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_service_1 = require('../../service/http.service');
 var LoginComponent = (function () {
     function LoginComponent() {
     }
     LoginComponent = __decorate([
         core_1.Component({
             selector: 'loginhtml',
-            templateUrl: 'app/component/login/login.html',
-            providers: [http_service_1.HttpService]
+            templateUrl: 'app/component/login/login.html'
         }), 
         __metadata('design:paramtypes', [])
     ], LoginComponent);

@@ -16,7 +16,7 @@ var CampaignService = (function () {
         this.noofCampaign = 0;
     }
     CampaignService.prototype.getcampaignData = function () {
-        this.campaignData = this.httpService.getcampaigns("campaignData");
+        this.campaignData = this.httpService.gets("campaignData");
         console.log(this.campaignData);
         return this.campaignData;
     };

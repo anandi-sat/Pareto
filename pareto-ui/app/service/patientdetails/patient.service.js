@@ -15,7 +15,12 @@ var PatientService = (function () {
         this.httpService = httpService;
     }
     PatientService.prototype.getPatientData = function () {
-        return this.httpService.getPatients("PatientData");
+        return this.httpService.gets("PatientData");
+    };
+    PatientService.prototype.enrollSelected = function (reqJsonBody) {
+        console.log(reqJsonBody);
+        var response = this.httpService.posts("enrollselectedData", reqJsonBody);
+        return response;
     };
     PatientService = __decorate([
         core_1.Injectable(), 

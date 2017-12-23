@@ -20,8 +20,6 @@ var CampaignComponent = (function () {
     }
     CampaignComponent.prototype.ngOnInit = function () {
         this.getcampaign();
-        // this.noofcampaign = this.campaignData.length;
-        this.getAlphabets();
     };
     CampaignComponent.prototype.getcampaign = function () {
         var _this = this;
@@ -35,13 +33,6 @@ var CampaignComponent = (function () {
         }, function (error) {
             console.log(error);
         });
-    };
-    CampaignComponent.prototype.getAlphabets = function () {
-        while (this.i <= 25) {
-            this.alphabets[this.i] = String.fromCharCode(this.i + 65);
-            this.i = this.i + 1;
-        }
-        console.log(this.alphabets);
     };
     CampaignComponent = __decorate([
         core_1.Component({

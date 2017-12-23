@@ -8,6 +8,12 @@ export class PatientService {
 
     getPatientData(){
         
-        return this.httpService.getPatients("PatientData");
+        return this.httpService.gets("PatientData");
+    }
+
+    enrollSelected(reqJsonBody: any){
+        console.log(reqJsonBody);
+        var response = this.httpService.posts("enrollselectedData", reqJsonBody);
+        return response;
     }
 }

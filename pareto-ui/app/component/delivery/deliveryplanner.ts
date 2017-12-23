@@ -28,7 +28,7 @@ export class DeliveryComponent{
     
     getdeliveryData(){
         
-        this.httpService.getdelivery("deliveryData").subscribe(
+        this.httpService.gets("deliveryData").subscribe(
         resp => {    
             if(resp!=null){
                 
@@ -45,7 +45,7 @@ export class DeliveryComponent{
     }
     getprogramoverviewData(){
         
-        this.httpService.getprogramoverview("programoverviewData").subscribe(
+        this.httpService.gets("programoverviewData").subscribe(
         resp => {    
             if(resp!=null){
                 

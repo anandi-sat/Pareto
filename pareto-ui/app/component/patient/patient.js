@@ -25,6 +25,7 @@ var PatientComponent = (function () {
         this.noofpatient = 0;
         this.selectedPatientArray = [];
         this.noofcampaign = 0;
+        this.enrollMessage = '';
     }
     PatientComponent.prototype.ngOnInit = function () {
         this.getPatient();
@@ -66,8 +67,27 @@ var PatientComponent = (function () {
         var index = arr.indexOf(item);
         index === -1 ? arr.push(item) : arr.splice(index, 1);
     };
-    PatientComponent.prototype.addPatienttoCampaign = function (selectedPatients) {
-        console.log(selectedPatients);
+    PatientComponent.prototype.addCampaign = function (camp, event) {
+        this.selectedCampaign = camp;
+    };
+    PatientComponent.prototype.addPatienttoCampaign = function (selectedPatients, selectedCampaign) {
+        var _this = this;
+        var patientCamp = new PatientCampaign();
+        patientCamp.campaignId = selectedCampaign.Id;
+        for (var i in selectedPatients) {
+            patientCamp.patientIds.push(selectedPatients[i].pid);
+        }
+        var reqJsonBody = JSON.stringify(patientCamp);
+        this.patientService.enrollSelected(reqJsonBody).subscribe(function (resp) {
+            if (resp != null) {
+                _this.enrollMessage = resp.response;
+            }
+            console.log(_this.enrollMessage);
+            document.getElementById("openModalButton").click();
+        }, function (error) {
+            console.log(error);
+        });
+        this.clearSelection();
     };
     PatientComponent.prototype.getcampaign = function () {
         var _this = this;
@@ -96,4 +116,10 @@ var PatientComponent = (function () {
     return PatientComponent;
 }());
 exports.PatientComponent = PatientComponent;
+var PatientCampaign = (function () {
+    function PatientCampaign() {
+        this.patientIds = [];
+    }
+    return PatientCampaign;
+}());
 //# sourceMappingURL=patient.js.map
