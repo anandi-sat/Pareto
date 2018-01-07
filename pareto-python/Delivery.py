@@ -18,7 +18,7 @@ def deliveryData():
 # Use all the SQL you like
     cur.execute("""SELECT patient.PatientID,patient.FirstName,patient.LastName,patient.DOB, patient.Gender,delivery_planner.TouchpointID,delivery_planner.DeliveryTime, delivery_planner.Message, delivery_planner.Contact, delivery_planner.Status
                     FROM patient
-                    INNER JOIN delivery_planner ON delivery_planner.PatientID=patient.PatientID and PatientID ='{patientId}';""")
+                    INNER JOIN delivery_planner ON delivery_planner.PatientID=patient.PatientID;""")
 
     df = list(cur.fetchall())
 

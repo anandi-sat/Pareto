@@ -15,27 +15,27 @@ var InterventionService = (function () {
         this.httpService = httpService;
     }
     InterventionService.prototype.getinterventionData = function (reqJsonBody) {
-        this.interventionData = this.httpService.getintervention("interventionData", reqJsonBody);
+        this.interventionData = this.httpService.posts("interventionData", reqJsonBody);
         console.log(this.interventionData);
         return this.interventionData;
     };
     InterventionService.prototype.getpatientvisitsData = function (reqJsonBody) {
-        this.patientvisitsData = this.httpService.getpatientvisits("patientvisitsData", reqJsonBody);
+        this.patientvisitsData = this.httpService.posts("patientvisitsData", reqJsonBody);
         console.log(this.patientvisitsData);
         return this.patientvisitsData;
     };
     InterventionService.prototype.getpatientcampaignsData = function (reqJsonBody) {
-        this.patientcampaignsData = this.httpService.getpatientcampaigns("patientcampaignsData", reqJsonBody);
+        this.patientcampaignsData = this.httpService.posts("patientcampaignsData", reqJsonBody);
         console.log(this.patientcampaignsData);
         return this.patientcampaignsData;
     };
     InterventionService.prototype.getdiagnosisData = function (reqJsonBody) {
-        this.diagnosisData = this.httpService.getdiagnosis("diagnosisData", reqJsonBody);
+        this.diagnosisData = this.httpService.posts("diagnosisData", reqJsonBody);
         console.log(this.diagnosisData);
         return this.diagnosisData;
     };
     InterventionService.prototype.getdetailsData = function (reqJsonBody) {
-        this.detailsData = this.httpService.getdetails("detailsData", reqJsonBody);
+        this.detailsData = this.httpService.posts("detailsData", reqJsonBody);
         console.log(this.detailsData);
         return this.detailsData;
     };

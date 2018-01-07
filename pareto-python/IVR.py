@@ -15,7 +15,7 @@ def setIVR(mobilenumber):
     api_key = "1AhH8esDzYiyGb6pFJE2"
     access_key="wUffJXBzn5nZci8Z91vbdwMCCVngwW8V9iZyVBb5"
     message = """Hello Mister Hosam. Good Morning! We are from Awazen Clinic. You have an appointment booked at 10:30 AM tomorrow with Doctor Sameer. Please press 1 to confirm, 2 to cancel. Please enter your choice followed by # key"""
-    xml = f"""api_key={api_key}&access_key={access_key}&xml=<request action='http://13.126.123.18:5000/' method="POST"><to>{mobilenumber}</to><getkeys validkeys=”12” tkey=”#” timeout=”10”><speak>{message}</speak><timeout type=”speak”>Thanks for your input</timeout></getkeys></request>"""
+    xml = f"""api_key={api_key}&access_key={access_key}&xml=<request action="http://13.126.123.18:5000/Ivr" method="POST"><to>{mobilenumber}</to><getkeys validkeys="12" tkey="#" timeout="10"><speak>{message}</speak></getkeys></request>"""
     print(xml)
 
     response = callSMSCountry(xml)
@@ -52,4 +52,5 @@ def callSMSCountry(xml):
 #         #print('none')
 #         app.run()
 
+#setIVR('9986670960')
 setIVR('9916363368')

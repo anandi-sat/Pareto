@@ -10,65 +10,15 @@ export class HttpService {
     constructor( private http: Http ) { }
 
 
-   getPatients( action: string ) {
+   gets( action: string ) {
         let headers = new Headers( { 'Content-Type': 'application/json' });
         let options = new RequestOptions( { headers: headers });
         return this.http.get( "http://127.0.0.1:5000/" + action,  options ).map( res => res.json() );
     }
-    getcampaigns( action: string ) {
-        let headers = new Headers( { 'Content-Type': 'application/json' });
-        let options = new RequestOptions( { headers: headers });
-        return this.http.get( "http://127.0.0.1:5000/" + action,  options ).map( res => res.json() );
-    }
-    getdelivery( action: string ) {
-        let headers = new Headers( { 'Content-Type': 'application/json' });
-        let options = new RequestOptions( { headers: headers });
-        return this.http.get( "http://127.0.0.1:5000/" + action,  options ).map( res => res.json() );
-    }
-    getintervention( action: string, params: any ) {
+    posts( action: string, params: any ) {
        let headers = new Headers( { 'Content-Type': 'application/json' });
        let options = new RequestOptions( { headers: headers });
        console.log("params:", params);
        return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
    }
-   getpatientvisits( action: string, params: any ) {
-    let headers = new Headers( { 'Content-Type': 'application/json' });
-    let options = new RequestOptions( { headers: headers });
-    console.log("params:", params);
-    return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
-}
-getpatientcampaigns( action: string, params: any ) {
-    let headers = new Headers( { 'Content-Type': 'application/json' });
-    let options = new RequestOptions( { headers: headers });
-    console.log("params:", params);
-    return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
-}
-getdiagnosis( action: string, params: any ) {
-    let headers = new Headers( { 'Content-Type': 'application/json' });
-    let options = new RequestOptions( { headers: headers });
-    console.log("params:", params);
-    return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
-}
-getdetails( action: string, params: any ) {
-    let headers = new Headers( { 'Content-Type': 'application/json' });
-    let options = new RequestOptions( { headers: headers });
-    console.log("params:", params);
-    return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
-}
-getprogramoverview( action: string ) {
-    let headers = new Headers( { 'Content-Type': 'application/json' });
-    let options = new RequestOptions( { headers: headers });
-    return this.http.get( "http://127.0.0.1:5000/" + action,  options ).map( res => res.json() );
-}
-gets( action: string ) {
-	let headers = new Headers( { 'Content-Type': 'application/json' });
-	let options = new RequestOptions( { headers: headers });
-	return this.http.get( "http://127.0.0.1:5000/" + action,  options ).map( res => res.json() );
-}
-posts( action: string, params: any ) {
-   let headers = new Headers( { 'Content-Type': 'application/json' });
-   let options = new RequestOptions( { headers: headers });
-   console.log("params:", params);
-   return this.http.post( "http://127.0.0.1:5000/" + action, params, options ).map( res => res.json() );
-}
 }

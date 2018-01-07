@@ -16,56 +16,6 @@ var HttpService = (function () {
     function HttpService(http) {
         this.http = http;
     }
-    HttpService.prototype.getPatients = function (action) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.get("http://127.0.0.1:5000/" + action, options).map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.getcampaigns = function (action) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.get("http://127.0.0.1:5000/" + action, options).map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.getdelivery = function (action) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.get("http://127.0.0.1:5000/" + action, options).map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.getintervention = function (action, params) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        console.log("params:", params);
-        return this.http.post("http://127.0.0.1:5000/" + action, params, options).map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.getpatientvisits = function (action, params) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        console.log("params:", params);
-        return this.http.post("http://127.0.0.1:5000/" + action, params, options).map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.getpatientcampaigns = function (action, params) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        console.log("params:", params);
-        return this.http.post("http://127.0.0.1:5000/" + action, params, options).map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.getdiagnosis = function (action, params) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        console.log("params:", params);
-        return this.http.post("http://127.0.0.1:5000/" + action, params, options).map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.getdetails = function (action, params) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        console.log("params:", params);
-        return this.http.post("http://127.0.0.1:5000/" + action, params, options).map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.getprogramoverview = function (action) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.get("http://127.0.0.1:5000/" + action, options).map(function (res) { return res.json(); });
-    };
     HttpService.prototype.gets = function (action) {
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });

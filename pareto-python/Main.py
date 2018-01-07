@@ -131,14 +131,9 @@ def retrieveinterventionDetails():
 def retrieveenrollselectedDetails():
     # enrollselected = enrollselectedData()
     input_query = request.get_json()
-    print(input_query)
-    patientId = input_query.get('patientId')
+    patientIds = input_query.get('patientIds')
     campaignId = input_query.get('campaignId')
-    print(patientId)
-    print(campaignId)
-    enrollselected = enrollselectedData(patientId, campaignId)
-
-#To set the response as JSON, use the below code
+    enrollselected = enrollselectedData(patientIds, campaignId)
     response=json.dumps(enrollselected)
     return response
 

@@ -15,35 +15,35 @@ export class InterventionService {
 
     getinterventionData(reqJsonBody: any){
         
-        this.interventionData = this.httpService.getintervention("interventionData", reqJsonBody);
+        this.interventionData = this.httpService.posts("interventionData", reqJsonBody);
         console.log(this.interventionData);
         return this.interventionData;
 
     }
     getpatientvisitsData(reqJsonBody: any){
         
-        this.patientvisitsData = this.httpService.getpatientvisits("patientvisitsData", reqJsonBody);
+        this.patientvisitsData = this.httpService.posts("patientvisitsData", reqJsonBody);
         console.log(this.patientvisitsData);
         return this.patientvisitsData;
 
     }
     getpatientcampaignsData(reqJsonBody: any){
         
-        this.patientcampaignsData = this.httpService.getpatientcampaigns("patientcampaignsData", reqJsonBody);
+        this.patientcampaignsData = this.httpService.posts("patientcampaignsData", reqJsonBody);
         console.log(this.patientcampaignsData);
         return this.patientcampaignsData;
 
     }
     getdiagnosisData(reqJsonBody: any){
         
-        this.diagnosisData = this.httpService.getdiagnosis("diagnosisData", reqJsonBody);
+        this.diagnosisData = this.httpService.posts("diagnosisData", reqJsonBody);
         console.log(this.diagnosisData);
         return this.diagnosisData;
 
     }
     getdetailsData(reqJsonBody: any){
         
-        this.detailsData = this.httpService.getdetails("detailsData", reqJsonBody);
+        this.detailsData = this.httpService.posts("detailsData", reqJsonBody);
         console.log(this.detailsData);
         return this.detailsData;
 
