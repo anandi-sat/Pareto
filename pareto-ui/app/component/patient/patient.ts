@@ -68,7 +68,7 @@ export class PatientComponent{
         }
         );   
     }
-
+    
     addPatientToArray(person: any, event) {
         this.toggleItemInArr(this.selectedPatientArray, person);
     }

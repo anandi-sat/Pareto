@@ -1286,6 +1286,48 @@ $outof: 5;
   }
 }
 
-
+.star-ratings {
+	unicode-bidi: bidi-override;
+	color: #e6e6e6;
+	font-size: 20px;
+	height: 25px;
+	width: 83px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0;
+	text-shadow: 0px 1px 0 #a2a2a2;
+}
+.star-ratings-top {
+	color: #FFE500;
+	padding: 0;
+	position: absolute;
+	z-index: 1;
+	display: block;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.star-ratings-bottom {
+	padding: 0;
+	display: block;
+	z-index: 0;
+}
+.star-ratings-sprite {
+	background: url(star-rating-sprite.png) repeat-x;
+	font-size: 0;
+	height: 18px;
+	line-height: 0;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 110px;
+	margin: 0 auto;
+}
+.star-ratings-sprite-rating {
+	background: url(star-rating-sprite.png) repeat-x;
+	background-position: 0 100%;
+	float: left;
+	height: 18px;
+	display: block;
+}
 
 

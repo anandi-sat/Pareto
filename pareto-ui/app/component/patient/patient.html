@@ -109,7 +109,7 @@
                   </tr>
               </thead>
               <tbody ng-controller="PatientComponent">
-                
+                <tr> <div><input  type="text" [(ngModel)]="search" maxlength="120"/></div></tr>
 				<tr *ngFor="let patient of patientData | filter:search:startsWith | paginate: { itemsPerPage: 15, currentPage: p }; let i=index " (click)="addPatientToArray(patient, $event)" [class.active]="isPatientSelected(patient)">
                   
                   <td><a [tooltip]="'Select a Patient to see his/her interventions'" (click)=store(patient.pid) class="reload_btn">{{patient.pid}}</a></td>
@@ -119,7 +119,11 @@
                   <td>{{patient.lastvisitdate}}</td>
                   <td>{{patient.opentreatment}}</td>
                   <td>{{patient.nextexpecteddate}}</td>
-                  <td bgcolor="#E1B810">{{patient.engagementscore}}</td>
+                  <td><div class="star-ratings">
+                    <div class="star-ratings-top" style="width:'patient.engagementscore*20'+'%'"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    <div class="star-ratings-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                  </div>
+                </td>
                   <td>{{patient.campaigns}}</td>
                 </tr>
                 	
