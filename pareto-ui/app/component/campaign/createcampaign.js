@@ -16,7 +16,7 @@ var CreateCampaignComponent = (function () {
     CreateCampaignComponent = __decorate([
         core_1.Component({
             selector: 'createcampaignhtml',
-            templateUrl: 'app/component/campaign/createcampaign.html',
+            templateUrl: 'app/component/campaign/createcampaign.2.html',
             providers: [http_service_1.HttpService]
         }), 
         __metadata('design:paramtypes', [])

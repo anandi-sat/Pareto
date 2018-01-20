@@ -44,20 +44,24 @@
         <div class="col-sm-4" style="padding-right: 2px; padding-left: 0px;">   
              <div class="panel panel-default">
                 <div class="panel-body">
-                <div class="draggable-items">
+                <div dnd-draggable class="draggable-items">
                     
-                <ul>
-                    <li [dragScope]="'drink'" draggable [dragClass]="'drag-over'">
+                
                     <div class="touchpoint-main">
                         <div class="blue-blok">
                          <div class="close"></div>
                             <div class="tch-icon"></div>
                             <h3><p>Insert Title</p></h3>
                         </div>
+                        <div class="tools" >
+                            <span class="lttr-icn blank" dnd-droppable (onDropSuccess)="changeObject($event)"></span>
+                            <span class="lttr-icn blank" dnd-droppable (onDropSuccess)="changeObject($event)"></span>
+                            <span class="lttr-icn blank" dnd-droppable (onDropSuccess)="changeObject($event)"></span>
+                            <span class="lttr-icn blank" dnd-droppable (onDropSuccess)="changeObject($event)"></span>
+                        </div>
                     
                 </div>
-            </li>
-        </ul>
+            
             </div>
 
                 </div>
@@ -65,7 +69,7 @@
             </div>
             <div class="col-sm-8" style="padding-right: 0px; padding-left: 2px;">
             <div class="panel panel-default">
-            <div droppable class="panel-body" [dropScope]="'drink'" [dragOverClass]="'drag-target-border-green'">
+            <div dnd-droppable class="panel-body" (onDropSuccess)="changeObject($event)">
             </div>
             </div>
             </div>
@@ -74,12 +78,20 @@
         <div class="col-sm-4" style="padding-right: 2px; padding-left: 0px;">
                 <div class="panel panel-default">
                         <div class="panel-body">
+                                <div class="channl-avlble">
+                                        <div class="channel-main">
+                                                <div class="day-blk-one"><h4>Channel Available</h4></div>            
+                                <div class="draggable-items">
                                 <div class= "tools">
-                                        <div class="lttr-icn" draggable ><span class="book draggable"></span></div>
-                                        <div class="lttr-icn" draggable ><span class="phone draggable"></span></div>
-                                         <div class="lttr-icn" draggable ><span id="draggable" class="mail draggable"></span></div>
-                                        <div class="lttr-icn" draggable ><span class="sms draggable"></span></div>
+                                        <div class="lttr-icn" dnd-draggable><span class="book draggable"></span></div>
+                                        <div class="lttr-icn" dnd-draggable><span class="phone draggable"></span></div>
+                                         <div class="lttr-icn" dnd-draggable><span id="draggable" class="mail draggable"></span></div>
+                                        <div class="lttr-icn" dnd-draggable><span class="sms draggable"></span></div>
                                     </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                         </div>
         </div>    

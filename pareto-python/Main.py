@@ -6,16 +6,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-from Patients import patientData
+from Patients import patientData, enrollselectedData
 from campaigns import campaignData
-from intervention import interventionData
-from Delivery import deliveryData
-from patientvisits import patientvisitsData
-from patientcampaigns import patientcampaignsData
-from diagnosis import diagnosisData
-from programoverview import programoverviewData
-from enrollselected import enrollselectedData
-from details import detailsData
+from intervention import interventionData, patientvisitsData, patientcampaignsData, diagnosisData, detailsData
+from Delivery import deliveryData, programoverviewData
 #import the method defined 'patientData' in Patients.py
 
 @app.route('/PatientData', methods=['GET'])

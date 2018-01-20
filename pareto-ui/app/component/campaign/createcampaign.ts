@@ -3,7 +3,7 @@ import {HttpService} from '../../service/http.service';
 
 @Component({
     selector: 'createcampaignhtml',
-    templateUrl: 'app/component/campaign/createcampaign.html',
+    templateUrl: 'app/component/campaign/createcampaign.2.html',
 	providers: [HttpService]
 })
 

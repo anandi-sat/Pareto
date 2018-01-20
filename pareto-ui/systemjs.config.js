@@ -18,7 +18,7 @@
 			'ng2-search-filter': 'node_modules/ng2-search-filter',
 		    'ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ngx-bootstrap.umd.js',
 			'core-js': 'node_modules/core-js',
-			'ng2-drag-drop': 'node_modules/ng2-drag-drop'
+		    'ng2-dnd': 'node_modules/ng2-dnd/bundles/ng2-dnd.umd.js'
 		},
 		packages : {
 			paretoapp : {
@@ -38,10 +38,7 @@
             },
 			'ng2-search-filter': 
 				{ main: 'dist/index.js' 
-			},
-			'ng2-drag-drop': 
-			 { main: 'index.js',  
-			 defaultExtension: 'js' }
+			}
 		}
 	});
 })(this);

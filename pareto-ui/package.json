@@ -27,7 +27,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~2.0.2",
     "ng2-bootstrap": "^1.2.5",
-    "ng2-drag-drop": "^3.0.2",
+    "ng2-dnd": "^5.0.2",
     "ng2-pagination": "^2.0.1",
     "ng2-search-filter": "^0.3.1",
     "ngx-bootstrap": "^1.9.3",
